@@ -735,6 +735,11 @@ address br {
 }
 }
 /************************Addons (29.05.2021)***********************/
+.adon_head {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ec528b;
+}
 .addOns {
     color: #646465 !important;
 }
@@ -759,6 +764,7 @@ address br {
 .mt_10{
     margin-top: 10px;
 }
+.pl_5{padding-left: 5px;}
 .custom-control {
     position: relative !important;
     display: block !important;
@@ -768,7 +774,7 @@ address br {
 /********check box/*******/
 .fill-control-input:checked~.fill-control-indicator{
   background-color: #fff;
-  border:1px solid #878787;
+  border:1px solid #b3aeb3;
 }
 .pink-checkbox .fill-control-indicator{
   background-color: #fd636b;
