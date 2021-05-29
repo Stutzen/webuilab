@@ -884,3 +884,32 @@ button.add-btn:focus {
         max-width: 100%;
     }
 }
+@media screen and (min-width:990px) and (max-width:1100px) 
+{
+    .new-feat-rt {
+        padding-right: 0px;
+        padding-left: 0 !important;
+    } 
+    .new-addons-store .new-feat-left .addons-about {
+        padding: 20px 0px 0px 0px;
+    }
+    .new-feat-left {
+        padding-left: 0px;
+        flex: 0 0 40.666667%;
+        max-width: 40.666667%;
+    }
+}
+@media screen and (min-width:1100px) and (max-width:1500px) 
+{
+    /* .new-addons-store .new-feat-rt .addons-about {
+        padding: 20px 0px 0px 0px;
+    } */
+    /* .new-addons-store .new-feat-left .addons-about {
+        padding: 20px 0px 0px 0px;
+    } */
+    .new-feat-left {
+        padding-left: 0px;
+        flex: 0 0 40.666667%;
+        max-width: 40.666667%;
+    }
+}
