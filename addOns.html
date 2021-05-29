@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Admin</title>
+	<meta name="robots" content="noindex, nofollow">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+	<section class="top-admin-bar">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12">
+					<div class="logo-brand pl-3"><img src="Images/logo-admin.png" alt="logo"><span class="logo-text">Veracious</span></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="admin-panel-wrap pb-5">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-3 pr-0 pl-0">
+					<div class="admin-tab-link-area">
+						<nav class="navbar navbar-expand-lg p-lg-0">
+							<a class="navbar-brand for-mobile" href="#"><div class="logo-brand"><img src="Images/logo-admin.png" alt="logo"><span class="logo-text">Veracious</span></div></a>
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+								<i class="fa fa-bars"></i>
+							</button>
+
+
+							<div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+
+								<ul class="nav nav-pills mb-3 tab-item-list-menu" id="pills-tab" role="tablist">
+
+									<li class="nav-item">
+										<a class="nav-link" id="product-tab" data-toggle="pill" href="#home" role="tab" aria-controls="home" aria-selected="true"><span class="icon_span"><i class="fa fa-home" aria-hidden="true"></i></span>Home</a>
+									</li>
+
+									<li class="nav-item">
+										<a class="nav-link" id="billing-tab" data-toggle="pill" href="#billing" role="tab" aria-controls="billing" aria-selected="false"><span class="icon_span"><i class="fa fa-book" aria-hidden="true"></i></span>Plan & Billing</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" id="activities-tab" data-toggle="pill" href="#activities" role="tab" aria-controls="activities" aria-selected="false"><span class="icon_span"><i class="fa fa-user-o" aria-hidden="true"></i></span>My Activities</a>
+									</li>
+
+									<li class="nav-item">
+										<a class="nav-link active show" id="add-ons-tab" data-toggle="pill" href="#add-ons" role="tab" aria-controls="add-ons" aria-selected="false"><span class="icon_span"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span>Add-ons</a>
+									</li>
+
+									<li class="nav-item">
+										<a class="nav-link" id="domains-tab" data-toggle="pill" href="#domains" role="tab" aria-controls="domains" aria-selected="false"><span class="icon_span"><i class="fa fa-hand-pointer-o"></i></span>Domains</a>
+									</li>
+
+								</ul>
+
+							</div>
+						</nav>
+					</div>
+				</div>
+				<div class="col-lg-9 admin-content-area-dashboard addons">
+
+					<!-- 	start content wrap -->
+					<div class="tab-content admin-area-content" id="#tab-content-area">
+
+						<!-- 	start tab content -->
+						<div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+							<div class="retailer-admin-box">
+								<h3 class="main-heading">Home</h3>
+							</div>
+						</div>
+						<!-- 	end start tab content -->
+
+
+						<!-- 	start tab content -->
+						<div class="tab-pane fade active show" id="billing" role="tabpanel" aria-labelledby="billing-tab">
+
+							<div class="retailer-admin-box">
+								<h3 class="main-heading">Add - ons</h3>
+								<div class="subscription-area">
+									<div class="addons-about border_bot">
+										<p class="subscription-date-text"><span class="date-text">Currently Active addons</span></p>
+                                        <p class="subscription-plan">2 add-ons</p>
+									</div>
+
+									<div class="about-addons-plan">
+										<div class="">
+                                            <p class="subscription-date-text"><span class="date-text"><img src="Images/service.png"></span>Design Services</p>
+                                            <p class="subscription-date-text"><span class="date-text"><img src="Images/designservice.png"></span>Additional Extensions & Plugins</p>
+                                        </div>
+									</div>
+								</div>
+
+
+								<div class="new-addons-store subscription-area mt_10">
+                                    <div class="addons-about border_bot">
+										<p class="subscription-date-text"><span class="date-text">New addons to your store</span></p>
+									</div>
+                                    <div class="row">
+                                        <div class="col-sm-1 new-feat-rt">
+                                            <div class="addons-about">
+                                            <span class="date-text"><img src="Images/iar.png"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5 new-feat-left">
+                                            <div class="addons-about">
+                                                <p class="subscription-date-text">Additional Extensions & Plugins</p>
+                                                <h6 class="f13">Lorem Ipsum is the simply dummy text of the printing and typestting industry</h6>
+                                                <div class="row pl_15">  
+                                                        <label class="custom-control black-checkbox">
+                                                            <input type="checkbox" class="fill-control-input" checked="checked">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control pink-checkbox">
+                                                            <input type="checkbox" class="fill-control-input">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control yellow-checkbox">
+                                                            <input type="checkbox" class="fill-control-input">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control green-checkbox">
+                                                            <input type="checkbox" class="fill-control-input">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control blue-checkbox">
+                                                            <input type="checkbox" class="fill-control-input">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <div class="col-sm-9">
+                                                            <button type="button" class="add-btn">Add</button>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1 new-feat-rt">
+                                            <div class="addons-about">
+                                            <span class="date-text"><img src="Images/iarblue.png"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5 new-feat-left">
+                                            <div class="addons-about">
+                                                <p class="subscription-date-text">SMS Gateway Integration</p>
+                                                <h6 class="f13">Lorem Ipsum is the simply dummy text of the printing and typestting industry</h6>
+                                                <div class="row pl_15">  
+                                                        <label class="custom-control black-checkbox">
+                                                            <input type="checkbox" class="fill-control-input" checked="checked">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control pink-checkbox">
+                                                            <input type="checkbox" class="fill-control-input">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control yellow-checkbox">
+                                                            <input type="checkbox" class="fill-control-input">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control green-checkbox">
+                                                            <input type="checkbox" class="fill-control-input" checked="checked">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control blue-checkbox">
+                                                            <input type="checkbox" class="fill-control-input">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <div class="col-sm-9">
+                                                            <button type="button" class="add-btn">Interested</button>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-1 new-feat-rt">
+                                            <div class="addons-about">
+                                            <span class="date-text"><img src="Images/iarvio.png"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5 new-feat-left">
+                                            <div class="addons-about">
+                                                <p class="subscription-date-text">One Page Checkout</p>
+                                                <h6 class="f13">Lorem Ipsum is the simply dummy text of the printing and typestting industry</h6>
+                                                <div class="row pl_15">  
+                                                        <label class="custom-control black-checkbox">
+                                                            <input type="checkbox" class="fill-control-input" checked="checked">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control pink-checkbox">
+                                                            <input type="checkbox" class="fill-control-input" checked="checked">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control yellow-checkbox">
+                                                            <input type="checkbox" class="fill-control-input" checked="checked">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control green-checkbox">
+                                                            <input type="checkbox" class="fill-control-input">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control blue-checkbox">
+                                                            <input type="checkbox" class="fill-control-input">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <div class="col-sm-9">
+                                                            <button type="button" class="add-btn">Interested</button>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1 new-feat-rt">
+                                            <div class="addons-about">
+                                            <span class="date-text"><img src="Images/iarpink.png"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5 new-feat-left">
+                                            <div class="addons-about">
+                                                <p class="subscription-date-text">Shipping Integration</p>
+                                                <h6 class="f13">Lorem Ipsum is the simply dummy text of the printing and typestting industry</h6>
+                                                <div class="row pl_15">  
+                                                        <label class="custom-control black-checkbox">
+                                                            <input type="checkbox" class="fill-control-input" checked="checked">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control pink-checkbox">
+                                                            <input type="checkbox" class="fill-control-input">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control yellow-checkbox">
+                                                            <input type="checkbox" class="fill-control-input">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control green-checkbox">
+                                                            <input type="checkbox" class="fill-control-input">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control blue-checkbox">
+                                                            <input type="checkbox" class="fill-control-input">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <div class="col-sm-9">
+                                                            <button type="button" class="add-btn">Add</button>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+								</div>
+
+
+								<div class="new-addons-store subscription-area mt_10">
+                                    <div class="addons-about border_bot">
+										<p class="subscription-date-text"><span class="date-text">Photography & Design Services</span></p>
+									</div>
+                                    <div class="row">
+                                        <div class="col-sm-1 new-feat-rt">
+                                            <div class="addons-about">
+                                            <span class="date-text"><img src="Images/iar.png"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5 new-feat-left">
+                                            <div class="addons-about">
+                                                <p class="subscription-date-text">Products & Photography</p>
+                                                <h6 class="f13">Lorem Ipsum is the simply dummy text of the printing and typestting industry</h6>
+                                                <div class="row pl_15">  
+                                                        <label class="custom-control black-checkbox">
+                                                            <input type="checkbox" class="fill-control-input" checked="checked">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control pink-checkbox">
+                                                            <input type="checkbox" class="fill-control-input">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control yellow-checkbox">
+                                                            <input type="checkbox" class="fill-control-input">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control green-checkbox">
+                                                            <input type="checkbox" class="fill-control-input">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control blue-checkbox">
+                                                            <input type="checkbox" class="fill-control-input">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <div class="col-sm-9">
+                                                            <button type="button" class="add-btn">Add</button>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1 new-feat-rt">
+                                            <div class="addons-about">
+                                            <span class="date-text"><img src="Images/iarblue.png"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5 new-feat-left">
+                                            <div class="addons-about ">
+                                                <p class="subscription-date-text">Logo Design</p>
+                                                <h6 class="f13">Lorem Ipsum is the simply dummy text of the printing and typestting industry</h6>
+                                                <div class="row pl_15">  
+                                                        <label class="custom-control black-checkbox">
+                                                            <input type="checkbox" class="fill-control-input" checked="checked">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control pink-checkbox">
+                                                            <input type="checkbox" class="fill-control-input">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control yellow-checkbox">
+                                                            <input type="checkbox" class="fill-control-input">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control green-checkbox">
+                                                            <input type="checkbox" class="fill-control-input" checked="checked">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control blue-checkbox">
+                                                            <input type="checkbox" class="fill-control-input">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <div class="col-sm-9">
+                                                            <button type="button" class="add-btn">Interested</button>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-1 new-feat-rt">
+                                            <div class="addons-about">
+                                            <span class="date-text"><img src="Images/iarvio.png"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5 new-feat-left">
+                                            <div class="addons-about">
+                                                <p class="subscription-date-text">Brand Style App Design</p>
+                                                <h6 class="f13">Lorem Ipsum is the simply dummy text of the printing and typestting industry</h6>
+                                                <div class="row pl_15">  
+                                                        <label class="custom-control black-checkbox">
+                                                            <input type="checkbox" class="fill-control-input" checked="checked">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control pink-checkbox">
+                                                            <input type="checkbox" class="fill-control-input" checked="checked">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control yellow-checkbox">
+                                                            <input type="checkbox" class="fill-control-input" checked="checked">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control green-checkbox">
+                                                            <input type="checkbox" class="fill-control-input">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control blue-checkbox">
+                                                            <input type="checkbox" class="fill-control-input">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <div class="col-sm-9">
+                                                            <button type="button" class="add-btn">Interested</button>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1 new-feat-rt">
+                                            <div class="addons-about">
+                                            <span class="date-text"><img src="Images/iarpink.png"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5 new-feat-left">
+                                            <div class="addons-about">
+                                                <p class="subscription-date-text">Banners Design</p>
+                                                <h6 class="f13">Lorem Ipsum is the simply dummy text of the printing and typestting industry</h6>
+                                                <div class="row pl_15">  
+                                                        <label class="custom-control black-checkbox">
+                                                            <input type="checkbox" class="fill-control-input" checked="checked">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control pink-checkbox">
+                                                            <input type="checkbox" class="fill-control-input">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control yellow-checkbox">
+                                                            <input type="checkbox" class="fill-control-input">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control green-checkbox">
+                                                            <input type="checkbox" class="fill-control-input">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <label class="custom-control blue-checkbox">
+                                                            <input type="checkbox" class="fill-control-input">
+                                                            <span class="fill-control-indicator"></span>
+                                                        </label>
+                                                        <div class="col-sm-9">
+                                                            <button type="button" class="add-btn">Add</button>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+								</div>
+
+							</div>
+						</div>
+						
+				</div>
+			</div>
+		</section>
+	</body>
+	</html>
