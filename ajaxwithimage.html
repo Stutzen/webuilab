@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+	$(document).ready(function () {
+		$('#demo').click(function (){
+			var showData = $('#show-data');
+			
+			$.getJSON('https://weblab.stutzen.xyz/json/jsonsample.json', function (data){
+			console.log(data);
+			
+				var items = data.items.map( function (item){
+				return item.path;
+				});
+				showData.empty();
+				
+				if (items.length){
+					var imgs = items.map(item => '<div><a><img src ="' + item + '" /></a></div>');
+					console.log(imgs);
+					var list = $('<div />').html(imgs);
+					showData.append(list);
+				}
+			});
+			showData.text('Loading the JSON file.');
+		});
+	});
+</script>
+</head>
+<body>
+
+<div>
+<h1>Example Two</h1>
+<button type="button" id="demo">My List</button></div>
+<div id="show-data">
+<div>
+
+</div>
+</body>
+</html>
