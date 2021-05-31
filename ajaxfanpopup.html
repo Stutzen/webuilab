@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+	
+	<script>
+	$(document).ready(function () {
+		$('#demo').click(function (){
+			var showData = $('#show-data');
+			
+			$.getJSON('https://weblab.stutzen.xyz/json/jsonsample.json', function (data){
+			console.log(data);
+			
+				var items = data.items.map( function (item){
+				return item.path;
+				});
+				showData.empty();
+				if (items.length){
+				$.fancybox.open(
+				
+					items = items.map(function(item) {
+						return {src : item,};
+					}));
+					
+				}
+				
+			});
+			showData.text('Loading the JSON file.');
+		    
+		});
+		
+	});
+	
+</script>
+</head>
+<body>
+
+<div>
+<h1>Example Popup with Ajax</h1>
+<p>
+
+<img src="https://source.unsplash.com/sGEHs-HY-Oo/240x160" class="parent" id="demo"/>
+	 
+</p>
+
+</div>
+
+</body>
+</html>
