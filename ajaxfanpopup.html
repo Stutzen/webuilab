@@ -13,15 +13,13 @@
 			$.getJSON('https://weblab.stutzen.xyz/json/jsonsample.json', function (data){
 			console.log(data);
 			
-				var items = data.items.map( function (item){
-				return item.path;
-				});
+				
 				showData.empty();
-				if (items.length){
+				if (data.items.length){
 				$.fancybox.open(
 				
-					items = items.map(function(item) {
-						return {src : item,};
+					data.items = data.items.map(function(item) {
+						return {src : item.src};
 					}));
 					
 				}
