@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "key": "First",
+      "src": "http://via.placeholder.com/740x400/FF0000/FFFFFF",
+      "value": 100
+    },{
+      "key": "Second",
+      "src": "http://via.placeholder.com/500x800/FF0000/FFFFFF",
+      "value": false
+    },{
+      "key": "Last",
+      "src": "http://via.placeholder.com/800x800/FF0000/FFFFFF",
+      "value": "Mixed"
+    }
+  ],
+  "obj": {
+    "number": 1.2345e-6,
+    "enabled": true
+  },
+  "message": "Strings have to be in double-quotes."
+}
