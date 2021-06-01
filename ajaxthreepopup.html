@@ -15,7 +15,10 @@
 			console.log(data);
 			showData.empty();
 			if (data.items.length){
-				$.fancybox.open(data.items);
+				$.fancybox.open(data.items,
+				{
+					loop : true
+				});
 
 			}
 			});
