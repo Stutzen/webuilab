@@ -15,7 +15,19 @@
 			console.log(data);
 			showData.empty();
 			if (data.items.length){
-				$.fancybox.open(data.items);
+				$.fancybox.open(data.items,
+				{
+					buttons: [
+					"slideShow",
+					"thumbs",
+					"zoom",
+					"fullScreen",
+					"share",
+					"close"
+				],
+					loop : true,
+					protect: true
+				});
 
 			}
 			});
