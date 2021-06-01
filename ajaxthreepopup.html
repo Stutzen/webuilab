@@ -17,7 +17,16 @@
 			if (data.items.length){
 				$.fancybox.open(data.items,
 				{
-					loop : true
+					buttons: [
+					"slideShow",
+					"thumbs",
+					"zoom",
+					"fullScreen",
+					"share",
+					"close"
+				],
+					loop : true,
+					protect: true
 				});
 
 			}
