@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+	
+	<script>
+	$(document).ready(function () {
+		$('.parent').click(function (){
+			var showData = $('#show-data');
+			var theID = $(this).attr('id');
+			var jsonFile = $(this).attr('data-jsontype');
+			$.getJSON(jsonFile, function (data){
+			console.log(data);
+			showData.empty();
+			if (data.items.length){
+				$.fancybox.open(data.items);
+
+			}
+			});
+			showData.text('Loading the JSON file.');
+		});
+    });
+	
+</script>
+</head>
+<body>
+
+<div>
+<h1>Example Popup with Ajax</h1>
+<p>
+
+<img src="https://source.unsplash.com/sGEHs-HY-Oo/240x160" class="parent" id="demo" data-jsontype="https://weblab.stutzen.xyz/json/jsonsample.json"/>
+<img src="https://source.unsplash.com/Ai2TRdvI6gM/240x160" class="parent" id="demotwo" style="margin-left: 30px;" data-jsontype="https://weblab.stutzen.xyz/json/jsonsample2.json"/>
+<img src="https://source.unsplash.com/Hau6K6VP5vs/240x160" class="parent" id="demothree" style="margin-left: 30px;" data-jsontype="https://weblab.stutzen.xyz/json/jsonsample3.json"/>	 
+</p>
+
+    
+
+</div>
+
+</body>
+</html>
