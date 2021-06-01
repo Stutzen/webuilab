@@ -7,9 +7,17 @@
 	
 	<script>
 	$(document).ready(function () {
-		$('#demo').click(function (){
+		$('.parent').click(function (){
 			var showData = $('#show-data');
-			$.getJSON('https://weblab.stutzen.xyz/json/jsonsample.json', function (data){
+			var theID = $(this).attr('id');
+			if( theID == 'demo'){
+				var jsonFile = 'https://weblab.stutzen.xyz/json/jsonsample.json';
+			} else if( theID == 'demotwo' ){
+				var jsonFile = 'https://weblab.stutzen.xyz/json/jsonsample2.json';
+			} else if( theID == 'demothree' ){
+				var jsonFile = 'https://weblab.stutzen.xyz/json/jsonsample3.json';
+			}
+			$.getJSON(jsonFile, function (data){
 			console.log(data);
 			showData.empty();
 			if (data.items.length){
@@ -19,31 +27,7 @@
 			});
 			showData.text('Loading the JSON file.');
 		});
-        $('#demotwo').click(function (){
-			var showData = $('#show-data');
-			$.getJSON('https://weblab.stutzen.xyz/json/jsonsample2.json', function (data){
-			console.log(data);
-			showData.empty();
-			if (data.items.length){
-				$.fancybox.open(data.items);
-
-			}
-			});
-			showData.text('Loading the JSON file.');
-		});
-        $('#demothree').click(function (){
-			var showData = $('#show-data');
-			$.getJSON('https://weblab.stutzen.xyz/json/jsonsample3.json', function (data){
-			console.log(data);
-			showData.empty();
-			if (data.items.length){
-				$.fancybox.open(data.items);
-
-			}
-			});
-			showData.text('Loading the JSON file.');
-		});
-	});
+    });
 	
 </script>
 </head>
