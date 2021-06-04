@@ -13,143 +13,90 @@
             box-sizing: border-box;
         }
 
-        html,
-        body {
-            background: linear-gradient(45deg, #0f2c18, #0b3013);
-            padding: 15px;
-        }
-
-        img {
-            width: 100%;
-        }
-
-        .grid-wrapper {
-            /*column-count: 4;*/
-            column-count: 4;
-            column-gap: 16px;
-        }
-
-        .grid-wrapper .mItem {
-            display: inline-block;
-            margin-bottom: 16px;
-            width: 100%;
-        }
-
-        .ring {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 150px;
-            height: 150px;
-            background: transparent;
-            border: 3px solid #3c3c3c;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 150px;
-            font-family: sans-serif;
-            font-size: 20px;
-            color: #fff000;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            text-shadow: 0 0 10px #fff000;
-            box-shadow: 0 0 20px rgba(0, 0, 0, .5);
-        }
-
-        .ring:before {
-            content: '';
-            position: absolute;
-            top: -3px;
-            left: -3px;
-            width: 100%;
-            height: 100%;
-            border: 3px solid transparent;
-            border-top: 3px solid #fff000;
-            border-right: 3px solid #fff000;
-            border-radius: 50%;
-            animation: animateC 2s linear infinite;
-        }
-
-        span {
+        .grid-item img {
             display: block;
-            position: absolute;
-            top: calc(50% - 2px);
-            left: 50%;
-            width: 50%;
-            height: 4px;
-            background: transparent;
-            transform-origin: left;
-            animation: animate 2s linear infinite;
+            max-width: 100%;
         }
 
-        span:before {
+        .grid-item {
+            width: 300px;
+        }
+
+        .grid {
+            background: #EEE;
+            max-width: 100%;
+        }
+
+        /* clearfix */
+        .grid:after {
             content: '';
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: #fff000;
-            top: -6px;
-            right: -8px;
-            box-shadow: 0 0 20px #fff000;
+            display: block;
+            clear: both;
         }
-
-        @keyframes animateC {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        @keyframes animate {
-            0% {
-                transform: rotate(45deg);
-            }
-
-            100% {
-                transform: rotate(405deg);
-            }
+        .hidden {
+            display: none;
         }
     </style>
-    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
+
+
     <script>
         $(document).ready(function () {
 
             var showData = $('#show-data');
-            var text = '<div class="ring">Loading<span></span></div>';
-            showData.append(text);
 
-            setTimeout(function () {
-                var showData = $('#show-data');
-
-                $.getJSON('https://weblab.stutzen.xyz/json/layout2.json', function (data) {
-                    console.log(data);
-
-                    showData.empty();
-                    if (data.items.length) {
-                        var imgs = data.items.map(item => '<div class="mItem"><img src ="' + item.src + '" /></div>');
-                        showData.append(imgs);
-                    }
-                });
-
-            }, 2000);
-
-        });
-        $(document).ready(function () {
-            $('#Loadmore').click(function () {
-
-                $.getJSON('https://weblab.stutzen.xyz/json/layout2.json', function (data) {
-                    console.log(data);
-
-                    if (data.items.length) {
-                        var imgs = data.items.map(item => '<div class="mItem"><img src ="' + item.src + '" /></div>');
-                        $('#show-data').append(imgs);
-                    }
-                });
+            var $grid = $('.grid').masonry({
+                gutter: 0,
+                itemSelector: '.grid-item',
+                horizontalOrder: false
             });
+
+            $('.append-button').on('click', function () {
+                getData();
+            });
+            var next_load=0;
+            const loadImg=function(data){
+                
+                if (data.items.length) {
+                        var elts = [];
+                        item = next_load
+                        console.log(item);
+                        wrapper_div = document.createElement('div');
+                        wrapper_div.className = 'grid-item hidden';
+                        img = document.createElement('img');
+                        img.src = data.items[item].src;
+                        wrapper_div.append(img)
+                        elts.push(wrapper_div);
+                        next_load = item+1;
+                        if(next_load>= data.items.length){
+                            getData();
+                            next_load=0;
+                            return;
+                        }
+                        var $elems = $(elts);
+                        $grid.append($elems).masonry('appended', $elems);
+                        $grid.imagesLoaded().progress(function (imgLoad, image) {
+                            var $item = $( image.img ).parent();
+                            
+                            if($item.hasClass('hidden')){
+                                $item.removeClass('hidden');
+                                $grid.masonry() ;
+                                loadImg(data);
+                            }
+                            
+                        });
+                    }
+            }
+            const getData = function () {
+
+                $.getJSON('https://weblab.stutzen.xyz/json/layout2.json', function (data) {
+                    console.log(data);
+                    loadImg(data);
+                });
+            }
+
         });
     </script>
 
@@ -157,13 +104,13 @@
 
 <body>
 
-    <div class="grid-wrapper" id="show-data">
+
+    <div class="grid" id="show-data">
 
     </div>
-    <div class="btn" style="text-align: center;">
+    <div class="btn append-button" style="text-align: center;">
         <button class="loadmore" id="Loadmore">Load More</button>
     </div>
-
 </body>
 
 </html>
