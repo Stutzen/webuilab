@@ -125,7 +125,7 @@
             setTimeout(function () {
                 var showData = $('#show-data');
 
-                $.getJSON('http://localhost/webuilab/json/layout2.json', function (data) {
+                $.getJSON('https://weblab.stutzen.xyz/json/layout2.json', function (data) {
                     console.log(data);
 
                     showData.empty();
@@ -140,32 +140,15 @@
         });
         $(document).ready(function () {
             $('#Loadmore').click(function () {
-                var showData = $('#show-data');
 
-                $.getJSON('http://localhost/webuilab/json/layout2.json', function (data) {
+                $.getJSON('https://weblab.stutzen.xyz/json/layout2.json', function (data) {
                     console.log(data);
 
-                    showData.empty();
                     if (data.items.length) {
                         var imgs = data.items.map(item => '<div class="mItem"><img src ="' + item.src + '" /></div>');
-                        showData.append(imgs);
+                        $('#show-data').append(imgs);
                     }
                 });
-                //var showData = $('#show-data');
-                //$.getJSON('http://localhost/webuilab/json/layout2.json', function (data) {
-                    //console.log(data);
-
-                    //if (data.items.length) {
-                       // var imgs = data.items.map(item => '<div class="mItem"><img src ="' + item.src + '" /></div>');
-                        //document.getElementById('show-data').appendChild(imgs);
-                    //}
-                    //data.items.forEach(function(item){
-                        //var imgs = '<div class="mItem"><img src ="' + item.src + '" /></div>';
-                        //document.getElementById('show-data').appendChild(imgs);
-                    //});
-                    
-                //});
-                //showData.text('Loading the JSON file.');
             });
         });
     </script>
