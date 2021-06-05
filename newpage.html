@@ -53,7 +53,7 @@
         }
 
         .grid-item {
-            width: 33.33%;
+            width: 360px;
         }
 
         .grid {
@@ -107,6 +107,9 @@
             background: #fff;
             display: inline-block;
         }
+        #headerWrapper{position: fixed;width: 224px;}
+        #pageWrapper{margin-left: 220px;}
+
 
         .append-button {
             padding-top: 30px;
@@ -182,7 +185,7 @@
     <!--<div class="container">-->
     <div class="row">
         <div class="col-sm-12">
-            <div class="col-sm-2">
+            <div class="col-sm-2" id="headerWrapper">
                 <div class="img-div">
                     <a style="cursor: pointer;display: inline-block;" href="https://www.iamretailer.com/"><img
                             src="https://www.iamretailer.com/wp-content/uploads/2020/08/logo.png" /><br>
@@ -195,7 +198,7 @@
                 </div>
 
             </div>
-            <div class="col-sm-10">
+            <div class="col-sm-10" id="pageWrapper">
                 <div class="grid" id="show-data">
 
                 </div>
