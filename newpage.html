@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #ddd;
+        }
+
+        .col-sm-12 {
+            padding-right: 0px;
+        }
+
+        .col-sm-10 {
+            padding-right: 0px;
+        }
+
+        .col-sm-2 {
+            padding-top: 50px;
+        }
+
+        .message5 {
+            font-family: 'Poppins', sans-serif;
+            color: #e20781;
+            line-height: 3;
+            letter-spacing: 1px;
+            font-size: 20px;
+            margin-bottom: 0px;
+            display: inline-block;
+            vertical-align: middle;
+            font-weight: 700;
+        }
+
+        .grid-item img {
+            display: block;
+            width: 100%;
+        }
+
+        .grid-item {
+            width: 33.33%;
+        }
+
+        .grid {
+            background: #EEE;
+            max-width: 100%;
+        }
+
+        /* clearfix */
+        .grid:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .row {
+            margin-left: 0px !important;
+            margin-right: 0px !important;
+        }
+
+        .img-div {
+            text-align: center;
+        }
+
+        .link-div {
+            padding-top: 30px;
+            text-align: center;
+        }
+
+        .link-div p {
+            padding-top: 10px;
+        }
+
+        .link-div .ka {
+            padding: 10px 40px;
+            border: 1px solid;
+            background: #fff;
+            display: inline-block;
+        }
+
+        .link-div .ka:hover {
+            text-decoration: none;
+        }
+
+        .loadmore {
+            padding: 10px 40px;
+            border: 1px solid;
+            background: #fff;
+            display: inline-block;
+        }
+
+        .append-button {
+            padding-top: 30px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+
+            var showData = $('#show-data');
+
+            var $grid = $('.grid').masonry({
+                gutter: 0,
+                itemSelector: '.grid-item',
+                horizontalOrder: false
+            });
+
+            $('.append-button').on('click', function () {
+                getData();
+            });
+            var next_load = 0;
+            const loadImg = function (data) {
+
+                if (data.items.length) {
+                    var elts = [];
+                    item = next_load
+                    console.log(item);
+                    wrapper_div = document.createElement('div');
+                    wrapper_div.className = 'grid-item hidden';
+                    img = document.createElement('img');
+                    img.src = data.items[item].src;
+                    wrapper_div.append(img)
+                    elts.push(wrapper_div);
+                    next_load = item + 1;
+                    if (next_load >= data.items.length) {
+                        //getData();
+                        next_load = 0;
+                        return;
+                    }
+                    var $elems = $(elts);
+                    $grid.append($elems).masonry('appended', $elems);
+                    $grid.imagesLoaded().progress(function (imgLoad, image) {
+                        var $item = $(image.img).parent();
+
+                        if ($item.hasClass('hidden')) {
+                            $item.removeClass('hidden');
+                            $grid.masonry();
+                            loadImg(data);
+                        }
+
+                    });
+                }
+            }
+            const getData = function () {
+
+                $.getJSON('https://weblab.stutzen.xyz/json/layout2.json', function (data) {
+                    console.log(data);
+                    loadImg(data);
+                });
+            }
+            getData();
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <!--<div class="container">-->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="col-sm-2">
+                <div class="img-div">
+                    <a style="cursor: pointer;display: inline-block;" href="https://www.iamretailer.com/"><img
+                            src="https://www.iamretailer.com/wp-content/uploads/2020/08/logo.png" /><br>
+                            <p class="message5">i.am.retailer</p></a>
+                </div>
+                <div class="link-div">
+                    <p><a href="" class="ka kaone"><span class="link link1"> Link 1 </span></a></p>
+                    <p><a href="" class="ka katwo"><span class="link link2"> Link 2 </span></a></p>
+                    <p><a href="" class="ka kathree"><span class="link link3"> Link 3 </span></a></p>
+                </div>
+
+            </div>
+            <div class="col-sm-10">
+                <div class="grid" id="show-data">
+
+                </div>
+                <div class="append-button" style="text-align: center;">
+                    <button class="loadmore" id="Loadmore">Load More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--</div>-->
+
+</body>
+
+</html>
