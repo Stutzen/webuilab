@@ -118,11 +118,6 @@
             margin-left: 220px;
         }
 
-        #mobileMenuLink {
-            display: none;
-            margin: 15px 0 0;
-        }
-
         .main-nav {
             overflow: hidden;
         }
@@ -181,14 +176,7 @@
                 width: 100%;
                 margin-left: 0px !important;
                 padding-left: 0px !important;
-            }
-
-            #mobileMenuLink {
-                display: block !important;
-                position: absolute;
-                top: -20px;
-                right: 0;
-                bottom: auto;
+                top: 64px;
             }
 
             .grid-item {
@@ -201,29 +189,30 @@
                 display: none !important;
             }
 
-            #mobileMenuLink a {
-                cursor: pointer;
-                padding: 20px 5px 20px 20px;
-                display: inline-block;
-                margin: 0;
-                font-size: 15px !important;
-            }
-
-            #mobileNav {
-                background: #e67e00;
+            #topNavMobile{
+                position: fixed;
+                z-index: 9999;
+                background: #ddd;
             }
 
             .menu-open {
                 height: auto !important;
             }
 
-        }
+            #headerWrapper{display: none;}
+            .topheadmob {
+                width: 70%;
+                text-align: center;
+                padding-top: 3px;
+            }
 
-        #mobileNav {
-            height: 0;
-            overflow: hidden;
-        }
+            .mbl-logo{width: 35px;}
 
+            .navbar-toggle{margin-top: 15px;margin-right: 0px;}
+
+            .navbar-toggle .icon-bar{background: #e20781;}
+
+        }
 
         .append-button {
             padding-top: 30px;
@@ -233,13 +222,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
-    <script>
-        function myFunction() {
-            var element = document.getElementById("mobileNav");
-            element.classList.toggle("menu-open");
-        }
-    </script>
-
+    
     <script>
         $(document).ready(function () {
 
@@ -304,21 +287,21 @@
 <body>
     <!--<div class="container">-->
     <div class="row">
-        <div class="col-sm-12">
-            <div class="col-sm-2" id="headerWrapper">
-                <div id="topNavMobile">
-                    <nav id="mobileMenuLink" class="main-nav clear">
-                        <ul>
-                            <li class="active-link"><a onclick="myFunction()">Menu</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="img-div">
-                    <a style="cursor: pointer;display: inline-block;" href="https://www.iamretailer.com/"><img
-                            src="https://www.iamretailer.com/wp-content/uploads/2020/08/logo.png" /><br>
-                        <p class="message5">i.am.retailer</p>
+        <div class="col-xs-12 hidden-sm hidden-md hidden-lg" id="topNavMobile">
+            <div id="menuMobile">
+                <div class="mobileimg-div">
+                    <a style="cursor: pointer;display: inline-block;" href="https://www.iamretailer.com/">
+                        <img class="mbl-logo" src="https://www.iamretailer.com/wp-content/uploads/2020/08/logo.png" />
                     </a>
+                    <p class="message5 topheadmob">i.am.retailer</p>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
                 </div>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
                 <div id="mobileNav" class="">
                     <div class="wrapper">
                         <nav class="main-nav mobile-nav">
@@ -329,6 +312,18 @@
                             </div>
                         </nav>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="col-sm-2" id="headerWrapper">
+                <div class="img-div">
+                    <a style="cursor: pointer;display: inline-block;" href="https://www.iamretailer.com/"><img
+                            src="https://www.iamretailer.com/wp-content/uploads/2020/08/logo.png" /><br>
+                        <p class="message5">i.am.retailer</p>
+                    </a>
                 </div>
                 <div id="topNav" data-content-field="navigation">
                     <nav id="mainNavigation" class="main-nav dropdown-click desktop-nav">
