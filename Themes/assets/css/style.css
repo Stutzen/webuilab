@@ -161,7 +161,22 @@ a:hover{
 .toppaddingsm{
     padding-top: 10px;
 }
+.pink{
+    color: #e20681;
+    font-weight: 600;
+    padding: 20px 0px 0px 0px;
+    font-size: 2.25em;
+}
+.bott_txt{
+    padding: 10px 0 10px 0;
+}
 @media(max-width:768px){
+    .pink {
+        text-align: center;
+    }
+    .bott_txt{
+        padding: 10px 0 10px 0;
+    }
     .top_img img {
         height: 215px;
         width: 150px;
