@@ -38,10 +38,15 @@ nav.sticky .navbar-brand img {
     width: 38px;
 }
 .logo_text {
+    font-family: 'Poppins';
     color: #e20781;
-    font-size: 20px;
-    font-weight: bold;
+    line-height: 3;
     letter-spacing: 1px;
+    font-size: 20px;
+    margin-bottom: 0px;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 700;
 }
 .navbar-nav li a {
     font-size: 12px;
@@ -184,6 +189,10 @@ a:hover{
     .p25{
         padding-bottom: 0px;
     }
+    .themes .row {
+        width: auto !important;
+        margin: auto;
+    }
 }
 @media screen and (min-device-width: 1000px) and (max-device-width: 1199px){
     .top_img img {
@@ -208,4 +217,14 @@ a:hover{
         height: 260px;
         border: 1px solid #ccc;
     }
+}
+@media (min-width: 1200px)
+{
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1200px !important;
+}
+}
+.themes .row{
+    width: 970px;
+    margin: auto;
 }
