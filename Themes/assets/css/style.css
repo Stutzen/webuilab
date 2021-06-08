@@ -1,0 +1,211 @@
+@font-face {
+    font-family: 'Roboto', sans-serif;
+   /* src: url('font/Roboto-Regular.woff2') format('woff2'),
+        url('font/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;*/
+}
+
+@font-face {
+   font-family: 'Roboto', sans-serif;
+    /*src: url('font/Roboto-Bold.woff2') format('woff2'),
+        url('font/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;*/
+}
+
+body{
+     font-family: 'Roboto', sans-serif !important;
+}
+nav{
+	height: 80px;
+	transition: all 0.6s ease;
+}
+nav.sticky {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: #fff;
+    height: 65px;
+    transition: all 0.6s ease;
+}
+nav.sticky .navbar-brand img {
+    width: 38px;
+}
+.logo_text {
+    color: #e20781;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.navbar-nav li a {
+    font-size: 12px;
+    font-weight: 780;
+    margin-left: 15px;
+    padding: 6px 15px !important;
+}
+.navbar-nav .btn_demo {
+    background: #e20681;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 10px !important;
+}
+.navbar {
+border-bottom:1px solid #ddddddb5;
+}
+.footer_wrap{
+	border-top: 1px solid #ddddddb5;
+}
+.footer_menu ul, .socia_icon ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.footer_menu li{
+	margin:15px 0;
+}
+.footer_menu li a {
+    font-size: 13px;
+    color: #878787;
+    font-weight: 600;
+}
+.footer_menu li a:hover{
+	color: #000000;
+}
+.footer_menu li .fa-chevron-down {
+    color: #ec528b;
+    font-size: 11px;
+}
+.footer_title h3 {
+    color: #e20681;
+    font-size: 13px;
+    font-weight: 700;
+}
+.footer_log a:hover{
+	text-decoration: none;
+}
+.socia_icon ul li {
+    margin: 0;
+    margin-left: 30px;
+}
+.socia_icon ul li a {
+    color: #878787;
+    font-size: 18px;
+}
+.copyright_text p{
+	color: #878787;
+	font-size: 13px;
+}
+.copyright_text a {
+    color: #878787;
+    border-left: 1px solid #878787;
+}
+a:hover{
+	text-decoration: none !important;
+}
+.bottom_footer{
+	border-top: 1px solid #ec528b;
+}
+@media (max-width: 991px){
+.navbar-nav.pull-right {
+    background: #ffffff;
+    padding: 15px;
+    z-index: 9999999999999999;
+    opacity: 1;
+    width: 100% !important;
+    position: relative;
+    top: 8px;
+    box-shadow: 0 3px 9px -6px #000000ad;
+    border-bottom: 1px solid;
+}
+}
+.p25{
+    padding: 25px 0px;
+}
+.top_img{
+    height:310px;
+}
+.top_img img{
+    height: 300px;
+    width: 250px;
+}
+.stle{
+    color:rgba(0,0,0,.5);
+}
+.pink_link , .pink_link:hover{
+    color: #e20681;
+    text-decoration: underline;
+}
+.stle_dot:before{
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: #b6babf;
+    display: inline-block;
+    transform: translateY(-50%);
+    margin: 0px 5px;
+}
+.toppaddingsm{
+    padding-top: 10px;
+}
+@media(max-width:768px){
+    .top_img img {
+        height: 215px;
+        width: 150px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+        margin-top: -1px;
+    }
+    .top_img {
+        height: 215px;
+        border: 1px solid #ccc;
+    }
+    .themes .col-xs-6 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .stle {
+        color: rgba(0,0,0,.5);
+        font-size: 13px;
+    }
+    .p25{
+        padding-bottom: 0px;
+    }
+}
+@media screen and (min-device-width: 1000px) and (max-device-width: 1199px){
+    .top_img img {
+        height: 250px;
+        width: 190px;
+        margin: auto;
+        display: flex;
+    }
+    .top_img {
+        height: 260px;
+        border: 1px solid #ccc;
+    }
+}
+@media screen and (min-device-width: 769px) and (max-device-width: 999px){
+    .top_img img {
+        height: 250px;
+        width: 150px;
+        margin: auto;
+        display: flex;    
+    }
+    .top_img {
+        height: 260px;
+        border: 1px solid #ccc;
+    }
+}
