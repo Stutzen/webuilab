@@ -1403,13 +1403,7 @@
                         wrapper_div.setAttribute("data-type", "image");
                         img = document.createElement('img');
                         img.src = data.items[item].src;
-                        divnew = document.createElement('div');
-                        divnew.className = 'caption';
-                        div = document.createElement('p');
-                        div.append(data.items[item].html);
-                        divnew.append(div)
                         wrapper_div.append(img)
-                        wrapper_div.append(divnew)
                         elts.push(wrapper_div);
                         next_load = item + 1;
                         if (next_load >= data.items.length) {
@@ -1431,10 +1425,6 @@
                                     baseClass: 'fancybox-custom-layout',
                                     margin: 0,
                                     gutter: 0,
-                                    autoSize: false,
-                                    autoWidth: false,
-                                    'width': 1503,
-                                    'height': 845,
                                     infobar: false,
                                     thumbs: {
                                         hideOnClose: false,
@@ -1454,7 +1444,7 @@
                                         instance.$refs.inner.wrap('<div class="fancybox-outer"></div>');
                                     },
                                     caption: function (instance, item) {
-                                        return $(this).find('.caption').html();
+                                        return '<h3>Collection #162 – <br /> The Histographer</h3><p>This collection of photos, curated by The Histographer, is a collection around the concept of \'Autumn is here\'.</p><p><a href="https://unsplash.com/collections/curated/162" target="_blank">unsplash.com</a></p>';
                                     }
                                 });
                             }
