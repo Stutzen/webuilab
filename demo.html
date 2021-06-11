@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .grid-item img {
+            display: block;
+            width: 100%;
+        }
+
+        .grid-item {
+            width: 273px;
+        }
+
+        .grid {
+            background: #ddd;
+            max-width: 100%;
+        }
+
+        /* clearfix */
+        .grid:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .row {
+            margin-left: 0px !important;
+            margin-right: 0px !important;
+        }
+
+
+
+        .loadmore {
+            padding: 10px 40px;
+            border: 1px solid #000;
+            background: #fff;
+            display: inline-block;
+        }
+
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+
+        #pageWrapper {
+            margin-left: 220px;
+        }
+
+        #template-wrapper {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+        }
+
+        #menu-container {
+            position: absolute;
+            height: 100%;
+            z-index: 10;
+            top: 0px;
+            left: 0px;
+        }
+
+        .shadow-side-all {
+            -moz-box-shadow: 0px 0px 2px #0c0c0c;
+            -webkit-box-shadow: 0px 0px 2px #0c0c0c;
+            box-shadow: 0px 0px 2px #0c0c0c;
+        }
+
+        .menu-content-holder {
+            position: relative;
+            float: left;
+            height: 100%;
+        }
+
+        .menu-background,
+        .sub-menu-holder {
+            background-color: #ffffff;
+            background-image: url('exact/menu_pattern_1.png');
+            background-repeat: repeat;
+        }
+
+        .menu-background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            z-index: 7;
+        }
+
+        .template-logo {
+            clear: both;
+            position: relative;
+            float: left;
+            background-image: url('exact/synergy_html5_logo.png');
+            background-repeat: no-repeat;
+            width: 140px;
+            height: 90px;
+            margin: 28px 0 28px -70px;
+            z-index: 8;
+            left: 50%;
+            cursor: pointer;
+        }
+
+        .template-menu {
+            clear: both;
+            position: relative;
+            float: left;
+            padding: 0;
+            z-index: 9;
+        }
+
+        .template-menu {
+            margin: 0 0 0 20px;
+        }
+
+        .template-menu,
+        .menu-option-holder,
+        .menu-option-background-selected,
+        .menu-option-text,
+        .sub-menu-option-text {
+            width: 210px;
+        }
+
+        .menu-option-holder,
+        .menu-option-background,
+        .menu-option-background-selected,
+        .menu-option-text,
+        .sub-menu-option-holder,
+        .sub-menu-option-background,
+        .sub-menu-option-background-selected,
+        .sub-menu-option-text {
+            height: 32px;
+        }
+
+        .menu-option-holder,
+        .sub-menu-option-holder,
+        .smartphone-option-holder {
+            margin-bottom: 1px;
+        }
+
+        #menu-hider-background,
+        #menu-hider-icon,
+        .menu-option-background,
+        .menu-option-background-selected,
+        .sub-menu-option-background,
+        .sub-menu-option-background-selected,
+        #module-scrollbar-dragger,
+        .draggerH-preview,
+        .filter-button.selected,
+        .draggerH,
+        .tooltip-background,
+        .smartphone-option-background,
+        .smartphone-option-background-selected {
+            background-color: #d00355;
+        }
+
+        .menu-option-background,
+        .menu-option-background-selected,
+        .sub-menu-option-background,
+        .sub-menu-option-background-selected {
+            position: absolute;
+            z-index: 1;
+        }
+
+        .sub-menu-option-text,
+        .menu-option-text,
+        .smartphone-option-text {
+            position: absolute;
+            z-index: 2;
+        }
+
+        .menu-option-text a,
+        .menu-option-sign,
+        .sub-menu-option-text a,
+        .smartphone-option-text a {
+            display: block;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 14px;
+            font-family: PT Sans Caption;
+            font-size: 12px;
+            /* letter-spacing: 1px; */
+            color: #777777;
+            overflow: hidden;
+            text-decoration: none;
+            outline: none;
+        }
+
+        .menu-option-sign {
+            position: absolute;
+            top: 0px;
+            right: 16px;
+            padding-left: 10px;
+            text-align: right;
+        }
+
+        .sub-menu-holder {
+            margin-left: 220px;
+            width: 84%;
+        }
+
+        .sub-menu-holder {
+            position: relative;
+            overflow: hidden;
+            display: none;
+        }
+
+        .sub-menu-option-holder {
+            overflow: hidden;
+        }
+
+        .menu-option-holder,
+        .sub-menu-option-holder,
+        .smartphone-option-holder {
+            margin-bottom: 1px;
+        }
+
+        .sub-menu-option-holder,
+        .sub-menu-option-background-selected {
+            width: 212px;
+        }
+
+        .sub-menu-option-background {
+            margin-left: 212px;
+        }
+
+        .sub-menu-option-text a {
+            font-family: PT Sans;
+            font-size: 13px;
+        }
+
+        #template-smpartphone-menu {
+            display: none;
+            clear: both;
+            position: relative;
+            float: left;
+            left: 50%;
+            margin: 0px 0px 15px -120px;
+            width: 240px;
+            /* height: 40px; */
+            /* background-color: #FFFFFF; */
+            z-index: 9;
+        }
+
+        #template-smpartphone-menu select {
+            display: block;
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #777777;
+        }
+
+        #audio-player {
+            clear: both;
+            position: relative;
+            float: left;
+            top: 10px;
+            left: 20px;
+            height: 70px;
+            /* background-color: #3f3f3f; */
+            z-index: 12;
+            overflow: hidden;
+        }
+
+        #audio-items {
+            display: none;
+        }
+
+        #audio-player-tooltip {
+            position: absolute;
+            float: left;
+            width: 88%;
+            height: 35px;
+            top: 0px;
+            left: 0px;
+            display: none;
+        }
+
+        #audio-tooltip-holder {
+            position: absolute;
+            height: 26px;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .opacity_0 {
+            opacity: 0;
+        }
+
+        .audio-tooltip-backg {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: #171717;
+            z-index: 1;
+        }
+
+        .audio-player-tooltip-title {
+            position: absolute;
+            top: 3px;
+            left: 2%;
+            width: 96%;
+            height: 20px;
+            overflow: hidden;
+            /* background-color: #373737; */
+            z-index: 2;
+        }
+
+        .audio-player-tooltip-title span {
+            position: relative;
+            left: 1px;
+            display: inline-block;
+            white-space: nowrap;
+            font-family: PT Sans;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 160%;
+            text-align: center;
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        .audio-player-tooltip-hook {
+            position: absolute;
+            top: 26px;
+            left: 36%;
+            width: 0px;
+            height: 0px;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-top: 9px solid #171717;
+        }
+
+        #audio-player-holder {
+            position: absolute;
+            top: 40px;
+            left: 0px;
+            width: 100%;
+            height: 30px;
+            overflow: hidden;
+        }
+
+        #audio-options-button {
+            width: 30px;
+        }
+
+        #audio-options-button,
+        #audio-prev-track,
+        #audio-play-pause-track,
+        #audio-next-track,
+        #audio-volume-speaker {
+            float: left;
+            height: 30px;
+            width: 28px;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        .audio-options-button-backg {
+            background-color: #d00355;
+        }
+
+        .audio-options-button-backg,
+        .audio-controls-backg {
+            position: absolute;
+            z-index: 1;
+            height: 30px;
+            width: 30px;
+        }
+
+        .audio-options-button-backg {
+            background-color: #d00355;
+        }
+
+        .audio-options-button-backg,
+        .audio-controls-backg {
+            position: absolute;
+            z-index: 1;
+            height: 30px;
+            width: 30px;
+        }
+
+        #audio-player-options-holder {
+            position: absolute;
+            top: 0px;
+            left: 30px;
+            height: 30px;
+            overflow: hidden;
+        }
+
+        #audio-options-button,
+        #audio-prev-track,
+        #audio-play-pause-track,
+        #audio-next-track,
+        #audio-volume-speaker {
+            float: left;
+            height: 30px;
+            width: 28px;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        .audio-controls-backg {
+            background-color: #171717;
+        }
+
+        .audio-options-button-backg,
+        .audio-controls-backg {
+            position: absolute;
+            z-index: 1;
+            height: 30px;
+            width: 30px;
+        }
+
+        .audio-prev-track-sign {
+            background-position: -390px -200px;
+        }
+
+        .audio-options-button-sign,
+        .audio-prev-track-sign,
+        .audio-play-track-sign,
+        .audio-pause-track-sign,
+        .audio-next-track-sign,
+        .audio-volume-on-sign,
+        .audio-volume-off-sign {
+            position: absolute;
+            height: 30px;
+            width: 29px;
+            background-image: url('exact/synergy_sprite.png');
+            background-repeat: no-repeat;
+            z-index: 2;
+        }
+
+        #audio-options-button,
+        #audio-prev-track,
+        #audio-play-pause-track,
+        #audio-next-track,
+        #audio-volume-speaker {
+            float: left;
+            height: 30px;
+            width: 28px;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        .audio-controls-backg {
+            background-color: #171717;
+        }
+
+        .audio-options-button-backg,
+        .audio-controls-backg {
+            position: absolute;
+            z-index: 1;
+            height: 30px;
+            width: 30px;
+        }
+
+        .audio-play-track-sign {
+            background-position: -420px -200px;
+        }
+
+        .audio-options-button-sign,
+        .audio-prev-track-sign,
+        .audio-play-track-sign,
+        .audio-pause-track-sign,
+        .audio-next-track-sign,
+        .audio-volume-on-sign,
+        .audio-volume-off-sign {
+            position: absolute;
+            height: 30px;
+            width: 29px;
+            background-image: url('exact/synergy_sprite.png');
+            background-repeat: no-repeat;
+            z-index: 2;
+        }
+
+        .audio-pause-track-sign {
+            background-position: -450px -200px;
+        }
+
+        .audio-options-button-sign,
+        .audio-prev-track-sign,
+        .audio-play-track-sign,
+        .audio-pause-track-sign,
+        .audio-next-track-sign,
+        .audio-volume-on-sign,
+        .audio-volume-off-sign {
+            position: absolute;
+            height: 30px;
+            width: 29px;
+            background-image: url('exact/synergy_sprite.png');
+            background-repeat: no-repeat;
+            z-index: 2;
+        }
+
+        #audio-options-button,
+        #audio-prev-track,
+        #audio-play-pause-track,
+        #audio-next-track,
+        #audio-volume-speaker {
+            float: left;
+            height: 30px;
+            width: 28px;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        .audio-controls-backg {
+            background-color: #171717;
+        }
+
+        .audio-options-button-backg,
+        .audio-controls-backg {
+            position: absolute;
+            z-index: 1;
+            height: 30px;
+            width: 30px;
+        }
+
+        .audio-next-track-sign {
+            background-position: -480px -200px;
+        }
+
+        .audio-options-button-sign,
+        .audio-prev-track-sign,
+        .audio-play-track-sign,
+        .audio-pause-track-sign,
+        .audio-next-track-sign,
+        .audio-volume-on-sign,
+        .audio-volume-off-sign {
+            position: absolute;
+            height: 30px;
+            width: 29px;
+            background-image: url('exact/synergy_sprite.png');
+            background-repeat: no-repeat;
+            z-index: 2;
+        }
+
+        #audio-options-button,
+        #audio-prev-track,
+        #audio-play-pause-track,
+        #audio-next-track,
+        #audio-volume-speaker {
+            float: left;
+            height: 30px;
+            width: 28px;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        .audio-controls-backg {
+            background-color: #171717;
+        }
+
+        .audio-options-button-backg,
+        .audio-controls-backg {
+            position: absolute;
+            z-index: 1;
+            height: 30px;
+            width: 30px;
+        }
+
+        .audio-volume-on-sign {
+            background-position: -510px -200px;
+        }
+
+        .audio-options-button-sign,
+        .audio-prev-track-sign,
+        .audio-play-track-sign,
+        .audio-pause-track-sign,
+        .audio-next-track-sign,
+        .audio-volume-on-sign,
+        .audio-volume-off-sign {
+            position: absolute;
+            height: 30px;
+            width: 29px;
+            background-image: url('exact/synergy_sprite.png');
+            background-repeat: no-repeat;
+            z-index: 2;
+        }
+
+        .audio-volume-off-sign {
+            background-position: -542px -200px;
+        }
+
+        .audio-options-button-sign,
+        .audio-prev-track-sign,
+        .audio-play-track-sign,
+        .audio-pause-track-sign,
+        .audio-next-track-sign,
+        .audio-volume-on-sign,
+        .audio-volume-off-sign {
+            position: absolute;
+            height: 30px;
+            width: 29px;
+            background-image: url('exact/synergy_sprite.png');
+            background-repeat: no-repeat;
+            z-index: 2;
+        }
+
+        #audio-volume-bar {
+            background-color: #171717;
+        }
+
+        #audio-volume-bar {
+            position: relative;
+            float: left;
+            height: 30px;
+            width: 68px;
+        }
+
+        .audio-volume-bar-scrub-backg,
+        .audio-volume-bar-scrub-current {
+            position: absolute;
+            top: 50%;
+            width: 58px;
+            height: 3px;
+            margin-top: -1px;
+            left: 5px;
+            background-color: #535353;
+            cursor: pointer;
+        }
+
+        .audio-volume-bar-scrub-current {
+            width: 40px;
+            background-color: #303030;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 8px;
+            width: 230px;
+            height: 74px;
+            /* left: -230px; */
+            display: none;
+            left: 0px;
+            /* visibility: hidden; */
+            z-index: 11;
+        }
+
+        #footer-social {
+            position: relative;
+            float: left;
+            margin: auto;
+            width: 100%;
+            height: 28px;
+            overflow: hidden;
+        }
+
+        #footer-social-holder {
+            display: block;
+            margin: 0px auto;
+            width: 150px;
+            height: 28px;
+        }
+
+        #footer-social-holder ul {
+            list-style-type: none;
+            float: left;
+            width: 150px;
+            height: 25px;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        #footer-social-holder ul .twitter {
+            background-position: 0 -100px;
+        }
+
+        #footer-social-holder ul li,
+        #control-pin,
+        .control-pin-hover,
+        .client-over,
+        .client-out {
+            background-image: url('exact/synergy_sprite.png');
+        }
+
+        #footer-social-holder ul li {
+            float: left;
+            width: 26px;
+            height: 26px;
+            cursor: pointer;
+            margin-right: 4px;
+        }
+
+        #footer-social-holder ul li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            /* outline: 0px solid #d00355; */
+        }
+
+        #footer-social-holder ul .facebook {
+            background-position: -30px -100px;
+        }
+
+        #footer-social-holder ul li,
+        #control-pin,
+        .control-pin-hover,
+        .client-over,
+        .client-out {
+            background-image: url('exact/synergy_sprite.png');
+        }
+
+        #footer-social-holder ul li {
+            float: left;
+            width: 26px;
+            height: 26px;
+            cursor: pointer;
+            margin-right: 4px;
+        }
+
+        #footer-social-holder ul li.google {
+            background-position: -60px -100px;
+        }
+
+        #footer-social-holder ul li,
+        #control-pin,
+        .control-pin-hover,
+        .client-over,
+        .client-out {
+            background-image: url('exact/synergy_sprite.png');
+        }
+
+        #footer-social-holder ul li {
+            float: left;
+            width: 26px;
+            height: 26px;
+            cursor: pointer;
+            margin-right: 4px;
+        }
+
+        #footer-social-holder ul li.dribbble {
+            background-position: -90px -100px;
+        }
+
+        #footer-social-holder ul li,
+        #control-pin,
+        .control-pin-hover,
+        .client-over,
+        .client-out {
+            background-image: url('exact/synergy_sprite.png');
+        }
+
+        #footer-social-holder ul li {
+            float: left;
+            width: 26px;
+            height: 26px;
+            cursor: pointer;
+            margin-right: 4px;
+        }
+
+        #footer-social-holder ul li.flickr {
+            background-position: -120px -100px;
+        }
+
+        #footer-social-holder ul li,
+        #control-pin,
+        .control-pin-hover,
+        .client-over,
+        .client-out {
+            background-image: url('exact/synergy_sprite.png');
+        }
+
+        #footer-social-holder ul li {
+            float: left;
+            width: 26px;
+            height: 26px;
+            cursor: pointer;
+            margin-right: 4px;
+        }
+
+        #footer-text {
+            display: block;
+            position: relative;
+            margin: 44px auto;
+            width: 100%;
+        }
+
+        #footer-copyright {
+            position: absolute;
+            top: 0px;
+            display: block;
+            width: 100%;
+        }
+
+        #footer-copyright a {
+            position: relative;
+            float: left;
+            width: 100%;
+            font-family: PT Sans;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 170%;
+            padding: 9px 0;
+            color: #777777;
+            text-align: center;
+            text-decoration: none;
+        }
+
+
+        #menu-hider {
+            position: relative;
+            float: left;
+            width: 10px;
+            height: 100%;
+            z-index: -1;
+            display: none;
+        }
+
+        #menu-hider-background {
+            position: absolute;
+            width: 10px;
+            height: 100%;
+            left: 0px;
+            z-index: 2;
+        }
+
+        #menu-hider-icon {
+            position: absolute;
+            left: 3px;
+            top: 68px;
+            height: 30px;
+            width: 20px;
+            /* background-color: #d00355; */
+            background-image: url('exact/synergy_sprite.png');
+            background-repeat: no-repeat;
+            background-position: -274px -202px;
+            overflow: hidden;
+            cursor: hand;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        #footer-social-holder ul li.twitter:hover {
+            background-position: 0px -130px;
+        }
+
+        #footer-social-holder ul li.facebook:hover {
+            background-position: -30px -130px;
+        }
+
+        #footer-social-holder ul li.google:hover {
+            background-position: -60px -130px;
+        }
+
+        #footer-social-holder ul li.dribbble:hover {
+            background-position: -90px -130px;
+        }
+
+        #footer-social-holder ul li.flickr:hover {
+            background-position: -120px -130px;
+        }
+
+        .audio-options-button-sign {
+            background-position: -360px -200px;
+        }
+
+        .menu-option-holder:hover .menu-option-background {
+            width: 210px;
+            margin-left: 0px;
+        }
+
+        .menu-option-holder:hover,
+        .sub-menu-option-holder:hover,
+        .smartphone-option-holder:hover {
+            cursor: pointer;
+        }
+
+        @media (max-width: 767px) {}
+
+        /**:not(html) {
+            -webkit-transform: translate3d(0, 0, 0);
+        }*/
+
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+            user-select: none;
+        }
+
+        #module-container {
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 6;
+            opacity: 1;
+            left: 240px;
+            overflow: auto;
+        }
+
+        #module-container::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        #module-container::-webkit-scrollbar-track {
+
+            background: #EEEEEE;
+        }
+
+        #module-container::-webkit-scrollbar-thumb {
+            background-color: #d00355;
+            outline: 1px solid #d00355;
+        }
+
+        .append-button {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                -webkit-transform: translatex(-100px);
+                -moz-transform: translatex(-100px);
+                -o-transform: translatex(-100px);
+                transform: translatex(-100px);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translatex(0);
+                -moz-transform: translatex(0);
+                -o-transform: translatex(0);
+                transform: translatex(0);
+            }
+        }
+
+        #menu-container {
+            -webkit-animation-name: fadeInLeft;
+            -moz-animation-name: fadeInLeft;
+            -o-animation-name: fadeInLeft;
+            animation-name: fadeInLeft;
+            -webkit-animation-fill-mode: both;
+            -moz-animation-fill-mode: both;
+            -o-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-duration: 1s;
+            -moz-animation-duration: 1s;
+            -o-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-delay: 1s;
+            -moz-animation-delay: 1s;
+            -o-animation-duration: 1s;
+            animation-delay: 1s;
+        }
+
+
+
+
+        /* Custom button design */
+        .fancybox-button {
+            background: transparent;
+            color: #333;
+            transition: all .2s;
+        }
+
+        .fancybox-toolbar .fancybox-button:hover {
+            background: rgba(223, 223, 223, 0.5);
+            color: #c11c95;
+        }
+
+        /* Make close button a bit bigger */
+        .fancybox-button--close {
+            padding: 7px;
+        }
+
+        /* Navigation arrows */
+        .fancybox-navigation .fancybox-button {
+            padding: 0px;
+            color: #444;
+            z-index: 99996;
+        }
+
+        .fancybox-navigation .fancybox-button.disabled,
+        .fancybox-navigation .fancybox-button.disabled:hover {
+            color: #888;
+        }
+
+        .fancybox-navigation .fancybox-button:hover {
+            color: #000;
+        }
+
+        /* Change backdrop color */
+        .fancybox-bg {
+            background: #eee;
+        }
+
+        /* Initially hide the caption */
+        .caption {
+            display: none;
+        }
+
+        /* Change position and design of caption area */
+        .fancybox-caption {
+            top: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            left: auto !important;
+            padding: 0 !important;
+            width: 300px !important;
+            background: #eee !important;
+            color: #333 !important;
+            box-shadow: 0 0 20px #888 !important;
+            z-index: 99996 !important;
+
+            /* Hide next to right edge */
+            transform: translate3d(320px, 0, 0);
+        }
+
+        .fancybox-caption::before {
+            display: none;
+        }
+
+        .fancybox-caption>div {
+            margin-top: 44px;
+            padding: 20px;
+            max-height: calc(100vh - 44px);
+            overflow: auto;
+        }
+
+        /* Overwrite the default animation */
+        .fancybox-show-caption .fancybox-caption,
+        .fancybox-caption {
+            transition: transform .2s;
+        }
+
+        /* Reveal caption */
+        .fancybox-show-caption.fancybox-vertical-caption .fancybox-caption {
+            transform: translate3d(0, 0, 0);
+        }
+
+        /* Styling of caption content */
+        .fancybox-caption a {
+            color: #333;
+        }
+
+        .fancy-nav a {
+            text-decoration: none;
+            font-weight: normal;
+            font-size: 20px;
+            font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: #444;
+            color: #fff;
+            border-radius: 50%;
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            line-height: 18px;
+            text-align: center;
+            -moz-user-select: none;
+            user-select: none;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .fancy-nav a:hover {
+            text-decoration: none;
+        }
+
+        .fancybox-slide--image {
+            padding: 0px !important;
+        }
+
+        .fancybox-bg {
+            background: #fff !important;
+            opacity: 1 !important;
+        }
+
+        .fancybox-button {
+            background: transparent !important;
+            color: #333 !important;
+            transition: all .2s;
+        }
+
+        .fancybox-toolbar .fancybox-button:hover {
+            background: rgba(223, 223, 223, 0.5) !important;
+            color: #c11c95 !important;
+        }
+
+        .fancybox-show-caption .fancybox-caption,
+        .fancybox-caption {
+            transition: transform .2s !important;
+        }
+
+        .fancybox-show-caption.fancybox-vertical-caption .fancybox-caption {
+            transform: translate3d(0, 0, 0) !important;
+        }
+
+        .fancybox-caption>.fancybox-caption__body>div {
+            margin-top: 44px;
+            padding: 20px;
+            max-height: calc(100vh - 44px);
+            overflow: auto;
+        }
+
+        .fancybox-caption__body p {
+            margin: 10px 0px;
+            text-align: left;
+            font-family: PT Sans Caption;
+        }
+
+        .fancybox-caption__body {
+            font-size: 14px;
+            color: #333;
+            line-height: 20px;
+            -webkit-text-size-adjust: none;
+
+        }
+
+        .fancybox-caption__body h3 {
+            font-size: 21px;
+        }
+
+        .fancybox-caption__body h2,
+        .fancybox-caption__body h3 {
+            font-weight: 700;
+            text-align: left;
+            font-family: PT Sans;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        //$(document).ready(function () {
+            //$('.menu-option-holder').on('click', function () {
+               // $('.menu-option-holder > div').removeClass('menu-option-background-selected');
+                //$('.menu-option-holder').children('div:first').addClass('menu-option-background');
+                //$(this).children('div:first').addClass('menu-option-background-selected');
+                //$(this).children('div:first').removeClass('menu-option-background');
+            //});
+        //});
+    //</script>
+    <script>
+        $(document).ready(function () {
+            $('.menu-option-holder').mouseover(
+                function () {
+                    $(this).children(".menu-option-background").css({ "width": "220px", "margin-left": "0px", "transition": "all .3s ease-in-out" });
+                },
+            )
+            $('.menu-option-text').mouseover(
+                function () {
+                    $(this).children("a, .menu-option-sign").css({ "color": "#fff" });
+                },
+            )
+
+            $('.menu-option-holder').mouseout(
+                function () {
+                    $(this).children(".menu-option-background").css({ "width": "0px", "margin-left": "210px", "transition": "all .3s ease-in-out" });
+                },
+            )
+
+            $('.menu-option-text').mouseout(
+                function () {
+                    $(this).children("a, .menu-option-sign").css({ "color": "rgb(119, 119, 119)" });
+                },
+            )
+            $('#audio-prev-track').mouseover(
+                function () {
+                    $(this).children(".audio-controls-backg").css({ "background-color": "rgb(208, 3, 85)" });
+                    $("#audio-player-tooltip").css({ "display": "inline", "opacity": "1" });
+                },
+            )
+
+            $('#audio-prev-track').mouseout(
+                function () {
+                    $(this).children(".audio-controls-backg").css({ "background-color": "rgb(23, 23, 23)" });
+                    $("#audio-player-tooltip").css({ "display": "none", "opacity": "0" });
+                },
+            )
+
+            $('#audio-play-pause-track').mouseover(
+                function () {
+                    $(this).children(".audio-controls-backg").css({ "background-color": "rgb(208, 3, 85)" });
+                    $("#audio-player-tooltip").css({ "display": "inline", "opacity": "1" });
+                },
+            )
+
+            $('#audio-play-pause-track').mouseout(
+                function () {
+                    $(this).children(".audio-controls-backg").css({ "background-color": "rgb(23, 23, 23)" });
+                    $("#audio-player-tooltip").css({ "display": "none", "opacity": "0" });
+                },
+            )
+
+            $('#audio-next-track').mouseover(
+                function () {
+                    $(this).children(".audio-controls-backg").css({ "background-color": "rgb(208, 3, 85)" });
+                    $("#audio-player-tooltip").css({ "display": "inline", "opacity": "1" });
+                },
+            )
+
+            $('#audio-next-track').mouseout(
+                function () {
+                    $(this).children(".audio-controls-backg").css({ "background-color": "rgb(23, 23, 23)" });
+                    $("#audio-player-tooltip").css({ "display": "none", "opacity": "0" });
+                },
+            )
+
+            $('#audio-volume-speaker').mouseover(
+                function () {
+                    $(this).children(".audio-controls-backg").css({ "background-color": "rgb(208, 3, 85)" });
+                    $("#audio-player-tooltip").css({ "display": "inline", "opacity": "1" });
+                },
+            )
+
+            $('#audio-volume-speaker').mouseout(
+                function () {
+                    $(this).children(".audio-controls-backg").css({ "background-color": "rgb(23, 23, 23)" });
+                    $("#audio-player-tooltip").css({ "display": "none", "opacity": "0" });
+                },
+            )
+
+            $('.menu-option-holder').mouseover(
+                function () {
+                    var divHeight = 0;
+                    var divHeightNew = 0;
+                    $(this).find(".sub-menu-option-holder").each(function (item) {
+                        divHeight = $('.sub-menu-option-holder').height();
+                        divHeightNew = divHeightNew + divHeight;
+                    })
+                    $(this).children(".sub-menu-holder").css({ "display": "block", "opacity": "1", "height": divHeightNew + "px", "width": "176px" });
+                },
+            )
+
+            $('.menu-option-holder').mouseout(
+                function () {
+                    $(this).children(".sub-menu-holder").css({ "display": "none", "opacity": "0", "height": "0px", "width": "0px" });
+                },
+            )
+
+            $('.sub-menu-option-holder').mouseover(
+                function () {
+                    $(this).children(".sub-menu-option-background").css({ "width": "212px", "margin-left": "0px", "transition": "all .3s ease-in-out" });
+                },
+            )
+            $('.sub-menu-option-text').mouseover(
+                function () {
+                    $(this).children("a").css({ "color": "#fff" });
+                },
+            )
+
+            $('.sub-menu-option-holder').mouseout(
+                function () {
+                    $(this).children(".sub-menu-option-background").css({ "width": "0px", "margin-left": "212px", "transition": "all .3s ease-in-out" });
+                },
+            )
+
+            $('.sub-menu-option-text').mouseout(
+                function () {
+                    $(this).children("a").css({ "color": "rgb(119, 119, 119)" });
+                },
+            )
+
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            setTimeout(function () {
+                var showData = $('#show-data');
+
+                var $grid = $('.grid').masonry({
+                    gutter: 0,
+                    itemSelector: '.grid-item',
+                    horizontalOrder: false
+                });
+
+                $('.append-button').on('click', function () {
+                    getData();
+                });
+                var next_load = 0;
+                const loadImg = function (data) {
+
+                    if (data.items.length) {
+                        var elts = [];
+                        item = next_load
+                        console.log(item);
+                        wrapper_div = document.createElement('a');
+                        wrapper_div.className = 'grid-item hidden';
+                        wrapper_div.href = data.items[item].src;
+                        wrapper_div.setAttribute("data-fancybox", "images");
+                        wrapper_div.setAttribute("data-type", "image");
+                        divnew = document.createElement('div');
+                        divnew.className = 'caption';
+                        div = document.createElement('p');
+                        div.append(data.items[item].value);
+                        divnew.append(div)
+                        img = document.createElement('img');
+                        img.src = data.items[item].src;
+                        wrapper_div.append(img)
+                        wrapper_div.append(divnew)
+                        elts.push(wrapper_div);
+                        next_load = item + 1;
+                        if (next_load >= data.items.length) {
+                            //getData();
+                            next_load = 0;
+                            return;
+                        }
+                        var $elems = $(elts);
+                        $grid.append($elems).masonry('appended', $elems);
+                        $grid.imagesLoaded().progress(function (imgLoad, image) {
+                            var $item = $(image.img).parent();
+
+                            if ($item.hasClass('hidden')) {
+                                $item.removeClass('hidden');
+                                $grid.masonry();
+                                loadImg(data);
+                                // Template for custom "info" button
+                                $.fancybox.defaults.btnTpl.info = '<button data-fancybox-info class="fancybox-button fancybox-button--info" title="Show caption">&#x25cf;&#x25cf;&#x25cf;</button>';
+
+                                // Initialise fancybox with custom settings
+                                $('[data-fancybox="images"]').fancybox({
+
+                                    // Disable idle
+                                    idleTime: 0,
+
+                                    // Display only these two buttons
+                                    buttons: [
+                                        'info', 'close'
+                                    ],
+
+                                    // Custom caption
+                                    caption: function (instance, obj) {
+                                        return '<div><p class="fancy-nav"><a data-fancybox-prev title="Previous" tabindex="1">&lsaquo;</a> <a data-fancybox-next title="Next" tabindex="2">&rsaquo;</a> &nbsp; <span data-fancybox-index></span> of <span data-fancybox-count></span> images</p>' + $(this).find('.caption').html() + '</div>';
+                                    },
+
+                                    onInit: function (instance) {
+
+                                        // Toggle caption on tap
+                                        instance.$refs.container.on('touchstart', '[data-fancybox-info]', function (e) {
+                                            e.stopPropagation();
+                                            e.preventDefault();
+
+                                            instance.$refs.container.toggleClass('fancybox-vertical-caption');
+                                        });
+
+                                        // Display caption on button hover
+                                        instance.$refs.container.on('mouseenter', '[data-fancybox-info]', function (e) {
+                                            instance.$refs.container.addClass('fancybox-vertical-caption');
+
+                                            // Hide caption when mouse leaves caption area
+                                            instance.$refs.caption.one('mouseleave', function (e) {
+                                                instance.$refs.container.removeClass('fancybox-vertical-caption');
+                                            });
+
+                                        });
+
+                                    }
+                                });
+                            }
+
+                        });
+                    }
+                }
+                const getData = function () {
+
+                    $.getJSON('https://weblab.stutzen.xyz/json/layout2.json', function (data) {
+                        console.log(data);
+                        loadImg(data);
+                    });
+                }
+                getData();
+            }, 2000);
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            var c = $(window).width(), f = $(window).height();
+            var g = ($("#menu-hider").length > 0) ? parseInt($("#menu-hider").width(), 10) : 0,
+                e = parseInt($("#menu-container").css("width"), 10) - g,
+                v = c - (g + e)
+            TweenMax.to($("#module-container"), 0.4,
+                { css: { width: v + "px" }, ease: Sine.easeInOut });
+            var menuActive = true;
+            $('#menu-hider-icon').on('click', function menuHideClick() {
+
+                var c = $(window).width(), f = $(window).height();
+                if (menuActive == true) {
+                    menuActive = false;
+                    if (c >= 768) {
+                        var g = ($("#menu-hider").length > 0) ? parseInt($("#menu-hider").width(), 10) : 0,
+                            e = parseInt($("#menu-container").css("width"), 10) - g,
+                            v = c - g,
+                            d = 0;
+                        TweenMax.to($("#template-wrapper"), 0.4,
+                            { css: { left: -(e) + "px" }, ease: Sine.easeInOut });
+
+                        TweenMax.to($("#menu-container"), 0.4,
+                            {
+                                css: { left: d + "px" }, ease: Sine.easeInOut,
+                                //onComplete: 
+                                //function () 
+                                //{ if (touchDevice == 0) { activateHoverMenu() } } 
+                            })
+                        TweenMax.to($("#module-container"), 0.4,
+                            { css: { width: v + "px" }, ease: Sine.easeInOut });
+                    } else {
+                        var b = parseInt($("#menu-container #menu-hider").height(), 10),
+                            h = parseInt($("#menu-container").css("height"), 10) - b, d = 0;
+                        TweenMax.to($("#template-wrapper"), 0.4, { css: { top: -(h) + "px" }, ease: Sine.easeInOut });
+                        TweenMax.to($("#menu-container"), 0.4, {
+                            css: { top: d + "px" }, ease: Sine.easeInOut,
+                            //onComplete: function () 
+                            //{ if (touchDevice == 0) { activateHoverMenu() } } 
+                        })
+                    }
+                } else {
+                    //if (touchDevice == 0) { disableHoverMenu() } 
+                    menuActive = true;
+                    isOverMenu = false;
+                    TweenMax.to($("#template-wrapper"), 0.4, { css: { left: "0px", top: "0px" }, ease: Sine.easeInOut });
+                    TweenMax.to($("#menu-container"), 0.4, { css: { left: "0px" }, top: "0px", ease: Sine.easeInOut });
+                    var g = ($("#menu-hider").length > 0) ? parseInt($("#menu-hider").width(), 10) : 0,
+                        e = parseInt($("#menu-container").css("width"), 10) - g,
+                        z = parseInt($("#module-container").css("width"), 10)
+                    v = z - e;
+                    TweenMax.to($("#module-container"), 0.4, { css: { width: v + "px" }, ease: Sine.easeInOut });
+                }
+
+            });
+        });
+    </script>
+</head>
+
+<body style="visibility: visible;">
+    <div class="" id="template-wrapper" style="left: 0px; top: 0px;">
+        <div id="menu-container" class="shadow-side-all" style="left: 0px;visibility: visible;">
+            <!-- start #menu-container -->
+            <div class="menu-content-holder">
+                <!-- start .menu-content-holder -->
+                <div class="menu-background"></div>
+                <div id="template-logo" class="template-logo" data-href="#portfolio.html"></div>
+                <div id="template-menu" class="template-menu" data-current-module-type="full_width_gallery"
+                    data-side="none" data-href="portfolio.html">
+                    <!-- start #template-menu -->
+                    <div class="menu-option-holder">
+                        <div class="menu-option-background" style="width: 0px; margin-left: 210px;"> </div>
+                        <div class="menu-option-text">
+                            <a href="#" style="color: rgb(119, 119, 119);">HOME</a>
+                            <div class="menu-option-sign" style="color: rgb(119, 119, 119);">+</div>
+                        </div>
+                        <div class="sub-menu-holder" style="opacity: 0; display: none; width: 0px; height: 0px;">
+                            <div class="sub-menu-option-holder" data-module-type="slideshow" data-side="none">
+                                <div class="sub-menu-option-background"></div>
+                                <div class="sub-menu-option-text"><a href="#home_layout_1.html"
+                                        data-path-href="html/home/">Home Layout 1</a></div>
+                            </div>
+                            <div class="sub-menu-option-holder" data-module-type="home2" data-side="none">
+                                <div class="sub-menu-option-background"></div>
+                                <div class="sub-menu-option-text"><a href="#home_layout_2.html"
+                                        data-path-href="html/home/">Home Layout 2</a></div>
+                            </div>
+                            <div class="sub-menu-option-holder" data-module-type="home3" data-side="none">
+                                <div class="sub-menu-option-background"> </div>
+                                <div class="sub-menu-option-text"><a href="#home_layout_3.html"
+                                        data-path-href="html/home/">Home Layout 3</a></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="menu-option-holder">
+                        <div class="menu-option-background" style="width: 0px; margin-left: 210px;"> </div>
+                        <div class="menu-option-text">
+                            <a href="#" style="color: rgb(119, 119, 119);">ABOUT US</a>
+                            <div class="menu-option-sign" style="color: rgb(119, 119, 119);">+</div>
+                        </div>
+                        <div class="sub-menu-holder" style="opacity: 0; display: none; width: 0px; height: 0px;">
+                            <div class="sub-menu-option-holder" data-module-type="text_page" data-side="height">
+                                <div class="sub-menu-option-background"></div>
+                                <div class="sub-menu-option-text"><a href="#about_us.html"
+                                        data-path-href="html/about_us/">About us</a></div>
+                            </div>
+                            <div class="sub-menu-option-holder" data-module-type="text_page" data-side="none">
+                                <div class="sub-menu-option-background"></div>
+                                <div class="sub-menu-option-text"><a href="#philosophy.html"
+                                        data-path-href="html/about_us/">Philosophy</a></div>
+                            </div>
+                            <div class="sub-menu-option-holder" data-module-type="text_page" data-side="height">
+                                <div class="sub-menu-option-background"> </div>
+                                <div class="sub-menu-option-text"><a href="#ethics.html"
+                                        data-path-href="html/about_us/">Ethics</a></div>
+                            </div>
+                            <div class="sub-menu-option-holder" data-module-type="text_page" data-side="none">
+                                <div class="sub-menu-option-background"> </div>
+                                <div class="sub-menu-option-text"><a href="#careers.html"
+                                        data-path-href="html/about_us/">Careers</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-option-holder" data-module-type="news" data-side="height">
+                        <div class="menu-option-background" style="width: 0px; margin-left: 210px;"> </div>
+                        <div class="menu-option-text"><a href="#news.html" data-path-href="html/news/"
+                                style="color: rgb(119, 119, 119);">NEWS</a></div>
+                    </div>
+                    <div class="menu-option-holder" data-module-type="full_width_gallery" data-side="none">
+                        <div class="menu-option-background-selected" style="width: 210px; margin-left: 0px;"> </div>
+                        <div class="menu-option-text"><a href="#portfolio.html" data-path-href="html/portfolio/"
+                                style="color: rgb(255, 255, 255);">PORTFOLIO</a></div>
+                    </div>
+                    <div class="menu-option-holder">
+                        <div class="menu-option-background" style="width: 0px; margin-left: 210px;"> </div>
+                        <div class="menu-option-text"><a href="#" style="color: rgb(119, 119, 119);">OUR
+                                PROJECTS</a>
+                            <div class="menu-option-sign" style="color: rgb(119, 119, 119);">+</div>
+                        </div>
+                        <div class="sub-menu-holder" style="opacity: 0; display: none; width: 0px; height: 0px;">
+                            <div class="sub-menu-option-holder" data-module-type="page_columns" data-side="custom">
+                                <div class="sub-menu-option-background" style="width: 0px; margin-left: 210px;">
+                                </div>
+                                <div class="sub-menu-option-text"><a href="#4_columns_projects.html"
+                                        data-path-href="html/our_projects/" style="color: rgb(119, 119, 119);">4
+                                        Columns Projects</a></div>
+                            </div>
+                            <div class="sub-menu-option-holder" data-module-type="page_columns" data-side="custom">
+                                <div class="sub-menu-option-background" style="width: 0px; margin-left: 212px;">
+                                </div>
+                                <div class="sub-menu-option-text"><a href="#3_columns_projects.html"
+                                        data-path-href="html/our_projects/" style="color: rgb(119, 119, 119);">3
+                                        Columns Projects</a></div>
+                            </div>
+                            <div class="sub-menu-option-holder" data-module-type="page_columns" data-side="custom">
+                                <div class="sub-menu-option-background" style="width: 0px; margin-left: 212px;">
+                                </div>
+                                <div class="sub-menu-option-text"><a href="#2_columns_projects.html"
+                                        data-path-href="html/our_projects/" style="color: rgb(119, 119, 119);">2
+                                        Columns Projects</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-option-holder" data-module-type="showreel" data-side="none">
+                        <div class="menu-option-background" style="width: 0px; margin-left: 210px;"> </div>
+                        <div class="menu-option-text"><a href="#showreel.html" data-path-href="html/showreel/"
+                                style="color: rgb(119, 119, 119);">SHOWREEL</a></div>
+                    </div>
+                    <div class="menu-option-holder">
+                        <div class="menu-option-background" style="width: 0px; margin-left: 210px;"> </div>
+                        <div class="menu-option-text"><a href="#" style="color: rgb(119, 119, 119);">GALLERIES</a>
+                            <div class="menu-option-sign" style="color: rgb(119, 119, 119);">+</div>
+                        </div>
+                        <div class="sub-menu-holder" style="opacity: 0; display: none; width: 0px; height: 0px;">
+                            <div class="sub-menu-option-holder" data-module-type="gallery" data-side="none">
+                                <div class="sub-menu-option-background"></div>
+                                <div class="sub-menu-option-text"><a href="#image_gallery.html"
+                                        data-path-href="html/galleries/">Image Gallery</a></div>
+                            </div>
+                            <div class="sub-menu-option-holder" data-module-type="gallery" data-side="none">
+                                <div class="sub-menu-option-background"> </div>
+                                <div class="sub-menu-option-text"><a href="#mixed_gallery.html"
+                                        data-path-href="html/galleries/">Mixed Gallery</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-option-holder">
+                        <div class="menu-option-background"> </div>
+                        <div class="menu-option-text"><a href="#">FEATURES</a>
+                            <div class="menu-option-sign">+</div>
+                        </div>
+                        <div class="sub-menu-holder">
+                            <div class="sub-menu-option-holder" data-module-type="full_width" data-side="custom">
+                                <div class="sub-menu-option-background"></div>
+                                <div class="sub-menu-option-text"><a href="#full_width_text_and_image.html"
+                                        data-path-href="html/features/">Fullwidth Text + Image</a></div>
+                            </div>
+                            <div class="sub-menu-option-holder" data-module-type="full_width" data-side="custom">
+                                <div class="sub-menu-option-background"></div>
+                                <div class="sub-menu-option-text"><a href="#full_width_text_and_video.html"
+                                        data-path-href="html/features/">Fullwidth Text + Video</a></div>
+                            </div>
+                            <div class="sub-menu-option-holder" data-module-type="fullscreen_video" data-side="none">
+                                <div class="sub-menu-option-background"></div>
+                                <div class="sub-menu-option-text"><a href="#fullscreen_video.html"
+                                        data-path-href="html/features/">Fullscreen Video</a></div>
+                            </div>
+                            <div class="sub-menu-option-holder" data-module-type="pricing_tables" data-side="none">
+                                <div class="sub-menu-option-background"> </div>
+                                <div class="sub-menu-option-text"><a href="#pricing_tables.html"
+                                        data-path-href="html/features/">Pricing Table</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-option-holder" data-module-type="contact" data-side="custom">
+                        <div class="menu-option-background"> </div>
+                        <div class="menu-option-text"><a href="#contact.html" data-path-href="html/contact/">CONTACT
+                                US</a></div>
+                    </div>
+                    <div class="menu-option-holder" data-module-type="external" data-side="custom"
+                        style="margin-top: 10px; margin-bottom:-10px;">
+                        <div class="menu-option-background"> </div>
+                        <div class="menu-option-text"><a
+                                href="http://themeforest.net/item/synergy-responsive-interactive-html-portfolio/3054099?ref=mediacreed"
+                                data-path-href="html/contact/" style="font-weight: bold;font-size:14px;">BUY THIS
+                                THEME!</a></div>
+                    </div>
+                </div><!-- end #template-menu -->
+                <div id="template-smpartphone-menu">
+                    <select>
+                        <option value="#">Navigate to...</option>
+                        <option value="#"> HOME +</option>
+                        <option value="#home_layout_1.html"> - Home Layout 1</option>
+                        <option value="#home_layout_2.html"> - Home Layout 2</option>
+                        <option value="#home_layout_3.html"> - Home Layout 3</option>
+                        <option value="#"> ABOUT US +</option>
+                        <option value="#about_us.html"> - About us</option>
+                        <option value="#philosophy.html"> - Philosophy</option>
+                        <option value="#ethics.html"> - Ethics</option>
+                        <option value="#careers.html"> - Careers</option>
+                        <option value="#news.html"> NEWS</option>
+                        <option value="#portfolio.html" selected="selected"> PORTFOLIO</option>
+                        <option value="#"> OUR PROJECTS +</option>
+                        <option value="#4_columns_projects.html" selected="selected"> - 4 Columns Projects</option>
+                        <option value="#3_columns_projects.html"> - 3 Columns Projects</option>
+                        <option value="#2_columns_projects.html"> - 2 Columns Projects</option>
+                        <option value="#showreel.html"> SHOWREEL</option>
+                        <option value="#"> GALLERIES +</option>
+                        <option value="#image_gallery.html"> - Image Gallery</option>
+                        <option value="#mixed_gallery.html"> - Mixed Gallery</option>
+                        <option value="#"> FEATURES +</option>
+                        <option value="#full_width_text_and_image.html"> - Full Width Text + Image</option>
+                        <option value="#full_width_text_and_video.html"> - Full Width Text + Video</option>
+                        <option value="#fullscreen_video.html"> - Fullscreen Video</option>
+                        <option value="#pricing_tables.html"> - Pricing Table</option>
+                        <option value="#contact.html"> CONTACT</option>
+                    </select>
+                </div>
+                <div id="audio-player" data-auto-play="false" data-player-opened="true" data-player-volume="0.6"
+                    style="width: 210px;">
+                    <div id="audio-items"></div>
+                    <div id="audio-player-tooltip" class="opacity_0">
+                        <div id="audio-tooltip-holder">
+                            <div class="audio-tooltip-backg"></div>
+                            <div class="audio-player-tooltip-title" style=""><span style="width: 100%;">Tim McMorris
+                                    - Top Of The World</span></div>
+                        </div>
+                        <div class="audio-player-tooltip-hook"></div>
+                    </div>
+                    <div id="audio-player-holder" style="left: 0px;">
+                        <div id="audio-options-button">
+                            <div class="audio-options-button-backg"></div>
+                            <div class="audio-options-button-sign"></div>
+                        </div>
+                        <div id="audio-player-options-holder">
+                            <div id="audio-prev-track">
+                                <div class="audio-controls-backg"></div>
+                                <div class="audio-prev-track-sign"></div>
+                            </div>
+                            <div id="audio-play-pause-track">
+                                <div class="audio-controls-backg"></div>
+                                <div class="audio-play-track-sign" style="opacity: 1;"></div>
+                                <div class="audio-pause-track-sign" style="opacity: 0;"></div>
+                            </div>
+                            <div id="audio-next-track">
+                                <div class="audio-controls-backg"></div>
+                                <div class="audio-next-track-sign"></div>
+                            </div>
+                            <div id="audio-volume-speaker">
+                                <div class="audio-controls-backg"></div>
+                                <div class="audio-volume-on-sign" style="opacity: 1;"></div>
+                                <div class="audio-volume-off-sign" style="opacity: 0;"></div>
+                            </div>
+                            <div id="audio-volume-bar">
+                                <div class="audio-volume-bar-scrub-backg"></div>
+                                <div class="audio-volume-bar-scrub-current" style="width: 34.8px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer style="display: inline; visibility: visible;">
+                    <div id="footer-social">
+                        <div id="footer-social-holder">
+                            <ul>
+                                <li class="twitter"><a href="http://www.twitter.com" target="_blank"></a></li>
+                                <li class="facebook"><a href="http://www.facebook.com" target="_blank"></a></li>
+                                <li class="google"><a href="http://www.google.com" target="_blank"></a></li>
+                                <li class="dribbble"><a href="http://www.dribbble.com" target="_blank"></a></li>
+                                <li class="flickr"><a href="http://www.flickr.com" target="_blank"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="footer-text">
+                        <!-- start #footer-text -->
+                        <div id="footer-copyright"><a href="#">©2012 YOUR-COMPANY.COM</a></div>
+                    </div><!-- end #footer -->
+                </footer>
+            </div><!-- end .menu-content-holder-->
+
+            <div id="menu-hider" style="display: inline; visibility: visible;">
+                <div id="menu-hider-background"></div>
+                <div id="menu-hider-icon"></div>
+            </div>
+        </div>
+        <div class="" id="module-container">
+            <div class="grid" id="show-data">
+                <div class="caption">
+                    <p>Grasshopper lynx some much dear fish before beneath rattlesnake aside well but moth well more far
+                        the gosh meadowlark enviable apt jeepers locked alas.</p>
+                    <p>Stylistic jay conic laughed dear less earthworm worm some groundhog far avowedly mastodon
+                        unobtrusive dogged obediently that ordered rancorous goodness far this alas until oh unkind.</p>
+                </div>
+            </div>
+            <div class="append-button" style="text-align: center;">
+                <button class="loadmore" id="Loadmore">Load More</button>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
