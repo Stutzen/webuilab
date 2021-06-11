@@ -1235,16 +1235,6 @@
         }
     </style>
     <script>
-        //$(document).ready(function () {
-            //$('.menu-option-holder').on('click', function () {
-               // $('.menu-option-holder > div').removeClass('menu-option-background-selected');
-                //$('.menu-option-holder').children('div:first').addClass('menu-option-background');
-                //$(this).children('div:first').addClass('menu-option-background-selected');
-                //$(this).children('div:first').removeClass('menu-option-background');
-            //});
-        //});
-    //</script>
-    <script>
         $(document).ready(function () {
             $('.menu-option-holder').mouseover(
                 function () {
@@ -1431,10 +1421,6 @@
                                     baseClass: 'fancybox-custom-layout',
                                     margin: 0,
                                     gutter: 0,
-                                    autoSize: false,
-                                    autoWidth: false,
-                                    'width': 1503,
-                                    'height': 845,
                                     infobar: false,
                                     thumbs: {
                                         hideOnClose: false,
@@ -1446,7 +1432,10 @@
                                     buttons: [
                                         'close',
                                         'thumbs',
-                                        'share'
+                                        'share',
+                                        'slideShow',
+                                        'zoom',
+                                        'fullScreen'
                                     ],
                                     animationEffect: "fade",
                                     animationDuration: 300,
