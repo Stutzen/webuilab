@@ -479,9 +479,9 @@ Bullet navigation design
         .fancybox-stage {
             position: relative !important;
             width: 100%;
-            height: calc(100% - 85px) !important;
+            height: calc(100% - 200px) !important;
         }
-        .downbtn{width: 100%; text-align: right;}
+        .downbtn{width: 100%; text-align: right;padding-top: 10px;}
 
         .fancybox-container {
             left: 250px !important;
@@ -489,7 +489,7 @@ Bullet navigation design
 
         .fancybox-inner {
             right: 250px !important;
-            max-width: 600px !important;
+            max-width: 475px !important;
         }
 
         .fancybox-form-wrap {
@@ -506,6 +506,9 @@ Bullet navigation design
             text-align: left;
         }
         .fancybox-image{padding: 0px 10px !important;}
+        .fancybox-bg{background: #fff !important;}
+        .fancybox-form-wrap::after{width: unset !important;background: none !important;}
+        .fancybox-inner .product-form{border: 1px solid #000;}
 
         @media (max-width: 767px) {
             .fancybox-container{left : 0px !important; }
