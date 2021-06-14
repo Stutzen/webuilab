@@ -517,7 +517,6 @@ button, input, optgroup, select, textarea {
     height: 14px;
     margin-right: 2px;
 }
-
 .web-catalog .web-productCatalogList>.brand-footer {
     margin-top: 10px;
     border-radius: 30px;
@@ -1039,7 +1038,7 @@ button, input, optgroup, select, textarea {
     .ds-searchbar-wrapper {
         width: 100%;
     }  
-    .search-bottom {
+    .search-page .search-bottom {
         display: flex;
         justify-content: center;
         position: fixed;
@@ -1065,26 +1064,26 @@ button, input, optgroup, select, textarea {
         margin-right: 0!important;
     }
     .arrow{
-    max-height: 25px;
-    filter: invert(1);
-    }
-    .back {
-        display: flex;
-    justify-content: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: transparent;
-    padding: 10px 16px;
-    z-index: 99;
-    right: 0;
-        border: 1px solid #484848;
-    border-radius: 12px;
-    font: normal normal 600 18px/22px Montserrat;
-    letter-spacing: 1px;
-    color: #484848;
-    background-color: #fff;
-    width: 100%;
-    padding: 10px 0;
-    }
+        max-height: 25px;
+        filter: invert(1);
+        }
+        .back {
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: transparent;
+            padding: 10px 16px;
+            z-index: 99;
+            right: 0;
+            border: 1px solid #484848;
+        border-radius: 12px;
+        font: normal normal 600 18px/22px Montserrat;
+        letter-spacing: 1px;
+        color: #484848;
+        background-color: #fff;
+        width: 100%;
+        padding: 10px 0;
+        }
 }
