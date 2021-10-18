@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Numma Land</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/landhome.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script>
+        function myFunction(x) {
+          x.classList.toggle("changeNav");
+        }
+    </script>
+</head>
+
+<body>
+    <div class="row visible-xs">
+        <div class="col-xs-12 hidden-sm hidden-md hidden-lg" id="topNavMobile">
+            <div id="menuMobile">
+                <div class="mobileimg-div">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" onclick="myFunction(this)">
+                        <span class="icon-bar bar1"></span>
+                        <span class="icon-bar bar2"></span>
+                        <span class="icon-bar bar3"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <div id="mobileNav" class="">
+                    <div class="wrapper">
+                        <nav class="main-nav mobile-nav">
+                            <ul class="link-ul">
+                                <li><a href="">About Us</a></li>
+                                <li><a href="">List Land</a></li>
+                                <li><a href="">Promote Land</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="vertical-center">
+        <div class="row">
+            <div class="col-sm-12 col-xs-12 center">
+                <div class="center">
+                    <img src="Images/land/pageone/logo.png" alt="Logo" class="logo-img">
+                </div>
+            </div>
+        </div>
+        <div class="row toppadding">
+            <div class="col-sm-12 col-xs-12 center">
+                <div class="search-div center">
+                    <input type="search" autocomplete="off" id="search" class="search-field form-control"
+                        placeholder="Enter City Name" value="" name="search">
+                    <img src="Images/land/pageone/search.png" class="search-icon">
+                </div>
+            </div>
+        </div>
+        <div class="row toppadding">
+            <div class="col-sm-12 col-xs-12 center">
+                <div class="center">
+                    <button type="submit" class="search-button search-btn" id="search-btn">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<footer class="footer">
+    <div class="row india-row hidden-xs">
+        <div class="col-sm-12 col-xs-12">
+            <div class="col-sm-6 col-xs-12">
+                <ul class="ind-ul">
+                    <li>India</li>
+                </ul>
+            </div>
+            <div class="col-sm-6 col-xs-12">&nbsp;</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="col-sm-6 hidden-xs">
+                <ul class="about-ul">
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">List Land</a></li>
+                    <li><a href="">Promote Land</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <ul class="term-ul">
+                    <li><a href="">Terms</a></li>
+                    <li><a href="">Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>
