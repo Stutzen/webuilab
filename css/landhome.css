@@ -229,5 +229,15 @@ footer {
     .search-section{width: 100%;max-width: 100%;}
     .logo-img{width: 150px;}
 
+    .vertical-center{
+        position: absolute;
+        width: 100%;
+        right: 0;
+        left: 0;
+        top: 25%;
+        display: block;
+        height: auto;
+    }
+
     
 }
