@@ -318,7 +318,7 @@ html,body{ height:100%; min-height:100%}
     }
     
     #topNavMobile {
-        margin-top: 20px;
+        margin-top: 10px;
     }
     .navbar-collapse{width: 100%;}
     .link-ul{
@@ -348,7 +348,7 @@ html,body{ height:100%; min-height:100%}
     .box-flex{margin-bottom: 20px;}
     .paragraph{font-size: 10px;}
     .slider-box{width: 100%;margin-bottom: 10px;text-align: center;}
-    .slider-box img{width: auto;}
+    .slider-box img{width: 100%;}
     .paragraph-p{width: 100%;}
     .need-left{padding-left: 0px;padding-right: 0px;}
     .nopad-left{padding-right: 0px;}
