@@ -122,6 +122,7 @@ footer {
     font-weight: 500;
     font-family: 'Roboto';
     letter-spacing: 1px;
+    display: inline-block;
   }
   .change-btn:focus{color: #7f7f7f;}
   .change-btn:hover{text-decoration: none;color: #7f7f7f;}
@@ -178,6 +179,20 @@ footer {
     text-transform: capitalize;
   }
 
+  .brown-head a{
+    color: #a15641;
+    margin: 0;
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+  }
+
+  .brown-head a:hover, .brown-head:focus{
+    color: #a15641;
+    text-decoration: none;
+  }
+
   .whatsapp-btn{
     padding: 7px 30px;
     background: #fff;
@@ -200,7 +215,11 @@ footer {
     letter-spacing: 1px;
     min-width: 180px;
     font-weight: 500;
+    display: inline-block;
   }
+
+  .direction-btn:hover{text-decoration: none;color: #6d6d6d;}
+  .direction-btn:focus{text-decoration: none;color: #6d6d6d;}
 
   .mar-bot{margin-bottom: 10px;}
   .img-div{overflow: hidden;width: 100%;}
@@ -303,7 +322,7 @@ body::-webkit-scrollbar-track{
     }
     
     #topNavMobile {
-        margin-top: -66px;
+        margin-top: 20px;
     }
     .navbar-collapse{width: 100%;}
     .link-ul{
@@ -341,5 +360,6 @@ body::-webkit-scrollbar-track{
     .showing p{font-size: 16px;}
     .boxnew{padding: 15px 15px 15px 15px;}
     .box{padding: 15px 15px 15px 15px;}
+    .change-btn{margin-top: 10px;}
     
 }

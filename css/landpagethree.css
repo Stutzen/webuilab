@@ -300,7 +300,7 @@ body::-webkit-scrollbar-track{
     }
     
     #topNavMobile {
-        margin-top: -66px;
+        margin-top: 20px;
     }
     .navbar-collapse{width: 100%;}
     .link-ul{
@@ -320,7 +320,7 @@ body::-webkit-scrollbar-track{
 
     .logo-img{width: 60px;}
     .box{padding: 15px 15px 15px 15px;}
-    .front-page{padding-top: 90px;padding-bottom: 70px;}
+    .front-page{padding-top: 100px;padding-bottom: 70px;}
     .box{box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
     .p1{font-size: 16px;}
     .brown-head{font-size: 25px;}
