@@ -227,16 +227,17 @@ footer {
         color: #8f8f8f;
     }
     .search-section{width: 100%;max-width: 100%;}
-    .logo-img{width: 150px;}
+    .logo-img{width: 120px;}
 
     .vertical-center{
         position: absolute;
         width: 100%;
         right: 0;
         left: 0;
-        top: 25%;
+        top: 30%;
         display: block;
         height: auto;
+        padding-bottom: 0px;
     }
 
     
