@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.428571429;
+    background-color: #fff;
+    background-image: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.row{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+  }
+
+.footer ul li {
+    color: #8f8f8f;
+    float: left;
+    list-style: none;
+    padding: 0px 20px;
+}
+
+.footer ul{
+    padding: 20px 20px 10px;
+    margin: 0;
+    display: inline-block;
+}
+
+.footer .term-ul{float: right;}
+
+.footer ul li a{
+    text-decoration: none;
+    color: #8f8f8f;
+}
+
+.footer .ind-ul {
+    padding: 0px 20px 0px;
+    margin: 0;
+}
+
+.india-row{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    top: -35px;
+}
+
+.padbottomthirty{padding-bottom: 30px;}
+.padtopthirty{padding-top: 30px;}
+
+
+.center{text-align: center;}
+.toppadding{padding-top: 20px;}
+.toppaddingsm{padding-top: 15px;}
+.bottompadding{padding-bottom: 20px;}
+.bottompaddingsm{padding-bottom: 15px;}
+.topmargin{margin-top: 30px;}
+.topmarginsm{margin-top: 15px;}
+.bottommargin{margin-bottom: 20px;}
+.bottommarginsm{margin-bottom: 15px;}
+
+
+
+.changeNav .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-1px, 6px);
+  }
+  
+  .changeNav .bar2 {opacity: 0;}
+  
+  .changeNav .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-2px, -8px);
+  }
+  .navbar-toggle.changeNav .icon-bar{width: 28px;}
+
+  .result-flex{
+      display: flex;
+      align-items: center;
+      text-align: center;
+  }
+
+  .showing{
+      color: #7f7f7f;
+      font-size: 22px;
+      padding-left: 55px;
+  }
+  .showing p{margin: 0px;}
+  .result{
+    font-size: 30px;
+    color: #5b5b5b;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-right: 40px;
+  }
+  .result-text{margin-top: 0px;margin-bottom: 5px;}
+
+  .change-btn{
+    padding: 8px 40px;
+    border-radius: 10px;
+    border: 1px solid #c6c6c8;
+    background: #fff;
+    color: #7f7f7f;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Roboto';
+    letter-spacing: 1px;
+  }
+
+  .box{
+    background: #ffff;
+    box-shadow: 4px 6px 4px 0px #16151530;
+    padding: 40px 45px 40px 45px;
+    margin-bottom: 30px;
+  }
+  .map-img{width: 100%;}
+
+  .paragraph{
+    font-size: 11px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #6c6c6c;
+    padding-bottom: 15px;
+    margin-bottom: 0px;
+  }
+
+  .paragraph-p{
+    font-size: 11px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #6c6c6c;
+    padding-bottom: 15px;
+    margin-bottom: 0px;
+    width: 85%;
+  }
+
+  .border-bottom{border-bottom: 2px solid #dbdbdb;}
+
+  .header{
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    z-index: 99999;
+  }
+
+  .front-page{padding-top: 135px;padding-bottom: 100px;}
+  .p1{
+    color: #7f7f7f;
+    font-size: 18px;
+    margin: 10px 0px 0px;
+    font-weight: 500;
+  }
+
+  .brown-head{
+    color: #a15641;
+    margin: 0;
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+  }
+
+  .whatsapp-btn{
+    padding: 7px 30px;
+    background: #fff;
+    font-size: 24px;
+    color: #fff;
+    border: 2px solid #64c560;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    background: #64c560;
+    min-width: 180px;
+  }
+
+  .direction-btn{
+    padding: 7px 30px;
+    background: #fff;
+    font-size: 24px;
+    color: #6d6d6d;
+    border: 2px solid #6d6d6d;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    min-width: 180px;
+    font-weight: 500;
+  }
+
+  .mar-bot{margin-bottom: 10px;}
+  .img-div{overflow: hidden;width: 100%;}
+  .nopad-left{padding-left: 0px;}
+  .need-left{padding-left: 50px;}
+
+  .boxnew {
+    background: #ffff;
+    padding: 30px 40px 30px 40px;
+    margin-bottom: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.box-flex{ display: flex;}
+.img-flex{flex-shrink: 0;}
+.cont-flex{padding-left: 15px;}
+.cent-flex{align-self: end;padding-bottom: 5px;}
+.price-flex{align-self: end;padding-bottom: 5px;}
+.area{
+    color: #6d6d6d;
+    font-size: 18px;
+    margin: 0;
+    line-height: 17px;
+}
+
+.cent{
+    margin: 0;
+    color: #a15641;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.price{
+    color: #6d6d6d;
+    font-size: 18px;
+    margin: 0;
+    line-height: 17px;
+}
+
+.amount{
+    margin: 0;
+    color: #a15641;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.centspan{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.name{
+    color: #6d6d6d;
+    font-size: 17px;
+    margin: 0;
+    float: right;
+    padding-right: 20px;
+}
+
+.rating{
+    color: #6d6d6d;
+    font-size: 18px;
+    margin: 0;
+    padding-right: 5px;
+}
+
+.ratings{
+    float: right;
+    display: flex;
+}
+.rate-flex{flex-shrink: 0;}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #6d6d6d;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: #ddd;
+}
+
+.map-div{padding-top: 50px;}
+
+
+@media (max-width: 767px)
+{
+    .search-div{width: 100%;}
+    .footer .term-ul{float: none !important;width: 100%;}
+    .footer .term-ul li{width: 50%; text-align: center;}
+    .navbar-toggle .icon-bar {background: #555;}
+    .main-nav {
+        overflow: hidden;
+    }
+
+    .main-nav {
+        font-size: 18px;
+    }
+    
+    #topNavMobile {
+        margin-top: -66px;
+    }
+    .navbar-collapse{width: 100%;}
+    .link-ul{
+        padding: 20px;
+    }
+
+    .link-ul li{
+        text-decoration: none;
+        color: #8f8f8f;
+        padding-bottom: 10px;
+        font-size: 18px;
+    }
+    .link-ul li a{
+        text-decoration: none;
+        color: #8f8f8f;
+    }
+
+    .logo-img{width: 60px;}
+    .box{padding: 15px 15px 15px 15px;}
+    .front-page{padding-top: 90px;padding-bottom: 70px;}
+    .box{box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
+    .p1{font-size: 16px;}
+    .brown-head{font-size: 25px;}
+    .whatsapp-btn{margin-bottom: 15px;}
+    .name{float: left;}
+    .ratings{float: left;}
+    .box-flex{margin-bottom: 20px;}
+    .paragraph{font-size: 10px;}
+    
+}
+
+
