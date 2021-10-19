@@ -306,6 +306,10 @@ body::-webkit-scrollbar-track{
     background-color: #ddd;
 }
 
+html,body{ height:100%; min-height:100%}
+.front-page{ min-height:calc(100% - 190px) }
+
+
   
 @media (max-width: 767px)
 {
