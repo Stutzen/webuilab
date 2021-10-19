@@ -21,6 +21,42 @@
         function myFunction(x) {
             x.classList.toggle("changeNav");
         }
+        $(document).ready(function () {
+            $(".box").click(function () {
+                if ($(this).children(".box1").css('display') == 'none') {
+                    $(this).children(".box2").slideUp({
+                        duration: 1000,
+                    });
+                    $(this).children(".box1").slideDown({
+                        duration: 1000,
+                    });
+                } else {
+                    $(this).children(".box1").slideUp({
+                        duration: 1000,
+                    });
+                    $(this).children(".box2").slideDown({
+                        duration: 1000,
+                    });
+                }
+
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+        window.onscroll = function() {myFunction()};
+        
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset > sticky && window.pageYOffset > 100 ) {
+            header.classList.add("scroll");
+          } else {
+            header.classList.remove("scroll");
+          }
+        }
+    });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
@@ -28,11 +64,11 @@
 </head>
 
 <body>
-    <div class="header">
+    <div class="header" id="myHeader">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-xs-6">
-                    <div class="toppadding bottompadding">
+                    <div class="toppadding bottompadding logo-pad">
                         <a href="landhomepage.html"><img src="Images/land/pagetwo/logo.png" alt="Logo"
                                 class="logo-img"></a>
                     </div>
@@ -129,6 +165,25 @@
                     </div>
 
                     <div class="box">
+                        <div class="innerbox box1" style="display: none;">
+                            <div class="row box-row">
+                                <div class="col-sm-4 nopad-left">
+                                    <div class="img-div">
+                                        <img src="Images/land/pagetwo/image1.jpg" alt="images">
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 need-left">
+                                    <p class="p1">Agricultural Land in Tamil Nadu</p>
+                                    <h1 class="brown-head">Agri Land Sale</h1>
+                                    <p class="paragraph-p">
+                                        சிவகாசி தெற்குத் தெருவில் 22 குழி வீடு மற்றும் 50 குழி காளிமனை தண்ணீர் வசதியுடன்
+                                        கிழக்கு வாசலில் உள்ளது. தேவைப்படுவோர் தொடர்பு கொள்ளவும். விலை நேரில்
+                                        பேசிக்கொள்ளலாம்.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxes box2">
                         <div class="innerbox">
                             <div class="row box-row">
                                 <div class="col-sm-9">
@@ -200,6 +255,7 @@
                                     <img src="Images/land/pagethree/map.jpg" alt="map" class="map-img">
                                 </div>
                             </div>
+                        </div>
                         </div>
                     </div>
 
