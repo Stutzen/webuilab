@@ -111,7 +111,7 @@ footer {
         z-index: 3;
         height: 48px;
         margin: 0 auto;
-        width: auto;
+        width: 584px;
         max-width: 584px;
 }
 .search-section:hover {
@@ -147,11 +147,14 @@ footer {
 
 .vertical-center {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
     flex-direction: column;
-    height: 100%;
+    padding-bottom: 100px;
 }
 
-.toppad{padding-top: 60px;}
 
 .a4bIc {
     display: flex;
@@ -174,11 +177,7 @@ footer {
     font-size: 16px;
 }
 
-.LLD4me {
-    min-height: 150px;
-    max-height: 290px;
-    height: calc(100% - 560px);
-}
+
 
 .changeNav .bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
@@ -227,6 +226,8 @@ footer {
         text-decoration: none;
         color: #8f8f8f;
     }
+    .search-section{width: 100%;max-width: 100%;}
+    .logo-img{width: 150px;}
 
     
 }

@@ -21,16 +21,53 @@
         function myFunction(x) {
             x.classList.toggle("changeNav");
         }
+        $(document).ready(function () {
+            $(".boxnew").click(function () {
+                if ($(this).children(".box1").css('display') == 'none') {
+                    $(this).children(".box2").slideUp({
+                        duration: 1000,
+                    });
+                    $(this).children(".box1").slideDown({
+                        duration: 1000,
+                    });
+                } else {
+                    $(this).children(".box1").slideUp({
+                        duration: 1000,
+                    });
+                    $(this).children(".box2").slideDown({
+                        duration: 1000,
+                    });
+                }
+
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+        window.onscroll = function() {myFunction()};
+        
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            header.classList.add("scroll");
+          } else {
+            header.classList.remove("scroll");
+          }
+        }
+    });
     </script>
 </head>
 
 <body>
-    <div class="header">
+    <div class="header" id="myHeader">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-xs-6">
-                    <div class="toppadding bottompadding">
-                        <a href="landhomepage.html"><img src="Images/land/pagetwo/logo.png" alt="Logo" class="logo-img"></a>
+                    <div class="toppadding bottompadding logo-pad">
+                        <a href="landhomepage.html"><img src="Images/land/pagetwo/logo.png" alt="Logo"
+                                class="logo-img"></a>
                     </div>
                 </div>
                 <div class="col-xs-6 visible-xs" id="topNavMobile">
@@ -81,71 +118,92 @@
                         </div>
                     </div>
 
-                    <div class="box">
-                        <div class="innerbox">
+                    <div class="boxnew">
+                        <div class="innerbox box1">
                             <div class="row box-row">
-                                <div class="col-sm-9">
+                                <div class="col-sm-4 nopad-left">
+                                    <div class="img-div">
+                                        <img src="Images/land/pagetwo/image1.jpg" alt="images">
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 need-left">
                                     <p class="p1">Agricultural Land in Tamil Nadu</p>
-                                    <h1 class="brown-head"><a href="landpagethree.html">Agri Land Sales</a></h1>
-                                    <p class="paragraph">
+                                    <h1 class="brown-head"><a href="landpagethree.html">Agri Land Sale</a></h1>
+                                    <p class="paragraph-p">
                                         சிவகாசி தெற்குத் தெருவில் 22 குழி வீடு மற்றும் 50 குழி காளிமனை தண்ணீர் வசதியுடன்
                                         கிழக்கு வாசலில் உள்ளது. தேவைப்படுவோர் தொடர்பு கொள்ளவும். விலை நேரில்
                                         பேசிக்கொள்ளலாம்.
                                     </p>
                                 </div>
-                                <div class="col-sm-3">
-                                    <div class="row mar-bot">
-                                        <button class="whatsapp whatsapp-btn">Whatsapp</button>
-                                    </div>
-                                    <div class="row">
-                                        <a href="landpagethree.html" class="direction direction-btn">Direction</a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="border-bottom"></div>
-                                </div>
-
                             </div>
                         </div>
-                        <div class="outerbox toppadding">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="box-flex">
-                                        <div class="img-flex cent-flex">
-                                            <img src="Images/land/pagetwo/area.png">
+                        <div class="boxes box2" style="display: none;">
+                            <div class="innerbox">
+                                <div class="row box-row">
+                                    <div class="col-sm-9">
+                                        <p class="p1">Agricultural Land in Tamil Nadu</p>
+                                        <h1 class="brown-head"><a href="landpagethree.html">Agri Land Sales</a></h1>
+                                        <p class="paragraph">
+                                            சிவகாசி தெற்குத் தெருவில் 22 குழி வீடு மற்றும் 50 குழி காளிமனை தண்ணீர்
+                                            வசதியுடன்
+                                            கிழக்கு வாசலில் உள்ளது. தேவைப்படுவோர் தொடர்பு கொள்ளவும். விலை நேரில்
+                                            பேசிக்கொள்ளலாம்.
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="row mar-bot">
+                                            <button class="whatsapp whatsapp-btn">Whatsapp</button>
                                         </div>
-                                        <div class="cont-flex">
-                                            <p class="area">Area</p>
-                                            <h3 class="cent">24 cent</h3>
+                                        <div class="row">
+                                            <a href="landpagethree.html" class="direction direction-btn">Direction</a>
                                         </div>
                                     </div>
+                                    <div class="col-sm-12">
+                                        <div class="border-bottom"></div>
+                                    </div>
+
                                 </div>
-                                <div class="col-sm-4">
-                                    <div class="box-flex">
-                                        <div class="img-flex price-flex">
-                                            <img src="Images/land/pagetwo/price.png">
-                                        </div>
-                                        <div class="cont-flex">
-                                            <p class="price">Price</p>
-                                            <h3 class="amount">80,000<span class="centspan">/Cent</span></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="row">
-                                        <p class="name">By: Ramkumar</p>
-                                    </div>
-                                    <div class="row">
-                                        <div class="ratings">
-                                            <div class="">
-                                                <span class="rating">4.3</span>
+                            </div>
+                            <div class="outerbox toppadding">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="box-flex">
+                                            <div class="img-flex cent-flex">
+                                                <img src="Images/land/pagetwo/area.png">
                                             </div>
-                                            <div class="rat-flex">
-                                                <img src="Images/land/pagetwo/yellowstar.png">
-                                                <img src="Images/land/pagetwo/yellowstar.png">
-                                                <img src="Images/land/pagetwo/yellowstar.png">
-                                                <img src="Images/land/pagetwo/yellowstar.png">
-                                                <img src="Images/land/pagetwo/greystar.png">
+                                            <div class="cont-flex">
+                                                <p class="area">Area</p>
+                                                <h3 class="cent">24 cent</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="box-flex">
+                                            <div class="img-flex price-flex">
+                                                <img src="Images/land/pagetwo/price.png">
+                                            </div>
+                                            <div class="cont-flex">
+                                                <p class="price">Price</p>
+                                                <h3 class="amount">80,000<span class="centspan">/Cent</span></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="row">
+                                            <p class="name">By: Ramkumar</p>
+                                        </div>
+                                        <div class="row">
+                                            <div class="ratings">
+                                                <div class="">
+                                                    <span class="rating">4.3</span>
+                                                </div>
+                                                <div class="rat-flex">
+                                                    <img src="Images/land/pagetwo/yellowstar.png">
+                                                    <img src="Images/land/pagetwo/yellowstar.png">
+                                                    <img src="Images/land/pagetwo/yellowstar.png">
+                                                    <img src="Images/land/pagetwo/yellowstar.png">
+                                                    <img src="Images/land/pagetwo/greystar.png">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -155,7 +213,7 @@
                     </div>
 
                     <div class="boxnew">
-                        <div class="innerbox">
+                        <div class="innerbox box1">
                             <div class="row box-row">
                                 <div class="col-sm-4 nopad-left">
                                     <div class="img-div">
@@ -173,10 +231,83 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="boxes box2" style="display: none;">
+                            <div class="innerbox">
+                                <div class="row box-row">
+                                    <div class="col-sm-9">
+                                        <p class="p1">Agricultural Land in Tirunelveli</p>
+                                        <h1 class="brown-head"><a href="landpagethree.html">Green Land Sales</a></h1>
+                                        <p class="paragraph">
+                                            சிவகாசி தெற்குத் தெருவில் 22 குழி வீடு மற்றும் 50 குழி காளிமனை தண்ணீர்
+                                            வசதியுடன்
+                                            கிழக்கு வாசலில் உள்ளது. தேவைப்படுவோர் தொடர்பு கொள்ளவும். விலை நேரில்
+                                            பேசிக்கொள்ளலாம்.
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="row mar-bot">
+                                            <button class="whatsapp whatsapp-btn">Whatsapp</button>
+                                        </div>
+                                        <div class="row">
+                                            <a href="landpagethree.html" class="direction direction-btn">Direction</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="border-bottom"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="outerbox toppadding">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="box-flex">
+                                            <div class="img-flex cent-flex">
+                                                <img src="Images/land/pagetwo/area.png">
+                                            </div>
+                                            <div class="cont-flex">
+                                                <p class="area">Area</p>
+                                                <h3 class="cent">24 cent</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="box-flex">
+                                            <div class="img-flex price-flex">
+                                                <img src="Images/land/pagetwo/price.png">
+                                            </div>
+                                            <div class="cont-flex">
+                                                <p class="price">Price</p>
+                                                <h3 class="amount">80,000<span class="centspan">/Cent</span></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="row">
+                                            <p class="name">By: Ramkumar</p>
+                                        </div>
+                                        <div class="row">
+                                            <div class="ratings">
+                                                <div class="">
+                                                    <span class="rating">4.3</span>
+                                                </div>
+                                                <div class="rat-flex">
+                                                    <img src="Images/land/pagetwo/yellowstar.png">
+                                                    <img src="Images/land/pagetwo/yellowstar.png">
+                                                    <img src="Images/land/pagetwo/yellowstar.png">
+                                                    <img src="Images/land/pagetwo/yellowstar.png">
+                                                    <img src="Images/land/pagetwo/greystar.png">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="boxnew">
-                        <div class="innerbox">
+                        <div class="innerbox box1">
                             <div class="row box-row">
                                 <div class="col-sm-4 nopad-left">
                                     <div class="img-div">
@@ -194,10 +325,83 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="boxes box2" style="display: none;">
+                            <div class="innerbox">
+                                <div class="row box-row">
+                                    <div class="col-sm-9">
+                                        <p class="p1">Agricultural Land in Thalayuthu</p>
+                                        <h1 class="brown-head"><a href="landpagethree.html">Land For Sales</a></h1>
+                                        <p class="paragraph">
+                                            சிவகாசி தெற்குத் தெருவில் 22 குழி வீடு மற்றும் 50 குழி காளிமனை தண்ணீர்
+                                            வசதியுடன்
+                                            கிழக்கு வாசலில் உள்ளது. தேவைப்படுவோர் தொடர்பு கொள்ளவும். விலை நேரில்
+                                            பேசிக்கொள்ளலாம்.
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="row mar-bot">
+                                            <button class="whatsapp whatsapp-btn">Whatsapp</button>
+                                        </div>
+                                        <div class="row">
+                                            <a href="landpagethree.html" class="direction direction-btn">Direction</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="border-bottom"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="outerbox toppadding">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="box-flex">
+                                            <div class="img-flex cent-flex">
+                                                <img src="Images/land/pagetwo/area.png">
+                                            </div>
+                                            <div class="cont-flex">
+                                                <p class="area">Area</p>
+                                                <h3 class="cent">24 cent</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="box-flex">
+                                            <div class="img-flex price-flex">
+                                                <img src="Images/land/pagetwo/price.png">
+                                            </div>
+                                            <div class="cont-flex">
+                                                <p class="price">Price</p>
+                                                <h3 class="amount">80,000<span class="centspan">/Cent</span></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="row">
+                                            <p class="name">By: Ramkumar</p>
+                                        </div>
+                                        <div class="row">
+                                            <div class="ratings">
+                                                <div class="">
+                                                    <span class="rating">4.3</span>
+                                                </div>
+                                                <div class="rat-flex">
+                                                    <img src="Images/land/pagetwo/yellowstar.png">
+                                                    <img src="Images/land/pagetwo/yellowstar.png">
+                                                    <img src="Images/land/pagetwo/yellowstar.png">
+                                                    <img src="Images/land/pagetwo/yellowstar.png">
+                                                    <img src="Images/land/pagetwo/greystar.png">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="boxnew">
-                        <div class="innerbox">
+                        <div class="innerbox box1">
                             <div class="row box-row">
                                 <div class="col-sm-4 nopad-left">
                                     <div class="img-div">
@@ -212,6 +416,80 @@
                                         கிழக்கு வாசலில் உள்ளது. தேவைப்படுவோர் தொடர்பு கொள்ளவும். விலை நேரில்
                                         பேசிக்கொள்ளலாம்.
                                     </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxes box2" style="display: none;">
+                            <div class="innerbox">
+                                <div class="row box-row">
+                                    <div class="col-sm-9">
+                                        <p class="p1">Agricultural Land in Thalayuthu</p>
+                                        <h1 class="brown-head"><a href="landpagethree.html">Residential Land Sales</a>
+                                        </h1>
+                                        <p class="paragraph">
+                                            சிவகாசி தெற்குத் தெருவில் 22 குழி வீடு மற்றும் 50 குழி காளிமனை தண்ணீர்
+                                            வசதியுடன்
+                                            கிழக்கு வாசலில் உள்ளது. தேவைப்படுவோர் தொடர்பு கொள்ளவும். விலை நேரில்
+                                            பேசிக்கொள்ளலாம்.
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="row mar-bot">
+                                            <button class="whatsapp whatsapp-btn">Whatsapp</button>
+                                        </div>
+                                        <div class="row">
+                                            <a href="landpagethree.html" class="direction direction-btn">Direction</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="border-bottom"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="outerbox toppadding">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="box-flex">
+                                            <div class="img-flex cent-flex">
+                                                <img src="Images/land/pagetwo/area.png">
+                                            </div>
+                                            <div class="cont-flex">
+                                                <p class="area">Area</p>
+                                                <h3 class="cent">24 cent</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="box-flex">
+                                            <div class="img-flex price-flex">
+                                                <img src="Images/land/pagetwo/price.png">
+                                            </div>
+                                            <div class="cont-flex">
+                                                <p class="price">Price</p>
+                                                <h3 class="amount">80,000<span class="centspan">/Cent</span></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="row">
+                                            <p class="name">By: Ramkumar</p>
+                                        </div>
+                                        <div class="row">
+                                            <div class="ratings">
+                                                <div class="">
+                                                    <span class="rating">4.3</span>
+                                                </div>
+                                                <div class="rat-flex">
+                                                    <img src="Images/land/pagetwo/yellowstar.png">
+                                                    <img src="Images/land/pagetwo/yellowstar.png">
+                                                    <img src="Images/land/pagetwo/yellowstar.png">
+                                                    <img src="Images/land/pagetwo/yellowstar.png">
+                                                    <img src="Images/land/pagetwo/greystar.png">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
