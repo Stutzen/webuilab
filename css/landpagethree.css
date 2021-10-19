@@ -154,7 +154,7 @@ footer {
     box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
     margin-top: -1px;
   }
-  .header.scroll .logo-img{width: 60px;}
+  .header.scroll .logo-img{width: 45px;}
   .header.scroll .logo-pad{padding-top: 10px;padding-bottom: 10px;}
 
   .front-page{padding-top: 15px;padding-bottom: 30px;}
@@ -331,6 +331,7 @@ body::-webkit-scrollbar-track{
     }
 
     .logo-img{width: 60px;}
+    .header.scroll .logo-img{width: 60px;}
     .box{padding: 15px 15px 15px 15px;}
     .box{box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
     .p1{font-size: 16px;}
