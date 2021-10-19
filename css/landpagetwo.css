@@ -341,5 +341,6 @@ body::-webkit-scrollbar-track{
     .showing p{font-size: 16px;}
     .boxnew{padding: 15px 15px 15px 15px;}
     .box{padding: 15px 15px 15px 15px;}
+    .change-btn{display: inline-block;margin-top: 10px;}
     
 }
