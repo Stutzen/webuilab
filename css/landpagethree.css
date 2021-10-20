@@ -352,6 +352,13 @@ html,body{ height:100%; min-height:100%}
     .paragraph-p{width: 100%;}
     .need-left{padding-left: 0px;padding-right: 0px;}
     .nopad-left{padding-right: 0px;}
+
+    .slider-div{
+        grid-template-columns: repeat(5, 68vw);
+        display: grid;
+        overflow: hidden;
+        overflow-x: auto;
+    }
     
 }
 
