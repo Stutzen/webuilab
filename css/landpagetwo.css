@@ -317,7 +317,8 @@ html,body{ height:100%; min-height:100%}
 {
     .search-div{width: 100%;}
     .footer .term-ul{float: none !important;width: 100%;}
-    .footer .term-ul li{width: 50%; text-align: center;}
+    .footer .term-ul .promote{width: 63%; text-align: center;}
+    .footer .term-ul .terms{width: 35%; text-align: center;}
     .navbar-toggle .icon-bar {background: #555;}
     .main-nav {
         overflow: hidden;
