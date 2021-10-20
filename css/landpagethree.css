@@ -124,7 +124,7 @@ footer {
     margin-top: 50px;
     cursor: pointer;
   }
-  .map-img{width: 100%;}
+  
 
   .paragraph{
     font-size: 11px;
@@ -359,6 +359,7 @@ html,body{ height:100%; min-height:100%}
         overflow: hidden;
         overflow-x: auto;
     }
+    .map-img{width: 100%;}
     
 }
 
