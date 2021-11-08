@@ -154,18 +154,23 @@ label{
     }
 }
 .Enquiry label,.productList p {
-    font-size: 25px;
+    font-size: 16px;
     font-weight: 500;
     margin-bottom: 5px;
 }
 .Enquiry span,.productList span {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
     padding-left: 5px;
 }
+.Enquiry h5{
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
 .productList h3{
-    font-size: 30px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: bold;
     margin-bottom: 0;
 }
 .modal-dialog{
