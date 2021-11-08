@@ -259,7 +259,7 @@ label{
     }
     .logo{
         width: 65%;
-        margin-bottom: 20px;
+        margin-bottom:0px;
     }
     .productList .col-sm-6 {
         border: 1px solid #ccc;
