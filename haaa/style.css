@@ -1,0 +1,353 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+.wlcm{
+    /* background: url('img/background.png');
+    background-size: cover;
+    background-position: center; */
+    width: 100%;
+    height: 100%;
+    background: #fafaf9;
+}
+.align_center{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+label{
+    width: 100%;
+    font-size: 25px;
+}
+.register .loginPage{
+    height: auto;
+}
+.loginButton{
+    border: 1px solid #f26300;
+    background: transparent;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #f26300;
+    outline: none;
+}
+.center{
+    text-align: center;
+}
+.head{
+    font-size: 45px;
+    font-weight: 700;
+}
+.mt-10{
+    margin-top: 5%;
+}
+.lgin a,.lgin a:hover {
+    text-decoration: none;
+    color: #f26300;
+    font-size: 20px;
+}
+.submitButton {
+    border: 1px solid #f26300;
+    padding: 5px 20px;
+    border-radius: 5px;
+    color: #fff;
+    outline: none;
+    width: 100%;
+    margin-top: 15px;
+    background: #f26300;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.loginPage a,.loginPage a:hover{
+    color:#f26300;
+    text-decoration: underline;
+}
+.loginPage{
+    height: 100%;
+}
+.login-row{
+    width: 100%;
+    padding: 30px;
+}
+.centerBorder{
+    border-left: 1px solid #ccc;
+    height: 100%;
+    margin-left: 30%;
+    position: absolute;
+    z-index: 999;
+}
+.form-input{
+    border-radius: 0.125rem!important;
+    box-shadow: none!important;
+    --bg-opacity: 1!important;
+    background-color: #ecf1f2!important;
+    background-color: rgba(236,241,242,var(--bg-opacity))!important;
+    --border-opacity: 1!important;
+    border-color: #dde2e6!important;
+    border-color: rgba(221,226,230,var(--border-opacity))!important;
+    font-family: Roboto!important;
+}
+.loginPage label{
+    font-size:18px;
+}
+.link,.link:hover{
+    text-decoration: none !important;
+    color: #fff !important;
+}
+.searchIcon{
+    float: right;
+    margin-top: -29px;
+    margin-right: 15px;
+    color: #b2b2b2;
+}
+.productList .col-sm-6 {
+    border: 1px solid #ccc;
+    padding: 15px;
+    flex: 0 0 49%;
+    max-width: 49%;
+    margin-right: 10px;
+    border-radius: 5px;
+    background: #fff;
+}
+.pl-0{
+    padding-left: 0;
+}
+.plus{
+    background: transparent;
+    outline: none;
+    border: 1px solid #f26300;
+    padding: 5px 10px;   
+    border-radius: 50px;
+}
+.plus i{
+    color:#f26300;
+}
+.topmargin{
+    margin-top: 15px!important;
+}
+.orderpg .centerBorder {
+    margin-left: 33%;
+}
+@media(max-width:768px)
+{
+    .centerBorder{
+        display: none;
+    }
+    .mob-left{
+        text-align: left;
+    }
+    .mobnopadd{
+        padding: 0;
+    }
+}
+@media(min-width: 768px)
+{
+    .productList .col-sm-6 {
+        flex: 0 0 49% !important;
+        max-width: 49% !important;
+        margin-right: 5px;
+    }
+}
+.Enquiry label,.productList p {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.Enquiry span,.productList span {
+    font-size: 20px;
+    font-weight: 400;
+    padding-left: 5px;
+}
+.productList h3{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.modal-dialog{
+    width: 100%;
+    max-width: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.modal-header{
+    border-bottom: none;
+    padding: 10px 10px 0 10px;
+}
+.modal-body h3{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+}
+.tickButton{
+    background: #2ecc71;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+}
+.tickButton i{
+    font-size: 30px;
+    color: #fff;
+    font-weight: 500;
+}
+.modal-footer{
+    border-top: none;
+}
+.f-left{float: left;}
+.modal-body p{
+    font-size: 25px;
+}
+.btn-bor{
+    border: 1px solid #f26300;
+}
+.padd-60{
+    padding: 0px 60px;
+}
+.proList{
+    height:800px;
+    overflow: auto;
+}
+.modal-footer .btn {
+    color: #f26300;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #ddd; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ddd; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ddd; 
+  }
+  .mob-disp{
+    display: none;
+}
+.mob-none{
+    display: block;
+}
+  @media(max-width:768px){
+    .mob-disp{
+        display: block;
+    }
+    .mob-none{
+        display: none;
+    }
+    .productList .col-sm-6 {
+        border: 1px solid #ccc;
+        padding: 15px;
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-right: 0px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    .loginPage {
+        height: auto;
+    }
+    .mob-mt-10{
+        margin-top: 10px !important;
+    }
+    .modal-dialog {
+        width: 100%;
+        max-width: 95%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .padd-60 {
+        padding: 0px 0px;
+    }
+    .foot .col-sm-6
+    {
+        width: 50%;
+    }  
+    .modal-footer .btn{
+        color: #f26300;
+    }
+    .Enquiry .col-sm-8{
+        width: 70%;
+    }
+    .Enquiry .col-sm-4{
+        width: 30%;
+    }
+    .modal-body p {
+        font-size: 25px;
+        margin-top: 15px;
+    }
+    .productList h3 {
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+    .Enquiry label, .productList p {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    .plus {
+        background: #f26300;
+        outline: none;
+        border: none;
+        padding: 5px 10px;
+        border-radius:5px 0;
+        float: right;
+        transform: translate(15px, 15px);
+    }
+    .plus i {
+        color: #fff;
+    }
+    .proList .topmargin{
+        margin-top: 0 !important;
+    }
+    .proList{
+        height:600px;
+        overflow: auto;
+    }
+    .login-row {
+        width: 100%;
+        padding: 0 0 0 30px;
+    }
+}
+.orderpg .align_center {
+    display: block;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+.padd25{
+    padding: 25px 25px 0 25px;
+}
+.orderpg{height:auto !important}
+.form-cont{
+    box-shadow: 1px 1px 8px -5px black;
+    border:none !important;
+}
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow:  1px 1px 8px -5px black;
+}
