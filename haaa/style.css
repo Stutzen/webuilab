@@ -257,6 +257,10 @@ label{
     .mob-none{
         display: none;
     }
+    .logo{
+        width: 65%;
+        margin-bottom: 20px;
+    }
     .productList .col-sm-6 {
         border: 1px solid #ccc;
         padding: 15px;
