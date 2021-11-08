@@ -338,6 +338,15 @@ label{
         width: 100%;
         padding: 0 0 0 30px;
     }
+    .proHead .col-sm-6 {
+        border: none;
+        padding: 0;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    .mob-mb-15{
+        margin-bottom: 15px !important;
+    }
 }
 .orderpg .align_center {
     display: block;
@@ -346,7 +355,7 @@ label{
     justify-content: center;
 }
 .padd25{
-    padding: 25px 25px 0 25px;
+    padding: 0 15px;
 }
 .orderpg{height:auto !important}
 .form-cont{
@@ -359,4 +368,13 @@ label{
     border-color: #80bdff;
     outline: 0;
     box-shadow:  1px 1px 8px -5px black;
+}
+.proHead .col-sm-6 {
+    border:none;
+    padding: 0;
+    flex: 0 0 49%;
+    max-width: 49%;
+    margin-right: 5px;
+    border-radius: 5px;
+    background: transparent;
 }
