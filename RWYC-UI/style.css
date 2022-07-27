@@ -1,0 +1,223 @@
+*{
+    box-sizing: border-box;
+}
+html,body{
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+    background: #01a89e;
+}
+/* Header UI */
+header{
+    background: #01a89e;
+    padding: 10px 0;
+    box-shadow: 1px 0px 6px 1px #01a89e;
+}
+header .headerUI{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+header .headerUI img{
+    width: 100px;
+    height: 100px;
+}
+.ConventionHead h1{
+    font-weight: 900;
+    text-align: center;
+    margin: auto;
+    word-break: break-word;
+    font-size: 35px;
+    width: 60%;
+}
+.ConventionHead h1{
+    background-image: linear-gradient( -225deg, #ffffff 0%, #fdcb1a 29%, #f6e905 67%, #ffffff 100% );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: block;
+    font-family: 'New Rocker', cursive;
+    letter-spacing: 1px;
+}
+@keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+/* Banner Section with Countdown */
+.bannerSection{
+    background: url('./img/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.bannerSection #demo{
+    color: #fff;
+    font-size: 60px;
+    text-align: center;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    font-family: 'New Rocker', cursive;
+}
+.bannerSection #demo p{
+    padding: 0 30px;
+    transform: skewY(10deg);
+}
+.bannerSection #demo p span{
+    display: block;
+}
+.bannerSection #demo p span:nth-child(2) {
+    font-family: 'Roboto';
+    text-transform: uppercase;
+    font-size: 25px;
+    color: #f6ea00;
+}
+.introSection img{
+    width: 100%;
+}   
+.align-center{
+    align-items: center;
+}
+
+.eventSection{
+    margin: 50px 0;
+}
+.eventSection .nav.nav-pills li.nav-item{
+    width: 33%;
+}
+.eventSection .nav.nav-pills{
+    box-shadow: 0px 0px 3px 2px #ccc;
+    justify-content: space-between;
+}
+.eventSection .nav.nav-pills li.nav-item a{
+    color: #01a89e;
+    text-align: center;
+    font-family: 'Roboto';
+    font-weight: 600;
+    letter-spacing: .5px;
+    font-size: 20px;
+    border-radius: 0;
+    padding: 1.5rem 1rem;
+}
+.eventSection .nav.nav-pills li.nav-item a.active{
+    background-color: #01a89e;
+    color: #fff;
+}
+.eventSection .nav.nav-pills li.nav-item a:after{
+    position: absolute;
+    bottom: 5px;
+    width: 0;
+    content: '';
+    height: 0;
+    margin: 0 auto;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #01a89e transparent transparent transparent;
+    opacity: 0;
+    transform: translate(-70px, -1px);
+}
+.eventSection .nav.nav-pills li.nav-item a.active::after{
+    opacity: 1;
+}
+.eventSection h3,.eventSection h1{
+    text-align: center;
+}
+.eventSection .event{
+    color: #01a89e;
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+.eventSection .eventSche{
+    font-size: 40px;
+    font-family: 'Roboto';
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+.eventSection .tab-content{
+    box-shadow: 0px 0px 3px 2px #ccc;
+    padding: 1.5rem;
+    font-family: 'Poppins';
+}
+.eventSection .tab-content ul li{
+    list-style-type: none;
+    line-height: 35px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 18px;
+}
+.eventSection .tab-content ul li:before{
+    content: '⏱';
+    margin-right: 10px;
+}
+.MoreEvents{
+    margin: 50px 0;
+}
+.MoreEvents .nav-pills,.MoreEvents .nav-item{
+    width: 100%;
+    margin-bottom: 0 !important;
+}
+.MoreEvents .nav-pills .nav-link{
+    background: #01a89e !important;
+    color: #fff !important;
+    padding: 2rem;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+.MoreEvents .tab-content{
+    box-shadow: 0px 1px 1px 1px #ccc;
+    padding: 20px 0 10px 0;
+}
+.MoreEvents .tab-content ul li{
+    list-style-type: none;
+    padding: 1rem;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Poppins';
+}
+.MoreEvents .tab-content ul li:before{
+    content: '⏳';
+    margin-right: 10px;
+}
+.MoreEvents .tab-content ul li span{
+    color: #01a89e;
+}
+.MoreEvents .nav-pills .nav-link a::after{
+    background-image: url(../../images/icon/icon-tit.png);
+    bottom: -26px;
+    content: "";
+    height: 32px;
+    right: 4px;
+    position: absolute;
+    width: 5px;
+    z-index: 99;
+}
+{
+    background-image: url(../../images/icon/icon-tit.png);
+    bottom: -26px;
+    content: "";
+    height: 32px;
+    left: 4px;
+    position: absolute;
+    width: 5px;
+    z-index: 99;
+}
