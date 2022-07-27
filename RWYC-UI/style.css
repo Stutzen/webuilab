@@ -172,7 +172,8 @@ header .headerUI img{
 }
 .MoreEvents .nav-pills,.MoreEvents .nav-item{
     width: 100%;
-    margin-bottom: 0 !important;
+    margin-bottom: 10px !important;
+    position: relative;
 }
 .MoreEvents .nav-pills .nav-link{
     background: #01a89e !important;
@@ -184,7 +185,7 @@ header .headerUI img{
     font-weight: 500;
 }
 .MoreEvents .tab-content{
-    box-shadow: 0px 1px 1px 1px #ccc;
+    box-shadow: 0px 0px 3px 2px #ccc;
     padding: 20px 0 10px 0;
 }
 .MoreEvents .tab-content ul li{
@@ -201,23 +202,23 @@ header .headerUI img{
 .MoreEvents .tab-content ul li span{
     color: #01a89e;
 }
-.MoreEvents .nav-pills .nav-link a::after{
-    background-image: url(../../images/icon/icon-tit.png);
-    bottom: -26px;
+.MoreEvents .nav-pills .nav-link::after{
+    background-image: url('./img/icon-tit.png');
     content: "";
     height: 32px;
-    right: 4px;
     position: absolute;
     width: 5px;
     z-index: 99;
+    margin-top: 50px;
+    left: 10px;
 }
-{
-    background-image: url(../../images/icon/icon-tit.png);
-    bottom: -26px;
+.MoreEvents .nav-pills .nav-link::before{
+    background-image: url('./img/icon-tit.png');
     content: "";
     height: 32px;
-    left: 4px;
     position: absolute;
     width: 5px;
     z-index: 99;
+    margin-top: 50px;
+    right: 10px;
 }
