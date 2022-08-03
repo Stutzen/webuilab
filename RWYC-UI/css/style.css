@@ -5,7 +5,6 @@ html,body{
     position: relative;
     overflow-x: hidden;
     width: 100%;
-    height: 100%;
     font-family: 'Roboto', sans-serif;
 }
 ::-webkit-scrollbar{
@@ -13,6 +12,23 @@ html,body{
     height: 5px;
     background: #01a89e;
 }
+section{
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
 /* Header UI */
 header{
     background: #01a89e;
@@ -63,7 +79,7 @@ header .headerUI img{
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100%;
+    min-height: 800px;
 }
 .bannerSection #demo{
     color: #fff;
@@ -73,7 +89,7 @@ header .headerUI img{
     margin: auto;
     align-items: center;
     justify-content: center;
-    height: 70%;
+    padding-top: 15rem !important;
     font-family: 'New Rocker', cursive;
 }
 .bannerSection #demo p{
@@ -257,6 +273,7 @@ h4.special{
     font-size: 20px;
     font-family: 'Roboto';
     font-weight: 500;
+    cursor: auto;
 }
 .MoreEvents .tab-content{
     box-shadow: 0px 0px 3px 2px #ccc;
@@ -351,7 +368,7 @@ h4.special{
     line-height: 28px;
 }
 .register{
-    margin: 50px 0;
+    margin: 50px 0 0;
     width: 100%;
     text-align: center;
     padding: 50px;
@@ -369,7 +386,7 @@ h4.special{
     font-size: 30px;
     font-family: 'New Rocker';
     color: #f6e905;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .toAddr{
     color: #fff;
@@ -379,10 +396,11 @@ h4.special{
     margin: 25px 0;
 }
 .mail{
-    display: inline;
+    display: inline-flex;
     border: 2px solid #fff;
     padding: 10px 30px;
     border-radius: 30px;
+    align-items: center;
 }
 .mail img{margin-right: 10px;}
 .mail a{
@@ -394,4 +412,45 @@ h4.special{
 }
 .vsub{
     vertical-align: sub;
+}
+.contactUsMore{
+    padding-top: 20px;
+}
+.contactUsMore ul{
+    padding-left: 0;
+    float: left;
+    list-style-type: none;
+    text-align: left;
+    display: flex;
+    width: 100%;
+    gap: 30px;
+    font-size: 20px;
+    align-items: baseline;
+    justify-content: center;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+.contactUsMore ul li{text-align: center;}
+.contactUsMore ul li p{
+    margin-bottom: 5px;
+}
+.allTopicsSection{min-height: 100%;}
+.allTopicsSection .row{
+    align-items: baseline;
+    justify-content: center;
+    margin: auto;
+    gap: 30px;
+}
+.allTopicsSection .row ul{padding-left: 0;}
+.allTopicsSection .row ul li{
+    list-style-type: none;
+    line-height: 65px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    display: flex;
+    font-size: 18px;
+}
+.allTopicsSection ul li:before {
+    content: '✺';
+    margin-right: 10px;
 }

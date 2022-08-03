@@ -1,0 +1,115 @@
+/***************Mobile UI****************/
+@media(max-width:768px){
+    header {
+        padding: 10px 10px;
+    }
+    header .headerUI img {
+        width: 60px;
+        height: 60px;
+    }
+    .ConventionHead h1 {
+        font-size: 15px;
+        width: 100%;
+    }
+    .bannerSection{
+        min-height: 200px;
+    }
+    .bannerSection #demo{
+        font-size: 35px;
+        padding-top: 4rem !important;
+    }
+    .bannerSection #demo p span:nth-child(2) {
+        font-size: 10px;
+    }
+    .bannerSection #demo p {
+        padding: 0 20px;
+        transform: skewY(5deg);
+    }
+    .introSection .intro {
+        padding: 1rem;
+    }
+    .introSection .intro h3 {
+        font-size: 25px;
+    }
+    .introSection ul li {
+        font-size: 15px;
+    }
+    .introSection .col-sm-5 img{
+        margin-top: 10px;
+    }
+    .allTopicsSection .row {
+        gap: 0px;
+        justify-content: flex-start;
+        padding-left: 15px
+    }
+    .allTopicsSection .row ul li {
+        line-height: 35px;
+        font-size: 16px;
+    }
+    .MeetSpearkers {
+        padding: 20px;
+    }
+    .MeetSpearkers .contentDiv h3 {
+        font-size: 25px;
+    }
+    .MeetSpearkers .contentDiv .greet {
+        margin-bottom: 20px;
+        font-size: 17px;
+        width: 100%;
+    }
+    h4.special {
+        font-size: 15px;
+    }
+    .eventSection .eventSche {
+        font-size: 25px;
+    }
+    .eventSection .nav.nav-pills li.nav-item a {
+        font-size: 16px;
+        padding: 15px 5px;
+    }
+    .eventSection .nav.nav-pills li.nav-item a:after {
+        transform: translate(-60px, -1px);
+    }
+    .eventSection .tab-content ul li {
+        line-height: 30px;
+        font-size: 16px;
+    }
+    .eventSection .tab-content h4.special{
+        font-size: 15px;
+    }
+    .MoreEvents .nav-pills .nav-link {
+        padding: 1rem;
+        font-size: 18px;
+    }
+    .MoreEvents .nav-pills .nav-link::after {
+        margin-top: 35px;
+    }
+    .MoreEvents .nav-pills .nav-link::before {
+        margin-top: 90px;
+    }
+    .MoreEvents .tab-content ul{padding-left: 0;}
+    .MoreEvents .tab-content ul li {
+        font-size: 15px;
+    }
+    .register {
+        padding: 20px;
+    }
+    .register h2{
+        font-size: 20px;
+    }
+    .toAddr {
+        font-size: 17px;
+    }
+    .contactUsMore ul {
+        display: block;
+        width: auto;
+    }
+    .contactUsMore ul li {
+        text-align: left;
+        border-bottom: 1px solid #d6d6d6;
+        padding-top: 10px;
+    }
+    .contactUsMore ul li:last-child{
+        border-bottom: none;
+    }
+}
