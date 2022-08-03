@@ -59,7 +59,7 @@ header .headerUI img{
   }
 /* Banner Section with Countdown */
 .bannerSection{
-    background: url('./img/banner.jpg');
+    background: url('../img/banner.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -278,7 +278,7 @@ h4.special{
     color: #01a89e;
 }
 .MoreEvents .nav-pills .nav-link::after{
-    background-image: url('./img/icon-tit.png');
+    background-image: url('../img/icon-tit.png');
     content: "";
     height: 32px;
     position: absolute;
@@ -288,7 +288,7 @@ h4.special{
     left: 10px;
 }
 .MoreEvents .nav-pills .nav-link::before{
-    background-image: url('./img/icon-tit.png');
+    background-image: url('../img/icon-tit.png');
     content: "";
     height: 32px;
     position: absolute;
@@ -305,8 +305,8 @@ h4.special{
     color: white;
     overflow: hidden;
     background: #000000; 
-    background: linear-gradient(rgb(72,0,72,0.8), rgb(1,168,158,0.8)), url("./img/banner2.jpg"); 
-    background: linear-gradient(rgb(72,0,72,0.8), rgb(1,168,158,0.8)), url("./img/banner2.jpg");
+    background: linear-gradient(rgb(72,0,72,0.8), rgb(1,168,158,0.8)), url("../img/banner2.jpg"); 
+    background: linear-gradient(rgb(72,0,72,0.8), rgb(1,168,158,0.8)), url("../img/banner2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -358,8 +358,8 @@ h4.special{
     color: white;
     overflow: hidden;
     background: #000000;
-    background: linear-gradient(rgb(1,150,150,0.8), rgb(1,150,150,0.8)), url(./img/banner2.jpg);
-    background: linear-gradient(rgb(1,150,150,0.8), rgb(1,150,150,0.8)), url(./img/banner2.jpg);
+    background: linear-gradient(rgb(1,150,150,0.8), rgb(1,150,150,0.8)), url(../img/banner2.jpg);
+    background: linear-gradient(rgb(1,150,150,0.8), rgb(1,150,150,0.8)), url(../img/banner2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
