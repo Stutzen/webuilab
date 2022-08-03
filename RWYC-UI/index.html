@@ -2,9 +2,11 @@
 <html lang="en">
     <head>
         <title>Reddy Women & Youth Convention</title>
+        <link rel="icon" type="image/x-icon" href="img/favicon.png">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/style-mobile.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
          <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -34,7 +36,7 @@
             <div id="demo"></div>
         </section>
         <section class="introSection">
-            <div class="container">
+            <div class="container reveal">
                 <div class="row align-center">
                     <div class="col-sm-7">
                         <div class="intro">
@@ -54,8 +56,33 @@
                 </div>
             </div>
         </section>
+        <section class="allTopicsSection">
+            <div class="container reveal">
+                <div class="row">
+                    <ul>
+                        <li>Women Empowerment</li>
+                        <li>Health & Wealth Sessions</li>
+                        <li>Legal Knowledge</li>
+                        <li>Creativity & Innovative Workshops</li>
+                    </ul>
+                    <ul>
+                        <li>NextGen Development</li>
+                        <li>Career Guidance</li>
+                        <li>Business Lessons</li>
+                        <li>Agricultural Enlightenment</li>
+                        <li>Mindfullness & Success Seminars</li>
+                    </ul>
+                    <ul>
+                        <li>Leadership Training</li>
+                        <li>Family Get-together</li>
+                        <li>English & Communication Skills</li>
+                        <li>Many More...</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
         <section class="MeetSpearkers">
-            <div class="contentDiv">
+            <div class="contentDiv reveal">
                 <p class="normal">Meet Us <img src="img/handdown.png"></p>
                 <h3>Reddy Women & Youth Leadership International Convention</h3>
                 <p class="normal1">23-25 December 2022 at Tirunelveli City, Tamilnadu</p>
@@ -71,7 +98,7 @@
             </div>
         </section>
         <section class="eventSection">
-            <div class="container">
+            <div class="container reveal">
                    <h3 class="event">SCHEDULE</h3>
                    <h1 class="eventSche">EVENT SCHEDULE 📅</h1>
                     <div class="row">
@@ -132,7 +159,7 @@
             </div>
         </section>
         <section class="MoreEvents">
-            <div class="container">
+            <div class="container reveal">
                 <ul class="nav nav-pills mb-3 nav-feature" id="pills-tab" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link active" id="more-tab" data-toggle="pill" href="#more" role="tab" aria-controls="more" aria-selected="true">Planning & Strategies Meetings  Every Month before the Convention Lead by the President, TAKEPON</a>
@@ -154,12 +181,35 @@
             </div>
         </section>
         <section class="register">
-            <div class="container">
+            <div class="container reveal">
                 <h2>Registration is mandatory</h2>
                 <h2>Registration Fees Rs-1000/-per person</h2>
                 <p class="toAddr"> Kindly Send yours,your children details to <img src="img/mailsent.png"> </p>
                 <p class="toAddr">Dr.S.Venkatesh Babu,MCh Orth.,FRCS,<br> Sri Sakthi Hospital,48F,Xavier's Colony, South Bypass Road,<br>Tirunelveli - 627 005</p>
                 <p class="mail"><img src="img/mail.png" alt="mail" class="vsub"><a href="mailto:drsvbabu@hotmail.com">drsvbabu@hotmail.com</a></p>
+                <div class="contactUsMore">
+                    <div class="row">
+                        <ul>
+                            <li><p>Contact Details : </p></li>
+                            <li>
+                                <p>Advt G.Girubakaran</p>
+                                <p>94433 55481</p>
+                            </li>
+                            <li>
+                                <p>Dr.S.Venkatesh Babu</p>
+                                <p>98430 57118</p>
+                            </li>
+                            <li>
+                                <p>Dr.C.Sumathi</p>
+                                <p>94878 10000</p>
+                            </li>
+                            <li>
+                                <p>Dr.Anita</p>
+                                <p>96003 86736</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <p class="unite">Let's Unite and Win</p>
             </div>
         </section>
@@ -194,4 +244,23 @@
           }
         }, 1000);
         </script>
+        <script type="text/javascript">
+            function reveal() {
+           var reveals = document.querySelectorAll(".reveal");
+         
+           for (var i = 0; i < reveals.length; i++) {
+             var windowHeight = window.innerHeight;
+             var elementTop = reveals[i].getBoundingClientRect().top;
+             var elementVisible = 150;
+         
+             if (elementTop < windowHeight - elementVisible) {
+               reveals[i].classList.add("active");
+             } else {
+               reveals[i].classList.remove("active");
+             }
+           }
+         }
+         
+         window.addEventListener("scroll", reveal);
+         </script>
 </html>
