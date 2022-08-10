@@ -44,23 +44,33 @@
             text-align: center;
             padding-bottom: 30px;
         }
-        .downloadButtton{
-            color: #0154a2;
-            font-weight: 500;
+        .downloadButtton {
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid #0154a2;
+            font-weight: 600;
+            margin: auto;
+            background: linear-gradient(90deg,#0154a2 50%,#fff 0);
+            background-size: 200% 100%;
+            background-position: 100% 100%;
+            transition: all .5s ease-out;
             font-family: 'Poppins';
-            font-size: 18px;
-            border: 1px solid;
+            font-size: 17px;
             padding: 10px 20px;
-            border-radius: 5px;
             text-decoration: none !important;
-            background: #c7eafb42;
+            color: #0154a2;
+        }
+        .downloadButtton:hover {
+            background-position: 0 100%;
+            color: #fff!important;
         }
         @media(max-width:768px)
         {
             header .row .headerUI img{
                 width: 100%;
-            }
+            }   
         }
+       
     </style>
     </head>
     <body>
