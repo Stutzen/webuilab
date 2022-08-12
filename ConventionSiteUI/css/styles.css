@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+}
+html,body{
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+    background: #01a89e;
+}
+header{
+    position: relative;
+    background: #000000; 
+    background: linear-gradient(rgb(65 65 65 / 20%), rgb(65 65 65 / 40%)), url(../img/banner.jpg); 
+    background: linear-gradient(rgb(65 65 65 / 20%), rgb(65 65 65 / 40%)), url(../img/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 924px;
+}
+.AboutUs{
+    background: #ff005a;
+}
+.AboutUs .container{
+    padding: 50px;
+}
+.AboutUs .head1{
+    text-align: center;
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: 'Roboto';
+    letter-spacing: 1px;
+}
+.AboutUs p.para{
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    width: 70%;
+    margin: auto;
+    font-weight: 700;
+    font-family: 'Roboto';
+    padding: 50px 0;
+}
+.AboutUs .speakers,.sponsors ul{
+    padding-left: 0;
+    list-style-type: none;
+    width: 100%;
+    margin-bottom: 0;
+    position: relative;
+}
+.AboutUs .speakers li{
+    float: left;
+    width: 25%;
+    position: relative;
+}
+.AboutUs .speakers li .image img{
+    width: 100%;
+}
+
+.speakers .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .2s ease;
+    background-color: #ff005a;
+  }
+  
+ .speakers .image:hover .overlay {
+    opacity: 1;
+ }
+
+ .text {
+    color: #000;
+    font-family: 'Roboto';
+    font-size: 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: 500;
+ }
+ .text span{
+    font-weight: 400;
+    font-size: 25px;
+ }
+ .schedule{
+    background: #0d0d59;
+    padding: 10rem;
+    color: #52ffff;
+ }
+ .center{text-align: center;}
+ .schedule .head1{
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: 'Roboto';
+    letter-spacing: 1px;
+ }
+ .padd2{
+    padding: 2rem 0;
+ }
+ .sponsors{
+    padding: 10rem;
+ }
+ .sponsors .head1{
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: 'Roboto';
+    letter-spacing: 1px;
+    color: #0d0d59;
+ }
+ .sponsors ul li{
+    float: left;
+ }
