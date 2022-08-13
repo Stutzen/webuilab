@@ -6,33 +6,58 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="css/style-mobile.css">
         <!-- Font Family -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=New+Rocker&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&family=Barlow:wght@400;500&family=Lobster&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     </head>
-    <body>
-        <header></header>
-        <section class="AboutUs">
-            <div class="container">
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="myNavbar">
+                  <ul class="nav navbar-nav">
+                    <li class="section1"><a href="#section-link1">Home</a></li>
+                    <li class="section2"><a href="#section-link2">About</a></li>
+                    <li class="section3"><a href="#section-link3">Speakers</a></li>
+                    <li class="section4"><a href="#section-link4">Schedule</a></li>
+                    <li class="section5"><a href="#section-link5">Events</a></li>
+                    <li class="section6"><a href="#section-link6">Sponsors</a></li>
+                    <li class="section7"><a href="#section-link7">Info</a></li>
+                    <li class="section8"><a href="#section-link8">Register</a></li>
+                  </ul>
+                </div>
+            </div>
+          </nav>
+        <header id="section-link1">
+            <img src="img/logo1.png" alt="logo" class="logo">
+            <div class="row">
+                <h1 class="heading">Reddy Women & Youth Leadership International Convention</h1>
+            </div>
+        </header>
+        <section class="AboutUs"  id="section-link2">
+            <div class="container reveal">
                 <div class="head1">
                     <p>01</p>
                     <p>ABOUT</p>
                 </div>
-                <p class="para">I'M A PARAGRAPH. CLICK TO ADD YOUR OWN TEXT AND EDIT ME. IT'S EASY. JUST CLICK "EDIT TEXT" OR DOUBLE CLICK ME TO ADD YOUR OWN CONTENT AND MAKE CHANGES TO THE FONT.</p>
-                <div class="head1">
+                <p class="para">Our Objective is to develop Women leaders and NextGen Leaders in our Reddy Community in this proposed three days Programme.</p>
+                <p class="para">Chief Advisors and Patrons : Advocate Vaithyalingam,President TAKEPON, Mr Pattabiraman, Madurai, Mr Sankaran, Kollam and more( Filled by Leaders )</p>
+                <p class="para">Organsing Team : Organising Chairman Advocate Kirubakaran,Secretary TAKEPON</p>
+                <p class="para">Organising Secretary Dr S.Venkatesh Babu,Tirunelveli<br>And More Members (Filled by the Leaders)</p>
+                <div class="head1 mt-5">
                     <p>02</p>
                     <p>SPEAKERS</p>
                 </div>
             </div>
-            <div class="row">
-                <ul class="speakers">
+            <div class="row"  id="section-link3">
+                <ul class="speakers reveal">
                     <li>
                         <div class="image">
                             <img src="img/1.jpg" alt="image1">
@@ -68,8 +93,8 @@
                 </ul>
             </div>
         </section>
-        <section class="schedule">
-            <div class="container">
+        <section class="schedule" id="section-link4">
+            <div class="container reveal">
                 <div class="head1">
                     <p>03</p>
                     <p>SCHEDULE</p>
@@ -77,87 +102,124 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
                         <p class="center padd2">AM</p>
-                        <div class="row">
-                            <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
-                               <h1>09:15</h1> 
+                        <div class="row Timing">
+                            <div class="">
+                               <h1>08:00</h1> 
                             </div>
-                            <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
-                                <p>Maxine Hughes:</p>
-                                <p>Businesses that Shine</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
-                               <h1>09:15</h1> 
-                            </div>
-                            <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
-                                <p>Maxine Hughes:</p>
-                                <p>Businesses that Shine</p>
+                            <div class="">
+                                <p>Morning Half Day Family Tour - Three Choices Kanyakumari,Tiruchendur, Courtallam</p>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
-                               <h1>09:15</h1> 
+                        <div class="row Timing">
+                            <div class="">
+                               <h1>09:00</h1> 
                             </div>
-                            <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
-                                <p>Maxine Hughes:</p>
-                                <p>Businesses that Shine</p>
+                            <div class="">
+                                <p>Women Empowerment & Leadership Session & Training and NextGen Development  at Hall A & B</p>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
-                               <h1>09:15</h1> 
+                        <div class="row Timing">
+                            <div class="">
+                               <h1>09:00</h1> 
                             </div>
-                            <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
-                                <p>Maxine Hughes:</p>
-                                <p>Businesses that Shine</p>
+                            <div class="">
+                                <p>Two Hours Meeting of All Leaders with Women Power and Youth Power - Open House Knowledge,Shills and Experience Sharing</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
                         <p class="center padd2">PM</p>
-                        <div class="row">
-                            <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
-                                <h1>09:15</h1> 
+                        <div class="row Timing">
+                            <div class="">
+                                <h1>06:00</h1> 
                             </div>
-                            <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
-                                <p>Maxine Hughes:</p>
-                                <p>Businesses that Shine</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
-                                <h1>09:15</h1> 
-                            </div>
-                            <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
-                                <p>Maxine Hughes:</p>
-                                <p>Businesses that Shine</p>
+                            <div class="">
+                                <p>Evening Two Hours Sports meet to make us Integrated Night Welcome Dinner</p>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
-                                <h1>09:15</h1> 
+                        <div class="row Timing">
+                            <div class="">
+                                <h1>06:00</h1> 
                             </div>
-                            <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
-                                <p>Maxine Hughes:</p>
-                                <p>Businesses that Shine</p>
+                            <div class="">
+                                <p>TAKEPON Executives Meeting at Hall C</p>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
-                                <h1>09:15</h1> 
+                        <div class="row Timing">
+                            <div class="">
+                                <h1>06:00</h1> 
                             </div>
-                            <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
-                                <p>Maxine Hughes:</p>
-                                <p>Businesses that Shine</p>
+                            <div class="">
+                                <p>Leaders Interaction and Valedictory function with Lunch</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="sponsors">
-            <div class="container">
+        <section class="eventSection"  id="section-link5">
+            <div class="container reveal">
+                   <h3 class="event">SCHEDULE</h3>
+                   <h1 class="eventSche">EVENT SCHEDULE</h1>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <ul class="nav nav-pills mb-3 nav-feature" id="pills-tab" role="tablist">
+                                <li class="nav-item active">
+                                    <a class="nav-link" id="day1-tab" data-toggle="pill" href="#day1" role="tab" aria-controls="day1" aria-selected="true">Day 01 <br><span>23 DEC.2022</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="day2-tab" data-toggle="pill" href="#day2" role="tab" aria-controls="day2" aria-selected="false">Day 02 <br><span>24 DEC.2022</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="day3-tab" data-toggle="pill" href="#day3" role="tab" aria-controls="day3" aria-selected="false">Day 03 <br><span>25 DEC.2022</span></a>
+                                </li>			
+                            </ul>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade active in" id="day1" role="tabpanel" aria-labelledby="day1-tab">
+                                    <h3>First Day <img src="img/1.png"></h3>
+                                    <p class="barlowPara">2PM to 6PM</p>
+                                    <ul>
+                                        <li>Morning  Half Day Family Tour – Three Choices Kanyakumari,Tiruchendur, Courtallam</li>
+                                        <li>Evening Two Hours Sports meet to make us Integrated</li>
+                                        <li>Night Welcome Dinner</li>
+                                    </ul>
+                                    <h4 class="special">Introduction Section Inauguration with Welcome Dinner 8pm onwards at Hall A</h4>
+                                </div>
+                                <div class="tab-pane fade" id="day2" role="tabpanel" aria-labelledby="day2-tab">
+                                    <h3>Second Day <img src="img/2.png"></h3>
+                                    <p class="barlowPara">9AM to 6PM</p>
+                                    <h4>Parallel –Three Halls - Three Simultaneous sessions</h4>
+                                    <ul>
+                                        <li>Hall A - Women Leadership Programme (Brain,Mind and Body/Health & Wealth Integrated Sessions by Noted Faculty all over the Country )</li>
+                                        <li>Hall B – Leaders Executives Progressive sessions ( TAKEPON Official Sessions )</li>
+                                        <li>Hall C- Youth Leadership Programme ( The Seven Habits of Effective People Teachings )</li>
+                                    </ul>
+                                    <h4 class="special">Women Empowerment & Leadership Session at Hall A</h4>
+                                    <h4 class="special">NextGen Development & Leadership Training at Hall B</h4>
+                                    <h4 class="special">TAKEPON Executives Meeting at Hall C</h4>
+                                </div>
+                                <div class="tab-pane fade" id="day3" role="tabpanel" aria-labelledby="day3-tab">
+                                    <h3>Third Day <img src="img/3.png"></h3>
+                                    <p class="barlowPara">9AM to 1PM</p>
+                                    <h4>Parallel –Three Halls - Three Simultaneous sessions</h4>
+                                    <p class="barlowPara">First Half – Two Hours Meeting of All Leaders with Women Power and Youth Power – Open House Knowledge,Shills and Experience Sharing</p>
+                                    <h4>Second Half</h4>
+                                    <ul>
+                                        <li>Hall A - Women Leadership Programme (Why/How Sessions for Lifting the society )</li>	
+                                        <li>Hall B – Leaders Executives Progressive sessions ( TAKEPON Official Sessions )</li>	
+                                        <li>Hall C- Youth Leadership Programme ( Creative,Innovative, Success Symposium )</li>	
+                                    </ul>
+                                    <h4 class="special">Leaders Interaction and Valedictory function with Lunch</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <section class="sponsors"  id="section-link6">
+            <div class="container reveal">
                 <div class="head1">
                     <p>04</p>
                     <p>SPONSORS</p>
@@ -173,5 +235,196 @@
                 </div>
             </div>
         </section>
+        <section class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.625328121774!2d77.7335159152543!3d8.727081296046261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0411f9b3d7ca89%3A0x58ea0ca45aa1c03f!2sHotel%20Uma%20Shankar!5e0!3m2!1sen!2sin!4v1660371252656!5m2!1sen!2sin" width="100%" height="600px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <div id="section-link7">
+        <section class="info">
+            <div class="container reveal">
+                <div class="head1">
+                    <p>05</p>
+                    <p>INFO</p>
+                </div>
+                <div class="row">
+                    <ul>
+                        <li><a class="normal"><img src="img/ico1.jpg"></a><a class="hoverCls"><img src="img/ico1red.png"></a><p>ACCOMMODATIONS</p></li>
+                        <li><a class="normal"><img src="img/ico2.jpg"></a><a class="hoverCls"><img src="img/ico2red.jpg"></a><p>PARKING</p></li>
+                        <li><a class="normal"><img src="img/ico3.jpg"></a><a class="hoverCls"><img src="img/ico3red.jpg"></a><p>TRANSPORTATION</p></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="faq reveal">
+            <div class="faq_area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="serction_title_large mb-95">
+                                <h3>Frequently Ask</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-xl-12">
+                            <div id="accordion">
+                                <div class="card">
+                                    <div class="card-header" id="headingTwo">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                <img src="data:image/webp;base64,UklGRkYCAABXRUJQVlA4TDkCAAAvGUAGEIfjIJIkRaru4zv/Zs7TM8Ns23DcSJIiRfcyw3f9d3IP2oHbNo4kZ3fv7v/f7L0kmbGD2lrzBhSEKEiq4MdB6qASJqFS6mCrAySkDoiCfA6GAwLQ/uT26IY75wSDsKtCP0PRd5j9bxRRU3gXlev+Z5AUPI1Mf+K15vLrek0pz6nzsP00mBT8WhP/dkpQFPB1/28gUXGQQ2gP9ug+1TH01xjE/D23X69Uf6yJhA0Cf+h8fyFc7+WTnOaUzA337wXbevoP7Ts3uvr+C4qv2Ibpwk4+Y3ckcqmYd/sLy3QxEizjTcvsjqKgjP3rBaHgmRR6IRCwoSoBu+BmH7S7hMkQwjWInnOCZpxAhhoNpEUvHROQ3nBhUoyvCAmGpchBkB6L6WIUy6zh0gQmeMLag8CrgG7b1rHlZNu27fqcXZ+t3Me6/789z+kWzn6eiP5PAGmL1Uq5ZKygSP8s5LL5r2+C2Hw2V2C9pz6JaVIfumgyAWJHrUAVCpLy98f8/gGCYUXAD+Vr2r5lXhTwBwDcPN4r4pEoISoxhX24Ay6voXyyAHD7rIBc4fQM6nNSXqgg1ufVqJ1ujdfncfH2jw81Ls+Jg7W7uU1ahxwRe3mNmHaPNTtHXLu1wxkxnB3ZWOf0CmfdrK5wmgzHyuISh78kNL/A+DUMscD0xIzuADqZnAIwOqargW7c4O/gkIY5bEk50N9neEb6jQro6ujhdHd2Ebe5rb21pZlgpbXdNNM/axsb6uuswNSSFgA=" alt="" data-pagespeed-url-hash="3695604186">
+                                                This convention's moto? 
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion" style="">
+                                        <div class="card-body">
+                                            <div class="row allTopicsSection">
+                                                <ul>
+                                                    <li>Women Empowerment</li>
+                                                    <li>Health & Wealth Sessions</li>
+                                                    <li>Legal Knowledge</li>
+                                                    <li>Creativity & Innovative Workshops</li>
+                                                </ul>
+                                                <ul>
+                                                    <li>NextGen Development</li>
+                                                    <li>Career Guidance</li>
+                                                    <li>Business Lessons</li>
+                                                    <li>Agricultural Enlightenment</li>
+                                                    <li>Mindfullness & Success Seminars</li>
+                                                </ul>
+                                                <ul>
+                                                    <li>Leadership Training</li>
+                                                    <li>Family Get-together</li>
+                                                    <li>English & Communication Skills</li>
+                                                    <li>Many More...</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingThree">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                <img src="data:image/webp;base64,UklGRkYCAABXRUJQVlA4TDkCAAAvGUAGEIfjIJIkRaru4zv/Zs7TM8Ns23DcSJIiRfcyw3f9d3IP2oHbNo4kZ3fv7v/f7L0kmbGD2lrzBhSEKEiq4MdB6qASJqFS6mCrAySkDoiCfA6GAwLQ/uT26IY75wSDsKtCP0PRd5j9bxRRU3gXlev+Z5AUPI1Mf+K15vLrek0pz6nzsP00mBT8WhP/dkpQFPB1/28gUXGQQ2gP9ug+1TH01xjE/D23X69Uf6yJhA0Cf+h8fyFc7+WTnOaUzA337wXbevoP7Ts3uvr+C4qv2Ibpwk4+Y3ckcqmYd/sLy3QxEizjTcvsjqKgjP3rBaHgmRR6IRCwoSoBu+BmH7S7hMkQwjWInnOCZpxAhhoNpEUvHROQ3nBhUoyvCAmGpchBkB6L6WIUy6zh0gQmeMLag8CrgG7b1rHlZNu27fqcXZ+t3Me6/789z+kWzn6eiP5PAGmL1Uq5ZKygSP8s5LL5r2+C2Hw2V2C9pz6JaVIfumgyAWJHrUAVCpLy98f8/gGCYUXAD+Vr2r5lXhTwBwDcPN4r4pEoISoxhX24Ay6voXyyAHD7rIBc4fQM6nNSXqgg1ufVqJ1ujdfncfH2jw81Ls+Jg7W7uU1ahxwRe3mNmHaPNTtHXLu1wxkxnB3ZWOf0CmfdrK5wmgzHyuISh78kNL/A+DUMscD0xIzuADqZnAIwOqargW7c4O/gkIY5bEk50N9neEb6jQro6ujhdHd2Ebe5rb21pZlgpbXdNNM/axsb6uuswNSSFgA=" alt="" data-pagespeed-url-hash="3695604186"> 
+                                                Who Organising this Convention?
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion" style="">
+                                        <div class="card-body"> 
+                                            <p>Greetings to all of you !! Kindly do make your children showcase their skills and extra-curricular activities (Singing,Dance,Standup comedy,Music Instrumentations and more) in front 
+                                                our Relatives on an exclusive Cultural Festival been designed in the Reddy Women & Youth International Leadership Convention at Tirunelveli City on 23-25 December 2022.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                <img src="data:image/webp;base64,UklGRkYCAABXRUJQVlA4TDkCAAAvGUAGEIfjIJIkRaru4zv/Zs7TM8Ns23DcSJIiRfcyw3f9d3IP2oHbNo4kZ3fv7v/f7L0kmbGD2lrzBhSEKEiq4MdB6qASJqFS6mCrAySkDoiCfA6GAwLQ/uT26IY75wSDsKtCP0PRd5j9bxRRU3gXlev+Z5AUPI1Mf+K15vLrek0pz6nzsP00mBT8WhP/dkpQFPB1/28gUXGQQ2gP9ug+1TH01xjE/D23X69Uf6yJhA0Cf+h8fyFc7+WTnOaUzA337wXbevoP7Ts3uvr+C4qv2Ibpwk4+Y3ckcqmYd/sLy3QxEizjTcvsjqKgjP3rBaHgmRR6IRCwoSoBu+BmH7S7hMkQwjWInnOCZpxAhhoNpEUvHROQ3nBhUoyvCAmGpchBkB6L6WIUy6zh0gQmeMLag8CrgG7b1rHlZNu27fqcXZ+t3Me6/789z+kWzn6eiP5PAGmL1Uq5ZKygSP8s5LL5r2+C2Hw2V2C9pz6JaVIfumgyAWJHrUAVCpLy98f8/gGCYUXAD+Vr2r5lXhTwBwDcPN4r4pEoISoxhX24Ay6voXyyAHD7rIBc4fQM6nNSXqgg1ufVqJ1ujdfncfH2jw81Ls+Jg7W7uU1ahxwRe3mNmHaPNTtHXLu1wxkxnB3ZWOf0CmfdrK5wmgzHyuISh78kNL/A+DUMscD0xIzuADqZnAIwOqargW7c4O/gkIY5bEk50N9neEb6jQro6ujhdHd2Ebe5rb21pZlgpbXdNNM/axsb6uuswNSSFgA=" alt="" data-pagespeed-url-hash="3695604186">
+                                                Where the Venue?
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion" style="">
+                                        <div class="card-body"> 
+                                            <p>Venue : Hotel Uma Shankar & Hotel Palmyra Inn,Tirunelveli</p>
+                                            <p>There Will be Three Separate Sessions for Women,Younger Generation and TAKEPON Executives</p>
+                                            <p>7pm onwards Family Culturals,Celebration and Gala Dinner</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="heading_4">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse_4" aria-expanded="false" aria-controls="collapse_4">
+                                                <img src="data:image/webp;base64,UklGRkYCAABXRUJQVlA4TDkCAAAvGUAGEIfjIJIkRaru4zv/Zs7TM8Ns23DcSJIiRfcyw3f9d3IP2oHbNo4kZ3fv7v/f7L0kmbGD2lrzBhSEKEiq4MdB6qASJqFS6mCrAySkDoiCfA6GAwLQ/uT26IY75wSDsKtCP0PRd5j9bxRRU3gXlev+Z5AUPI1Mf+K15vLrek0pz6nzsP00mBT8WhP/dkpQFPB1/28gUXGQQ2gP9ug+1TH01xjE/D23X69Uf6yJhA0Cf+h8fyFc7+WTnOaUzA337wXbevoP7Ts3uvr+C4qv2Ibpwk4+Y3ckcqmYd/sLy3QxEizjTcvsjqKgjP3rBaHgmRR6IRCwoSoBu+BmH7S7hMkQwjWInnOCZpxAhhoNpEUvHROQ3nBhUoyvCAmGpchBkB6L6WIUy6zh0gQmeMLag8CrgG7b1rHlZNu27fqcXZ+t3Me6/789z+kWzn6eiP5PAGmL1Uq5ZKygSP8s5LL5r2+C2Hw2V2C9pz6JaVIfumgyAWJHrUAVCpLy98f8/gGCYUXAD+Vr2r5lXhTwBwDcPN4r4pEoISoxhX24Ay6voXyyAHD7rIBc4fQM6nNSXqgg1ufVqJ1ujdfncfH2jw81Ls+Jg7W7uU1ahxwRe3mNmHaPNTtHXLu1wxkxnB3ZWOf0CmfdrK5wmgzHyuISh78kNL/A+DUMscD0xIzuADqZnAIwOqargW7c4O/gkIY5bEk50N9neEb6jQro6ujhdHd2Ebe5rb21pZlgpbXdNNM/axsb6uuswNSSFgA=" alt="" data-pagespeed-url-hash="3695604186">
+                                                More About this Convention
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse_4" class="collapse" aria-labelledby="heading_4" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <section class="MoreEvents">
+                                                <p>Planning & Strategies Meetings  Every Month before the Convention Lead by the President, TAKEPON</p>
+                                                    <ul>
+                                                        <li>June - 26.6.2022-Place will be decided by the TAKEPON</li>
+                                                        <li>July - 31.7.2022-Place will be decided by the TAKEPON</li>
+                                                        <li>August - 21.8.2022-Place will be decided by the TAKEPON</li>
+                                                        <li>September - 25.9.2022-Place will be decided by the TAKEPON</li>
+                                                        <li>October - 30.10.2022-Place will be decided by the TAKEPON</li>
+                                                        <li>November - 27.11.2022-at Tirunelveli City to Check the arrangements fully</li>
+                                                        <li>December - 11.12.2022-at Tirunelveli City two weeks before convention-key organizing members</li>
+                                                    </ul>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
+        <section class="register"  id="section-link8">
+            <div class="container reveal">
+                <div class="col-sm-12">
+                    <p>Registration is Mandatory. Fees Rs-1000/-per person.</p>
+                    <p>Dr.S.Venkatesh Babu,MCh Orth.,FRCS,<br> Sri Sakthi Hospital,48F,Xavier's Colony, South Bypass Road</p>
+                    <p>Tirunelveli - 627 005</p>
+                    <div class="row center mt-5">
+                        <p class="mail"><img src="img/mail.png" alt="mail" class="vsub"><a href="mailto:drsvbabu@hotmail.com">drsvbabu@hotmail.com</a></p>
+                    </div>
+                    <div class="contactUsMore mt-5">
+                        <div class="row">
+                            <ul>
+                                <li><p>Contact Details : </p></li>
+                                <li>
+                                    <p>Advt G.Girubakaran</p>
+                                    <p>94433 55481</p>
+                                </li>
+                                <li>
+                                    <p>Dr.S.Venkatesh Babu</p>
+                                    <p>98430 57118</p>
+                                </li>
+                                <li>
+                                    <p>Dr.C.Sumathi</p>
+                                    <p>94878 10000</p>
+                                </li>
+                                <li>
+                                    <p>Dr.Anita</p>
+                                    <p>96003 86736</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>© 2022 by Reddy Women & Youth Convention. Proudly created with <a href="https://stutzen.co/" target="_blank">Ṩtutzen.co</a></p>
+        </footer>
     </body>
+    <script type="text/javascript">
+        function reveal() {
+       var reveals = document.querySelectorAll(".reveal");
+     
+       for (var i = 0; i < reveals.length; i++) {
+         var windowHeight = window.innerHeight;
+         var elementTop = reveals[i].getBoundingClientRect().top;
+         var elementVisible = 150;
+     
+         if (elementTop < windowHeight - elementVisible) {
+           reveals[i].classList.add("active");
+         } else {
+           reveals[i].classList.remove("active");
+         }
+       }
+     }
+     
+     window.addEventListener("scroll", reveal);
+     </script>
 </html>

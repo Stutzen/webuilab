@@ -1,0 +1,126 @@
+@media(max-width:768px){
+    header {
+        height: 500px;
+    }
+    .logo {
+        width: 30%;
+        margin: 10px;
+        padding: 0;
+    }
+    .heading {
+        width: 90%;
+        font-size: 45px;
+        line-height: 70px;
+    }
+    .AboutUs p.para{
+        font-size: 30px;
+    }
+    .AboutUs .head1,.sponsors .head1,.info .head1{
+        line-height: 30px;
+    }
+    .AboutUs .container {
+        padding: 30px;
+    }
+    .AboutUs .speakers li {
+        width: 50%;
+    }
+    .text {
+        font-size: 25px;
+    }
+    .schedule {
+        padding: 5rem 0;
+    }
+    .schedule .row.Timing {
+        gap: 20px;
+    }
+    .schedule h1 {
+        font-size: 40px;
+    }
+    .schedule p {
+        font-size: 15px;
+        line-height: 25px;
+        padding-left: 0px;
+    }
+    .eventSection .nav.nav-pills li.nav-item {
+        width: 32.8%;
+    }
+    .sponsors {
+        padding: 0rem;
+    }
+    .sponsors ul{
+        display: -webkit-inline-box;
+        overflow: auto;
+        white-space: nowrap;
+    }
+    .map iframe{
+        height: 300px;
+    }
+    .info {
+        padding: 30px 10px;
+    }
+    .info ul{
+        gap: 25px;
+    }
+    .info ul li img{
+        width: 50px;
+    }
+    .info ul li p{
+        font-size: 16px;
+    }
+    .faq{
+        padding: 0 15px;
+    }
+    .faq h3 {
+        font-size: 40px;
+        line-height: 60px;
+    }
+    .faq_area #accordion .card h5 button{
+        font-size: 17px;
+    }
+    .faq_area #accordion .card .card-header h5{margin: 0;}
+    .faq_area #accordion .card .card-header {
+        padding: 10px 0 10px 10px;
+    }
+    .faq_area #accordion .card h5 button img {
+        margin-right: 5px;
+    }
+    .faq_area #accordion .card .card-body {
+        padding: 0 10px 10px 30px;
+        font-size: 14px;
+    }
+    .allTopicsSection {
+        display: block;
+    }
+    .allTopicsSection ul li, .MoreEvents ul li {
+        line-height: 40px;font-size: 16px;
+    }
+    .allTopicsSection ul, .MoreEvents ul {
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+    .register {
+        padding: 30px 10px;
+    }
+    .contactUsMore ul li p {
+        margin-bottom: 5px;
+        text-align: left;
+    }
+    .contactUsMore ul {
+        padding-left: 0;
+        float: left;
+        text-align: left;
+        display: block;
+        list-style-type: none;
+    }
+    .contactUsMore ul li:first-child p{
+        display: inline;
+        border-bottom: 1px solid #fff;
+    }
+    .contactUsMore ul li {
+        text-align: left;
+        padding-bottom: 10px;
+    }
+    footer p {
+        font-size: 14px;
+    }
+}

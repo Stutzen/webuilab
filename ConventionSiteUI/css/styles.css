@@ -10,18 +10,98 @@ html,body{
 ::-webkit-scrollbar{
     width: 5px;
     height: 5px;
-    background: #01a89e;
+    background: #0d0d59;
 }
+@font-face {
+    font-family: 'DIN Neuzeit Grotesk LT W01 BdCn';
+    src: url('../font/DIN\ Neuzeit\ Grotesk\ LT\ W01\ BdCn.woff'),
+         url('../font/DIN\ Neuzeit\ Grotesk\ LT\ W01\ BdCn.woff2');
+}
+.mt-5{
+    margin-top: 5%;
+}
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+ }
+  
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+/*******Float*********/
+body .navbar-inverse {
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+body .navbar-nav>li{
+    float: none !important;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    height: 35px;
+}
+body .navbar-fixed-top {
+    top: 30% !important;
+    border-width: 0 0 1px;
+    position: fixed;
+    right: 20px;
+    left: auto;
+    z-index: 1030;
+}
+body .navbar-inverse .navbar-nav>li>a{
+    padding: 0 15px !important;  
+    visibility: hidden; 
+}
+body .navbar-inverse .navbar-nav>.active>a{
+    color: #0d0d59 !important;
+    background-color: transparent !important;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 0 15px !important;
+    visibility: visible; 
+}
+body .navbar-inverse ul.navbar-nav li:after{
+    content: '';
+    border: 1px solid;
+    border-radius: 50px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: -5px;
+}
+body .navbar-inverse ul.navbar-nav li.active:after{
+    border: 1px solid;
+    background-color: #0d0d59;
+}
+/***********Header*************/
 header{
     position: relative;
     background: #000000; 
-    background: linear-gradient(rgb(65 65 65 / 20%), rgb(65 65 65 / 40%)), url(../img/banner.jpg); 
-    background: linear-gradient(rgb(65 65 65 / 20%), rgb(65 65 65 / 40%)), url(../img/banner.jpg);
+    background: linear-gradient(rgb(65 65 65 / 50%), rgb(65 65 65 / 50%)), url(../img/banner.jpg); 
+    background: linear-gradient(rgb(65 65 65 / 50%), rgb(65 65 65 / 50%)), url(../img/banner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 924px;
 }
+.logo{
+    width: 15%;
+    padding: 50px;
+}
+.heading{
+    font-family: 'Lobster', cursive;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    font-size: 90px;
+    font-weight: 400;
+    line-height: 125px;
+    color: rgb(82, 255, 255);
+}
+/***********About Us*************/
 .AboutUs{
     background: #ff005a;
 }
@@ -31,20 +111,21 @@ header{
 .AboutUs .head1{
     text-align: center;
     color: #000;
-    font-weight: 600;
-    font-size: 18px;
-    font-family: 'Roboto';
-    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 46px;
+    letter-spacing: 2px;
+    font-family: 'DIN Neuzeit Grotesk LT W01 BdCn';
 }
 .AboutUs p.para{
     text-align: center;
     color: #fff;
     font-size: 35px;
-    width: 70%;
+    width: 100%;
     margin: auto;
-    font-weight: 700;
-    font-family: 'Roboto';
-    padding: 50px 0;
+    font-weight: 400;
+    font-family: 'DIN Neuzeit Grotesk LT W01 BdCn';
+    padding: 10px 0;
 }
 .AboutUs .speakers,.sponsors ul{
     padding-left: 0;
@@ -80,8 +161,8 @@ header{
  }
 
  .text {
-    color: #000;
-    font-family: 'Roboto';
+    color: #fff;
+    font-family: 'Lobster';
     font-size: 35px;
     position: absolute;
     top: 50%;
@@ -95,34 +176,354 @@ header{
  .text span{
     font-weight: 400;
     font-size: 25px;
+    font-family: 'DIN Neuzeit Grotesk LT W01 BdCn';
  }
  .schedule{
     background: #0d0d59;
     padding: 10rem;
     color: #52ffff;
  }
+ .schedule h1{
+    font-size: 55px;
+    font-family: 'DIN Neuzeit Grotesk LT W01 BdCn';
+    margin-top: 0;
+ }
+ .schedule p{
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.8px;
+    margin-bottom: 0;
+    padding-left: 10px;
+ }
+ .schedule .row.Timing{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+ }
+ .schedule .row.Timing:last-child{
+    margin-bottom: 0px;
+ }
  .center{text-align: center;}
  .schedule .head1{
     text-align: center;
-    font-weight: 600;
-    font-size: 18px;
-    font-family: 'Roboto';
-    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 46px;
+    letter-spacing: 2px;
+    font-family: 'DIN Neuzeit Grotesk LT W01 BdCn';
+    color: rgb(82, 255, 255);
  }
  .padd2{
     padding: 2rem 0;
+    font-family: 'Roboto';
  }
  .sponsors{
     padding: 10rem;
  }
  .sponsors .head1{
     text-align: center;
-    font-weight: 600;
-    font-size: 18px;
-    font-family: 'Roboto';
-    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 46px;
+    letter-spacing: 2px;
+    font-family: 'DIN Neuzeit Grotesk LT W01 BdCn';
     color: #0d0d59;
  }
  .sponsors ul li{
     float: left;
  }
+ .info{
+    padding: 50px;
+ }
+ .info .head1{
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 46px;
+    letter-spacing: 2px;
+    font-family: 'DIN Neuzeit Grotesk LT W01 BdCn';
+    color: #0d0d59;
+ }
+ .info ul li p{
+    font-family: 'DIN Neuzeit Grotesk LT W01 BdCn';
+    letter-spacing: 2px;
+    font-size: 20px;
+    color: rgb(13, 13, 89);
+    font-weight: 400;
+ }
+ .info ul{
+    padding-left: 0;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+ }
+ .info ul li{
+    list-style-type: none;
+    float: left;
+ }
+ .info .normal{
+    display: block;
+    cursor: pointer;
+ }
+ .info .hoverCls{
+    display: none;
+ }
+ .info .normal:hover img{
+    display: none;
+ }
+ .info .normal:hover + .hoverCls{
+    display: block !important;
+    cursor: pointer;
+ }
+ .faq h3{
+    font-family: 'Poppins';
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 100px;
+ }
+ .faq_area #accordion .card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    background: #fff!important;
+    border: 1px solid #e9e5ec;
+    border: 5px;
+    margin-bottom: 30px;
+    border: 1px solid #e9e5ec;
+}
+.faq_area #accordion .card .card-header {
+    margin-bottom: 0;
+    background-color: #fff;
+    border-bottom: none;
+    padding: 14px 0 16px 14px;
+}
+.card-header:first-child {
+    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+.faq_area #accordion .card .card-header h5{
+    font-size: 16px;
+    line-height: 1.2em;
+}
+.faq_area #accordion .card h5 button {
+    font-size: 22px;
+    font-weight: 400;
+    color: #1f1f1f;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+.faq_area #accordion .card h5 button img {
+    margin-right: 15px;
+}
+.faq_area #accordion .card .card-body {
+    padding: 0 0 40px 76px;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
+}
+.contactUsMore{
+    padding-top: 20px;
+}
+.contactUsMore ul{
+    padding-left: 0;
+    float: left;
+    list-style-type: none;
+    text-align: left;
+    display: flex;
+    width: 100%;
+    gap: 30px;
+    font-size: 20px;
+    align-items: baseline;
+    justify-content: center;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+.contactUsMore ul li{text-align: center;}
+.contactUsMore ul li p{
+    margin-bottom: 5px;
+}
+.mail{
+    display: inline-flex;
+    border: 2px solid #fff;
+    padding: 10px 30px;
+    border-radius: 30px;
+    align-items: center;
+}
+.mail img{margin-right: 10px;}
+.mail a{
+    color: #fff!important;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none !important;
+}
+.vsub{
+    vertical-align: sub;
+}
+ .register{
+    background-color: #ff005a;
+    padding: 100px;
+ }
+ .register p{
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+ }
+ footer p{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 15px;
+    font-family: 'Roboto';
+ }
+footer p a{
+    text-decoration: none;
+    color: #0d0d59;
+}
+
+ .eventSection,.introSection{
+    margin: 50px 0;
+}
+.eventSection .nav.nav-pills li.nav-item{
+    width: 33.2%;
+}
+.eventSection .nav.nav-pills{
+    box-shadow: 0px 0px 3px 2px #ccc;
+    justify-content: space-between;
+}
+.eventSection .nav.nav-pills li.nav-item a{
+    color: #0d0d59;
+    text-align: center;
+    font-family: Barlow, Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 20px;
+    border-radius: 0;
+    padding: 1.5rem 1rem;
+    background: transparent;
+}
+.eventSection .nav.nav-pills li.nav-item a span{
+    font-size: 14px;
+}
+.eventSection .nav.nav-pills li.nav-item.active{
+    background-color: #0d0d59;
+    color: #fff;
+}
+.eventSection .nav.nav-pills li.nav-item.active a{
+    color: #fff;
+}
+.eventSection .nav.nav-pills li.nav-item a:after{
+    position: absolute;
+    bottom: 5px;
+    width: 0;
+    content: '';
+    height: 0;
+    margin: 0 auto;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #0d0d59 transparent transparent transparent;
+    opacity: 0;
+    transform: translate(-70px, 15px);
+}
+.eventSection .nav.nav-pills li.nav-item a.active::after{
+    opacity: 1;
+}
+.eventSection h3,.eventSection h1{
+    text-align: center;
+}
+.eventSection .event{
+    color: #52ffff;
+    font-size: 20px;
+    font-family: 'DIN Neuzeit Grotesk LT W01 BdCn';
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.eventSection .eventSche{
+    font-size: 50px;
+    font-family: 'DIN Neuzeit Grotesk LT W01 BdCn';
+    font-weight: 900;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    color: #0d0d59;
+}
+.eventSection .tab-content{
+    box-shadow: 0px 0px 3px 2px #ccc;
+    padding: 1.5rem;
+    font-family: 'Poppins';
+    margin-top: 15px;
+}
+.eventSection .tab-content ul{
+    padding-left: 0;
+}
+.eventSection .tab-content ul li{
+    list-style-type: none;
+    line-height: 35px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    display: flex;
+    font-size: 17px;
+}
+.barlowPara{
+    line-height: 35px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+}
+.eventSection .tab-content ul li:before{
+    content: '⏱';
+    margin-right: 10px;
+}
+.eventSection .tab-content h3{
+    text-align: left;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 30px;
+    color: #0d0d59;
+    font-weight: 600;
+}
+.eventSection .tab-content h4{
+    text-align: center;
+    font-family: 'Lobster';
+    font-size: 20px;
+    color: #000000;
+}
+.allTopicsSection{
+    align-items: baseline;
+    justify-content: flex-start;
+    margin: auto;
+    gap: 15px;
+    display: flex;
+}
+.allTopicsSection ul,.MoreEvents ul{padding-left: 0;}
+.allTopicsSection ul li,.MoreEvents ul li{
+    list-style-type: none;
+    line-height: 50px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    display: flex;
+    font-size: 18px;
+}
+.allTopicsSection ul li:before,.MoreEvents ul li:before {
+    content: '✺';
+    margin-right: 10px;
+}
+.faq p{
+    font-size: 17px;
+    line-height: 30px;
+}
