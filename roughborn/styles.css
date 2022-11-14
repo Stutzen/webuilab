@@ -59,7 +59,7 @@ html,body{
     .comingSoonPage .comingsoon.desktop{display: none;}
     .comingSoonPage .comingsoon.mobile{display: flex;flex-direction: column-reverse;justify-content: space-evenly;height: 100%;}
     .comingSoonPage .comingsoon.mobile img{width: auto;height: 150px;}
-    .comingSoonPage .comingsoon.mobile .image4{display: flex;align-items: center;animation: 5s logozoom ease infinite;}
+    .comingSoonPage .comingsoon.mobile .image4{display: flex;align-items: center;animation: 5s logozoom ease infinite;justify-content: center;}
     .comingSoonPage .comingsoon.mobile .image5{display: flex;gap:15px;animation: 10s moving-out ease infinite;}
     .comingSoonPage .comingsoon.mobile .image6{display: flex;gap:15px;animation: 10s moving-in ease infinite;justify-content: end;}
     /* @keyframes mobmove {
