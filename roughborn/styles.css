@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+}
+html,body{
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+.comingSoonPage{
+    height: 100%;
+    background: url('./img/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    padding: 50px;
+    overflow-y: hidden;
+}
+
+.comingsoon .image1{display: flex;align-items: flex-end;animation: 10s moving-out ease infinite;}
+.comingsoon .image2{display: flex;align-items: center;animation: 5s popoutin ease infinite;}
+.comingsoon .image3{display: flex;align-items: flex-start;animation: 10s moving-in ease infinite;}
+@keyframes popoutin {
+    0% {
+      transform: scale(0.1);
+    }
+    25% {
+      transform: scale(0.3);
+    }
+    50% {
+      transform: scale(0.5);
+    }
+    100% {
+        transform: scale(0.8);
+    }
+  }
+  @keyframes moving-out {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+  }
+  @keyframes moving-in {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+  }
+
+.comingSoonPage .comingsoon.desktop{display: flex;justify-content: space-between;height: 100%;}
+.comingSoonPage .comingsoon.mobile{display: none;}
+
+@media(max-width:768px) {
+    .comingSoonPage .comingsoon.desktop{display: none;}
+    .comingSoonPage .comingsoon.mobile{display: flex;flex-direction: column;align-items: center;justify-content: space-evenly;height: 100%;}
+    .comingSoonPage .comingsoon.mobile img{width: 100%;}
+    .comingSoonPage .comingsoon.mobile .image4{display: flex;align-items: center;animation: 5s logozoom ease infinite;}
+    .comingSoonPage .comingsoon.mobile .image5{display: flex;gap:15px;animation: 10s mobmove ease infinite;}
+    @keyframes mobmove {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(100%);
+        }
+    }
+    @keyframes logozoom {
+        0% {
+          transform: scale(0.3);
+        }
+        25% {
+          transform: scale(0.5);
+        }
+        50% {
+          transform: scale(0.8);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+}
