@@ -37,7 +37,7 @@ html,body{
   }
   @keyframes moving-out {
     0% {
-      transform: translateY(-100%);
+      transform: translateY(-50%);
     }
     100% {
         transform: translateY(0%);
@@ -45,7 +45,7 @@ html,body{
   }
   @keyframes moving-in {
     0% {
-      transform: translateY(100%);
+      transform: translateY(50%);
     }
     100% {
         transform: translateY(0%);
@@ -57,30 +57,25 @@ html,body{
 
 @media(max-width:768px) {
     .comingSoonPage .comingsoon.desktop{display: none;}
-    .comingSoonPage .comingsoon.mobile{display: flex;flex-direction: column;align-items: center;justify-content: space-evenly;height: 100%;}
-    .comingSoonPage .comingsoon.mobile img{width: 100%;}
+    .comingSoonPage .comingsoon.mobile{display: flex;flex-direction: column-reverse;justify-content: space-evenly;height: 100%;}
+    .comingSoonPage .comingsoon.mobile img{width: auto;height: 150px;}
     .comingSoonPage .comingsoon.mobile .image4{display: flex;align-items: center;animation: 5s logozoom ease infinite;}
-    .comingSoonPage .comingsoon.mobile .image5{display: flex;gap:15px;animation: 10s mobmove ease infinite;}
-    @keyframes mobmove {
+    .comingSoonPage .comingsoon.mobile .image5{display: flex;gap:15px;animation: 10s moving-out ease infinite;}
+    .comingSoonPage .comingsoon.mobile .image6{display: flex;gap:15px;animation: 10s moving-in ease infinite;justify-content: end;}
+    /* @keyframes mobmove {
         0% {
           transform: translateX(0%);
         }
         100% {
-            transform: translateX(-100%);
+            transform: translateX(-50%);
         }
-    }
+    } */
     @keyframes logozoom {
         0% {
           transform: scale(0.3);
         }
-        25% {
-          transform: scale(0.5);
-        }
-        50% {
-          transform: scale(0.8);
-        }
         100% {
-            transform: scale(1);
+            transform: scale(0.5);
         }
     }
 }
