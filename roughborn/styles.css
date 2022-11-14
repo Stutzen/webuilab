@@ -37,18 +37,18 @@ html,body{
   }
   @keyframes moving-out {
     0% {
-      transform: translateY(100%);
+      transform: translateY(-100%);
     }
     100% {
-        transform: translateY(-100%);
+        transform: translateY(0%);
     }
   }
   @keyframes moving-in {
     0% {
-      transform: translateY(-100%);
+      transform: translateY(100%);
     }
     100% {
-        transform: translateY(100%);
+        transform: translateY(0%);
     }
   }
 
@@ -63,10 +63,10 @@ html,body{
     .comingSoonPage .comingsoon.mobile .image5{display: flex;gap:15px;animation: 10s mobmove ease infinite;}
     @keyframes mobmove {
         0% {
-          transform: translateX(-100%);
+          transform: translateX(0%);
         }
         100% {
-            transform: translateX(100%);
+            transform: translateX(-100%);
         }
     }
     @keyframes logozoom {
