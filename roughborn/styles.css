@@ -18,9 +18,9 @@ html,body{
     overflow-y: hidden;
 }
 
-.comingsoon .image1{display: flex;align-items: flex-end;animation: 10s moving-out ease infinite;width: 25%;}
+.comingsoon .image1{display: flex;align-items: flex-end;animation: 20s moving-out ease infinite;width: 25%;}
 .comingsoon .image2{display: flex;align-items: center;justify-content: center;animation: 5s popoutin ease infinite;width: 50%;}
-.comingsoon .image3{display: flex;align-items: flex-start;justify-content: end;animation: 10s moving-in ease infinite;width: 25%;}
+.comingsoon .image3{display: flex;align-items: flex-start;justify-content: end;animation: 20s moving-in ease infinite;width: 25%;}
 @keyframes popoutin {
     0% {
       transform: scale(0.1);
