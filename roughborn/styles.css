@@ -52,15 +52,15 @@ html,body{
   @keyframes moving-in {
     0% {
       transform: translateY(3%);
-      color: #82cf0694;
+      color: #388803ba;
     }
     50% {
       transform: translateY(8%);
-      color: #82cf0694;
+      color: #388803ba;
     }
     100% {
         transform: translateY(3%);
-        color: #82cf0694;
+        color: #388803ba;
     }
   }
 
