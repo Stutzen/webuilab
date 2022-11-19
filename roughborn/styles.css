@@ -23,10 +23,7 @@ html,body{
 .comingsoon .image3{display: flex;align-items: flex-start;justify-content: end;animation: 20s moving-in ease infinite;width: 25%; animation-direction: alternate;}
 @keyframes popoutin {
     0% {
-      transform: scale(0.1);
-    }
-    25% {
-      transform: scale(0.3);
+      transform: scale(0.8);
     }
     50% {
       transform: scale(0.5);
@@ -92,23 +89,18 @@ html,body{
     .comingSoonPage .comingsoon.mobile .image4{display: flex;align-items: center;animation: 5s logozoom ease infinite;justify-content: center;}
     .comingSoonPage .comingsoon.mobile .image5{display: flex;gap:15px;animation: 10s moving-out ease infinite;}
     .comingSoonPage .comingsoon.mobile .image6{display: flex;gap:15px;animation: 10s moving-in ease infinite;justify-content: end;} */
-    /* @keyframes mobmove {
-        0% {
-          transform: translateX(0%);
-        }
-        100% {
-            transform: translateX(-50%);
-        }
-    } */
-    @keyframes popoutin {
+    /* @keyframes popoutin {
       0% {
         transform: scale(0.3);
       }
       100% {
           transform: scale(0.37);
       }
-    }
+    } */
     .textAnimateComing,.textAnimateSoon{
       font-size: 70px;
     }
+    .textAnimateComing{margin: 0 0 0 -100px;}
+    .textAnimateSoon{margin: 0 -60px 0 0;}
+    .comingSoonPage{padding: 30px 0;}
 }

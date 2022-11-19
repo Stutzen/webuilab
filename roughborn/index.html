@@ -24,8 +24,10 @@
                     <!-- <img src="./img/coming.png" alt="coming"> -->
                     <h1 class="textAnimateComing">COMING</h1>
                 </div>
-                <div class="image2">
+                <div class="image2 image-slider">
                     <img src="./img/logo.png" alt="logo">
+                    <img src="./img/sepal.png" alt="logo">
+                    <img src="./img/shoe.png" alt="logo">
                 </div>
                 <div class="image3">
                     <!-- <img src="./img/soon1.png" alt="soon"> -->
@@ -44,6 +46,39 @@
                     </div>
             </div> -->
         </section>
-        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://kenwheeler.github.io/slick/slick/slick.css">
+        <script>	
+            jQuery(document).ready(function(jQuery) {
+                jQuery('.image-slider').slick({   
+                infinite: true,
+                autoWidth:true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                dots:false,     
+                arrows: false,
+                responsive: [{
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true
+                  }
+                },
+                {
+                   breakpoint: 400,
+                   settings: {
+                      arrows: false,
+                      slidesToShow: 1,
+                      slidesToScroll: 1,             
+                   }
+                }]
+           }); 
+         });   
+        </script>        
     </body>
 </html>
