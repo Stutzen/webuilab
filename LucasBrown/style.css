@@ -1,0 +1,195 @@
+:root {
+    --theme-three: #270cac;
+}
+html,body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+}
+.bodyBg {
+    background-image: url('./img/main_bg3.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+}
+.aside{
+    background-color: #fff;
+    border-radius: 20px;
+    position: relative;
+    transition: box-shadow .3s ease-in-out;
+    box-shadow: 0 2.5rem 3.125rem rgb(103 118 128 / 10%) !important;
+}
+.aside .first-bannar img {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    height: 200px;
+    border-radius: 20px 20px 0px 0px;
+}
+.side-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.side-profile img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: -35px;
+    border: 5px solid rgba(var(--bs-white), var(--bs-bg-opacity)) !important;
+    object-fit: cover;
+}
+.user-name {
+    margin-top: -15px !important;
+    padding: 0px 30px;
+}
+.sidebar-sec .side-main-box2 .user-name h5 {
+    font-size: 18px;
+}
+.user-bg {
+    font-size: 0.9375rem;
+    font-weight: 400;
+    border-radius: 10rem;
+    padding: 0.5rem 1rem;
+    background-color: #F5F6F7;
+    color: #44566C;
+}
+.side-social-icon {
+    margin: 5px;
+}
+.side-social-icon i {
+    padding: 11px 10px;
+    font-size: 16px;
+}
+.insta-icon {
+    color: #C13584;
+}
+.facebook-icon {
+    color: #1773EA;
+}
+.twitter-icon {
+    color: #1C9AEA;
+}
+.youtube-icon {
+    color: #FF0000;
+}
+.whatsapp-icon {
+    color: #42c152;
+}
+.dribbble-icon {
+    color: #e54786;
+}
+.printrest-icon {
+    color: #c51f27;
+}
+.email-icon {
+    color: #6AB5B9;
+}
+.phone-icon {
+    color: #0085FF;
+}
+.website-icon {
+    color: #0079bf;
+}
+
+.side-social {
+    background-color: #F5F8F9;
+    padding: 30px;
+    position: relative;
+    z-index: 0;
+    border-radius: 0px 0px 16px 16px;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.btn.blue-btn {
+    background: var(--theme-three);
+    border-radius: 20px;
+    border: 0;
+    box-shadow: 0 0.5rem 1rem rgb(48 76 253 / 15%), 0 0.125rem 0.25rem rgb(48 76 253 / 15%);
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.text-dark {
+    color: #343a40!important;
+    word-break: break-word;
+}
+.main-div {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px 30px 0px 30px;
+    position: relative;
+    transition: box-shadow .3s ease-in-out;
+    box-shadow: 0 2.5rem 3.125rem rgb(103 118 128 / 10%) !important;
+}
+.theme-three-title {
+    font-size: 30px;
+    color: var(--theme-three);
+    text-transform: uppercase;
+}
+.aboutUs p {
+    margin: 0;
+}
+.about-content {
+    font-size: 15px;
+    color: #5B5B5B;
+}
+.doing-sec, .promotionalVideo {
+    background-color: #F5F8F9;
+    position: relative;
+    z-index: 0;
+}
+.doing-sec .owl-nav button.owl-prev, .promotionalVideo .owl-nav button.owl-prev {
+    width: 30px;
+    height: 30px;
+    background: var(--theme-three);
+    color: #fff;
+}
+.doing-sec .owl-nav button.owl-next, .promotionalVideo .owl-nav button.owl-next {
+    width: 30px;
+    height: 30px;
+    background: var(--theme-three);
+    color: #fff;
+}
+.promotionalVideo .owl-dots{display: none;}
+.design-box {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+.promotional_videos .owl-carousel iframe, .promotional_videos2 .owl-carousel iframe, .promotionalVideo .owl-carousel iframe, .promotional_videos4 .owl-carousel iframe, .promotional_videos5 .owl-carousel iframe {
+    width: -webkit-fill-available;
+    height: 225px;
+}
+.doing-sec:before, .promotionalVideo::before {
+    content: '';
+    background-color: #F5F8F9;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 1.875rem;
+    z-index: -1;
+    left: -1.875rem;
+}
+.doing-sec:after, .promotionalVideo::after {
+    content: '';
+    background-color: #F5F8F9;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 1.875rem;
+    z-index: -1;
+    right: -1.875rem;
+}
+button.customPreviousBtn,button.customNextBtn {margin: 5px;border-radius: 3px;outline: none;border: none;}
