@@ -140,11 +140,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="owl-nav text-center pt-3">
-                                <button type="button" role="presentation" class="owl-prev disabled customPreviousBtn"><span aria-label="Previous">‹</span></button>
-                                <button type="button" role="presentation" class="owl-next customNextBtn"><span aria-label="Next">›</span></button>
-                            </div>
-                            <div class="owl-dots disabled"></div>
                         </div>
                         <div class="business2-sec py-4 reorder-sec" data-name="3">
                             <h2 class="business3-text theme-three-title pb-2">
@@ -294,11 +289,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="owl-nav text-center pt-3">
-                                <button type="button" role="presentation" class="owl-prev customPreviousBtn1"><span aria-label="Previous">‹</span></button>
-                                <button type="button" role="presentation" class="owl-next customNextBtn1"> <span aria-label="Next">›</span></button>
-                            </div>
-                            <div class="owl-dots disabled"></div>
                         </div>
                         <div class="testi-sec reorder-sec pb-4" data-name="6">
                             <h2 class="theme-three-title pb-2">Testimonials</h2>
@@ -422,11 +412,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="owl-nav text-center pt-3">
-                                    <button type="button" role="presentation" class="owl-prev customPreviousBtn2"><span aria-label="Previous">‹</span></button>
-                                    <button type="button" role="presentation" class="owl-next customNextBtn2"><span aria-label="Next">›</span></button>
-                                </div>
-                                <div class="owl-dots disabled"></div>
                             </div>
                         </div>
                         <div class="appoment3-sec py-4 reorder-sec" data-name="8" id="contact_inquiries">
@@ -532,9 +517,10 @@ $(document).ready(function(){
   owl.owlCarousel({
     loop:false,
     margin:10,
-    nav:false,
+    nav: true,
     items: 2,
     dots:false,
+    responsiveClass: true,
     responsive: {
     0: {
       items: 1
@@ -552,14 +538,6 @@ $(document).ready(function(){
       items: 2
     }
   }
-  });
-  
-  // Custom Button
-  $('.customNextBtn').click(function() {
-    owl.trigger('next.owl.carousel');
-  });
-  $('.customPreviousBtn').click(function() {
-    owl.trigger('prev.owl.carousel');
   });
 });
 $(document).ready(function(){
@@ -567,9 +545,10 @@ $(document).ready(function(){
   owl2.owlCarousel({
     loop:false,
     margin:10,
-    nav:false,
+    nav: true,
     items: 2,
     dots:false,
+    responsiveClass: true,
     responsive: {
     0: {
       items: 1
@@ -587,14 +566,6 @@ $(document).ready(function(){
       items: 2
     }
   }
-  });
-  
-  // Custom Button
-  $('.customNextBtn1').click(function() {
-    owl2.trigger('next.owl.carousel');
-  });
-  $('.customPreviousBtn1').click(function() {
-    owl2.trigger('prev.owl.carousel');
   });
 });
 $(document).ready(function(){
@@ -602,9 +573,10 @@ $(document).ready(function(){
   owl3.owlCarousel({
     loop:false,
     margin:10,
-    nav:false,
+    nav: true,
     items: 2,
     dots:false,
+    responsiveClass: true,
     responsive: {
     0: {
       items: 1
@@ -622,14 +594,6 @@ $(document).ready(function(){
       items: 2
     }
   }
-  });
-  
-  // Custom Button
-  $('.customNextBtn2').click(function() {
-    owl3.trigger('next.owl.carousel');
-  });
-  $('.customPreviousBtn2').click(function() {
-    owl3.trigger('prev.owl.carousel');
   });
 });
 $(document).on("click", ".share_card_modal", function(){
