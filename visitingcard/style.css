@@ -156,6 +156,226 @@ html,body{
     width: -moz-fit-content;
     width: fit-content;
 }
+.Gallery .service-card .card-img-top{
+    height: 238px;
+}
+.Gallery.py-4 {
+    padding: 35px 0;
+}
+.Gallery .owl-nav div.owl-prev:hover,
+.Gallery .owl-nav div.owl-next:hover {
+    color: transparent;
+    background: transparent;
+}
+.Gallery .owl-nav div.owl-prev,
+.Gallery .owl-nav div.owl-next {
+    color: transparent;
+    background: transparent;
+}
+.Testimonials .testimonial-card{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: -6px -2px 16px hsl(0deg 0% 100% / 80%), 6px 5px 12px hsl(0deg 0% 62% / 40%);
+    padding: 0.75rem
+}
+.testimonial-box{
+     padding: 35px 0;
+}
+.Testimonials .testimonial-user .rounded-circle{
+     width: 60px;
+     height: 60px;
+     border-radius: 50%;
+}
+.Testimonials .testimonial-user{
+    width: 100%;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.Testimonials .user-detail{
+    margin-left: 0.75rem;
+}
+.Testimonials .user-message{
+   margin-top: 0.5rem;
+   margin-bottom: 0.5rem;
+}
+.QR-code .heading-left{
+    border-radius: 0 0 50px 0;
+    margin-left: -16px;
+}
+.QR-code .pe-none{
+    display: flex;
+    justify-content: center;
+}
+.QR-code .rounded-circle{
+     height: 120px;
+     width: 120px;
+     border-radius: 50%;
+     margin-left: auto;
+    margin-right: auto;
+}
+.qr-code-btn:hover{
+     -webkit-text-fill-color: transparent;
+      background: linear-gradient(90deg,#f15f79,#b24592);
+     -webkit-background-clip: text;
+}
+.qr-code-btn,
+.qr-code-btn2{
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(90deg,#b24592,#f15f79);
+    -webkit-background-clip: text;
+    border: none;
+    border-radius: 10px;
+    box-shadow: -6px -2px 16px hsl(0deg 0% 100% / 80%), 6px 5px 20px hsl(0deg 0% 62% / 40%);
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    padding: 10px 16px;
+    margin-top: 1rem;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    display: block;
+}
+.qr-box{
+    display: flex;
+}
+.business-calender{
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: -6px -2px 16px hsl(0deg 0% 100% / 80%), 6px 5px 20px hsl(0deg 0% 62% / 40%);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.calendar-icon{
+    background: linear-gradient(90deg,#b24592,#f15f79);
+    border-radius: 12px;
+    padding: 1rem;
+}
+.calendar-icon svg{
+    font-size: 1.375rem;
+    height: 1em;
+}
+.week{
+   margin-left: 0.5rem;
+}
+.week-day,
+.week-hour{
+   margin-left: 1.25rem;
+}
+.week-hour{
+    margin-top: 0.75rem;
+    color: #181818;
+    font-weight: 500;
+    font-size: 1rem;
+}
+.date-input{
+    background-color: #edf2f8;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: block;
+    font-size: 11px;
+    font-weight: 500;
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+.appointment-card{
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: -6px -2px 16px hsl(0deg 0% 100% / 80%), 6px 5px 12px hsl(0deg 0% 62% / 40%);
+    padding: 0.75rem;
+}
+.appointmentAdd{
+    background: linear-gradient(90deg,#b24592,#f15f79);
+    -webkit-background-clip: text;
+    border: none;
+    border-radius: 10px;
+    box-shadow: -6px -2px 16px hsl(0deg 0% 100% / 80%), 6px 5px 20px hsl(0deg 0% 62% / 40%);
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    padding: 10px 16px;
+    transition: all .3s ease;
+    color: transparent;
+    display: flex;
+    margin: auto;
+}
+.form-control.form-field:focus{
+    border: 1px solid #dbdbdb;
+    box-shadow: unset;
+}
+.form-control.form-field{
+   background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    color: #505050;
+    outline: none;
+    padding: 1.4rem 1rem;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.contact-btn{
+    background: linear-gradient(90deg,#b24592,#f15f79);
+    border: none;
+    border-radius: 10px;
+    box-shadow: -6px -2px 16px hsl(0deg 0% 100% / 80%), 6px 5px 20px hsl(0deg 0% 62% / 40%);
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    padding: 13px 20px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    margin-top: 1rem;
+}
+.contact-btn:hover {
+     background: linear-gradient(90deg,#f15f79,#b24592);
+}
+.vcard-btn{
+    margin: 0 auto;
+}
+.vcard-download,
+.vcardsharebtn{
+   background: linear-gradient(90deg,#b24592,#f15f79);
+    border: none;
+    border-radius: 10px;
+    box-shadow: -6px -2px 16px hsl(0deg 0% 100% / 80%), 6px 5px 20px hsl(0deg 0% 62% / 40%);
+    font-size: 14px;
+    font-weight: 500;
+    outline: none;
+    padding: 10px 20px;
+    color: #fff;
+}
+.vcard-download:hover,
+.vcardsharebtn:hover{
+    background: linear-gradient(90deg,#f15f79,#b24592);
+    text-decoration: none;
+    color: #fff;
+}
+.vcard-download,
+.vcard-share{
+   margin-top: 1rem;
+}
+.vcard-share{
+    margin-left: 0.75rem;
+    padding: 0.563rem 1.563rem;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+.vcard-download svg,
+.vcard-share svg{
+   height: 1em;
+   margin-right: 0.5rem
+}
+
 
 
 @media (min-width: 576px)
@@ -172,4 +392,65 @@ html,body{
     .text-sm-start.text-center {
         text-align: left!important;
     }
+    .vcard-btn{
+        display: flex;
+        justify-content: center;
+        margin-top: 1.25rem;
+        padding-bottom: 1.25rem
+    }
+    .qr-code-btn2{
+        display: none;
+    }
+}
+
+
+@media (max-width: 575px){
+    .vcard-download, 
+    .vcard-share {
+        margin: 0 auto;
+        display: block;
+        margin-top: 1rem;
+    }
+    .Testimonials .testimonial-user {
+        text-align: center;
+        display: block;
+    }
+    .qr-code-btn{
+        display: none;
+    }
+    .Gallery .owl-nav div.owl-prev,
+.Gallery .owl-nav div.owl-next {
+    color: transparent;
+    background: transparent;
+}
+.Gallery .owl-nav div.owl-prev:before {
+    content: '‹';
+    position: absolute;
+    color: #fff;
+    z-index: 9;
+    text-indent: 6px;
+}
+.Gallery .owl-nav div.owl-prev{
+    border-color: transparent #db5682 transparent transparent;
+    border-style: solid;
+    border-width: 11px 11px 11px 0;
+    height: 0;
+    position: absolute;
+    left: 40px;
+    width: 15px;
+}
+.Gallery .owl-nav div.owl-next{
+    border-color: transparent transparent transparent #db5682;
+    border-style: solid;
+    border-width: 11px 0 11px 11px;
+    height: 0;
+    position: absolute;
+    right: 40px;
+    width: 15px;
+}
+.Gallery .owl-nav div.owl-prev:hover,
+.Gallery .owl-nav div.owl-next:hover {
+    color: transparent;
+    background: transparent;
+}
 }
