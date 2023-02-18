@@ -156,6 +156,22 @@ html,body{
     width: -moz-fit-content;
     width: fit-content;
 }
+.morecontent span {
+    -webkit-box-orient: vertical;
+    display: none;
+    font-weight: 400!important;
+}
+.morelink,
+.morelink1 {
+    color: #000;
+    font-weight: 500;
+    cursor: pointer;
+}
+.morelink:hover,
+.morelink1:hover {
+    color: #515acc;
+    text-decoration: unset;
+}
 .Gallery .service-card .card-img-top{
     height: 238px;
 }
@@ -273,40 +289,6 @@ html,body{
     font-weight: 500;
     font-size: 1rem;
 }
-.date-input{
-    background-color: #edf2f8;
-    border: none;
-    border-radius: 10px;
-    box-sizing: border-box;
-    display: block;
-    font-size: 11px;
-    font-weight: 500;
-    margin: 0;
-    padding: 10px 0;
-    text-align: center;
-    width: 100%;
-}
-.appointment-card{
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: -6px -2px 16px hsl(0deg 0% 100% / 80%), 6px 5px 12px hsl(0deg 0% 62% / 40%);
-    padding: 0.75rem;
-}
-.appointmentAdd{
-    background: linear-gradient(90deg,#b24592,#f15f79);
-    -webkit-background-clip: text;
-    border: none;
-    border-radius: 10px;
-    box-shadow: -6px -2px 16px hsl(0deg 0% 100% / 80%), 6px 5px 20px hsl(0deg 0% 62% / 40%);
-    font-size: 16px;
-    font-weight: 500;
-    outline: none;
-    padding: 10px 16px;
-    transition: all .3s ease;
-    color: transparent;
-    display: flex;
-    margin: auto;
-}
 .form-control.form-field:focus{
     border: 1px solid #dbdbdb;
     box-shadow: unset;
@@ -317,10 +299,11 @@ html,body{
     border-radius: 5px;
     color: #505050;
     outline: none;
-    padding: 1.4rem 1rem;
-    font-size: .875rem;
+    padding: .688rem .75rem;
+    font-size: 15px;
     font-weight: 400;
     line-height: 1.5;
+    min-height: calc(1.5em + 1.376rem + 2px);
 }
 .contact-btn{
     background: linear-gradient(90deg,#b24592,#f15f79);
