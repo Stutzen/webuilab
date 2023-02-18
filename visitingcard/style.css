@@ -232,6 +232,7 @@ html,body{
      border-radius: 50%;
      margin-left: auto;
     margin-right: auto;
+    object-fit: cover;
 }
 .qr-code-btn:hover{
      -webkit-text-fill-color: transparent;
@@ -300,7 +301,7 @@ html,body{
     color: #505050;
     outline: none;
     padding: .688rem .75rem;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
     min-height: calc(1.5em + 1.376rem + 2px);
@@ -405,6 +406,7 @@ html,body{
 .Gallery .owl-nav div.owl-next {
     color: transparent;
     background: transparent;
+    padding: 0;
 }
 .Gallery .owl-nav div.owl-prev:before {
     content: '‹';
@@ -436,4 +438,47 @@ html,body{
     color: transparent;
     background: transparent;
 }
+}
+.modal{
+    background: rgba(0,0,0,0.6);
+}
+.modal .modal-dialog .modal-content .modal-body .social-link-modal{
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+    gap: 15px;
+    padding: 10px 0;
+}
+.modal .modal-dialog .modal-content .modal-body .social-link-modal .share9{width: 25px;}
+.modal .modal-dialog .modal-content .modal-body .social-link-modal .copy-vcard-clipboard{
+    width: 25px;
+    border: none;
+    background: transparent;
+    margin: 0 !important;
+}
+.Gallery .item1{
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: -6px -2px 16px hsl(0deg 0% 100% / 80%), 6px 5px 12px hsl(0deg 0% 62% / 40%);
+    padding: 10px;
+    position: relative;
+    width: 90%;
+    margin: 0 auto 20px auto;
+}
+@media(max-width:767px)
+{
+    .social-icons span {
+        height: 50px;
+        min-width: 50px;
+        width: 50px;
+    }
+    .social-icons span a{font-size: 23px;}
+    .section2 .container{padding-left: 0;padding-right: 0;}
+    .ourService .card{border: none;}
+    .ourService .card .card-body.py-4{padding: 15px 0 !important;}
+    .container.mobnopadd{padding: 0 !important;}
+    .calender .container{padding: 0 !important;}
+    .modal .modal-dialog .modal-content .modal-body .social-link-modal {
+        gap: 5px;padding: 5px 15px;
+    }
 }
