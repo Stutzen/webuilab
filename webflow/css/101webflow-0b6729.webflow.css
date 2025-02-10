@@ -21,20 +21,35 @@
   }
 }
 
-.container {
+h3 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.hero-container {
   flex-flow: column;
   justify-content: center;
   align-items: center;
   display: flex;
 }
 
-.major-button {
+.button {
   background-color: var(--brand-color);
   box-shadow: 0 20px 45px -13px var(--brand-color);
   border-radius: 3px;
   padding: 15px 30px;
   font-weight: 700;
   transition: opacity .2s;
+}
+
+.button.form {
+  color: var(--brand-color);
+  background-color: #ddc2ff;
+  padding-top: 9px;
+  padding-bottom: 9px;
 }
 
 .body {
@@ -49,6 +64,7 @@
 
 .hero-paragraph {
   text-align: center;
+  max-width: 700px;
   margin-top: 6px;
   margin-bottom: 20px;
   padding-bottom: 0;
@@ -62,6 +78,222 @@
 .big-heading {
   font-size: 60px;
   line-height: 65px;
+}
+
+.nav-link {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 700;
+}
+
+.nav-link.cta {
+  background-color: var(--brand-color);
+  color: #fff;
+  border-radius: 3px;
+}
+
+.logo {
+  margin-top: 14px;
+}
+
+.navbar {
+  color: #fff;
+  background-color: #fff;
+}
+
+.container-2 {
+  justify-content: center;
+  align-items: center;
+  display: block;
+}
+
+.logo-holder {
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  justify-content: space-between;
+  place-items: center;
+  display: grid;
+}
+
+.feature-grid {
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  margin-top: 60px;
+  padding-top: 0;
+  display: grid;
+}
+
+.card, .feature-heading {
+  text-align: center;
+}
+
+.form-content-wrapper {
+  max-width: 300px;
+}
+
+.form {
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  align-items: flex-end;
+  display: flex;
+}
+
+.field-wrapper {
+  flex: 1;
+}
+
+.text-field {
+  border-radius: 3px;
+  margin-bottom: 0;
+}
+
+.message {
+  background-color: #f9ffed;
+  border-radius: 3px;
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+
+.message.error {
+  background-color: #ffedf1;
+}
+
+.footer-logo {
+  width: 110px;
+}
+
+.footer-link {
+  color: #4e4e4e;
+  text-decoration: none;
+}
+
+.footer-link-block {
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.container {
+  max-width: 1100px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.container.centered {
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+@media screen and (max-width: 991px) {
+  .section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .big-heading {
+    text-align: center;
+    font-size: 44px;
+  }
+
+  .nav-link {
+    text-align: center;
+  }
+
+  .nav-link.cta {
+    border-radius: 0;
+  }
+
+  .form {
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  .menu-button {
+    color: #000;
+  }
+
+  .menu-button.w--open {
+    color: #000;
+    background-color: #fff;
+  }
+
+  .nav-menu {
+    background-color: #fff;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  h3 {
+    font-size: 18px;
+  }
+
+  .big-heading {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .feature-grid {
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 30px;
+  }
+
+  .feature-heading {
+    font-size: 25px;
+    line-height: 27px;
+  }
+
+  .form {
+    flex-flow: column;
+    align-items: stretch;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .section {
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+
+  .big-heading {
+    font-size: 32px;
+    line-height: 34px;
+  }
+
+  .logo-holder {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-link-block {
+    flex-flow: wrap;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    line-height: 16px;
+  }
+
+  .container {
+    padding-left: 21px;
+    padding-right: 21px;
+  }
 }
 
 
